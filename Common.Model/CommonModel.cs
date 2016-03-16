@@ -10,8 +10,7 @@ namespace Common.Model
 {
     public enum SqlTtypes { nvarchar, varchar, datetime2, nText, Int, Bit, Bool, Float, date }
     public class DBTableColumnInfo : ObservableObject
-    {
-        
+    {   
         private string _ColumnName;
         private SqlTtypes _DataType;
         private int _CharacterMaximumLength;

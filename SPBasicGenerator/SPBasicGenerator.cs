@@ -25,7 +25,7 @@ namespace SPCoreGenerator
         internal static string[] sqlKeyWords;
         static BaseSPGenerator()
         {
-            sqlKeyWords = File.ReadAllLines("SqlKeyWords.txt").Select(p => p.Trim().ToUpperInvariant()).ToArray();
+            sqlKeyWords = File.ReadAllLines("../../Resources/SqlKeyWords.txt").Select(p => p.Trim().ToUpperInvariant()).ToArray();
         }
         public static void SetSettings(Settings setting)
         {

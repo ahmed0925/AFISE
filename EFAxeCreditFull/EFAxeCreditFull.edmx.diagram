@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a2ce71a866114c01a76a56dcfe571c1b" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="EFAxeCreditFull.account_type" Width="1.5" PointX="3" PointY="612.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.accounting_output" Width="1.5" PointX="49.5" PointY="610.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.acp_parameters" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.action_type" Width="1.5" PointX="6" PointY="612.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.additional_data" Width="1.5" PointX="9" PointY="611.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.additional_data_domain" Width="1.5" PointX="11.25" PointY="635.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.additional_data_profiles" Width="1.5" PointX="11.25" PointY="583.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.aggregation_criteria" Width="1.5" PointX="3" PointY="605.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.amortization_type" Width="1.5" PointX="6" PointY="607.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.arrangement_type" Width="1.5" PointX="3" PointY="617.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.asset_class" Width="1.5" PointX="6" PointY="617.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.audit_trail" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.base_rate" Width="1.5" PointX="9" PointY="605.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.base_rate_value" Width="1.5" PointX="11.25" PointY="588" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.bkp_constant" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.bkp_estimated_probability" Width="1.5" PointX="33.75" PointY="581" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.bkp_financial_mitigant_recovery" Width="1.5" PointX="37.5" PointY="587.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.bkp_mitigant_time_to_recovery" Width="1.5" PointX="37.5" PointY="584" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.bkp_transaction_rating_el" Width="1.5" PointX="33.75" PointY="585.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.bkt_ccf_history" Width="1.5" PointX="37.5" PointY="577.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.bkt_cure_probability_history" Width="1.5" PointX="33.75" PointY="576.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.bkt_discriminatory_history" Width="1.5" PointX="33.75" PointY="569" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.bkt_discriminatory_history_detail" Width="1.5" PointX="49.5" PointY="601.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.bkt_financial_mitigant_history" Width="1.5" PointX="37.5" PointY="640.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.bkt_lgd_history" Width="1.5" PointX="49.5" PointY="620.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.bkt_pd_history" Width="1.5" PointX="33.75" PointY="563.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.bkt_pd_history_detail" Width="1.5" PointX="46.5" PointY="622.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.bkt_rest_probability_history" Width="1.5" PointX="33.75" PointY="642.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.bkt_time_to_recovery_history" Width="1.5" PointX="37.5" PointY="645.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.classification" Width="1.5" PointX="33" PointY="666" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.collateral_type" Width="1.5" PointX="9" PointY="619.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.collect_question" Width="1.5" PointX="26.25" PointY="586.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.combinaison_hierarchy_criteria_1" Width="1.5" PointX="12" PointY="612.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.combinaison_hierarchy_criteria_2" Width="1.5" PointX="12" PointY="607.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.combinaison_hierarchy_criteria_3" Width="1.5" PointX="12" PointY="617.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.combinaison_hierarchy_criteria_4" Width="1.5" PointX="3" PointY="622.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.commodity" Width="1.5" PointX="6" PointY="622.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.commodity_quote" Width="1.5" PointX="35.25" PointY="632.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.communication_log" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.confidence_index" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.constant_matrix" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.constants" Width="1.5" PointX="6" PointY="602.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.core_banking" Width="1.5" PointX="52.5" PointY="612.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty" Width="1.5" PointX="38.25" PointY="596.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_account" Width="1.5" PointX="35.25" PointY="594.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_action" Width="1.5" PointX="52.5" PointY="606.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_add_data" Width="1.5" PointX="32.25" PointY="620.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_add_data_litigation" Width="1.5" PointX="92.25" PointY="609.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_address" Width="1.5" PointX="49.5" PointY="625.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_amount" Width="1.5" PointX="52.5" PointY="618.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_category" Width="1.5" PointX="36" PointY="573.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_classification" Width="1.5" PointX="36" PointY="569.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_comment" Width="1.5" PointX="40.5" PointY="660.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_contacts" Width="1.5" PointX="52.5" PointY="624.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_cpty" Width="1.5" PointX="40.5" PointY="628" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_credit_state_history" Width="1.5" PointX="52.5" PointY="600.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_external_rating" Width="1.5" PointX="43.5" PointY="600" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_financial_data" Width="1.5" PointX="55.5" PointY="612.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_financial_structure" Width="1.5" PointX="43.5" PointY="629.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_generic" Width="1.5" PointX="55.5" PointY="596" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_internal_rating" Width="1.5" PointX="46.5" PointY="592.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_internal_rating_warning" Width="1.5" PointX="57.75" PointY="632.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_parent" Width="1.5" PointX="46.5" PointY="629.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_qualitative_data" Width="1.5" PointX="40.5" PointY="730.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_qualitative_element" Width="1.5" PointX="49.5" PointY="631.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_qualitative_node" Width="1.5" PointX="52.5" PointY="633.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_shareholders" Width="1.5" PointX="55.5" PointY="617.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_type" Width="1.5" PointX="12" PointY="602.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.counterparty_user" Width="1.5" PointX="49.5" PointY="596.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.country" Width="1.5" PointX="12" PointY="622.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.country_group" Width="1.5" PointX="3" PointY="600.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.country_link" Width="1.5" PointX="29.25" PointY="636.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.country_region" Width="1.5" PointX="14.25" PointY="636" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.covenant" Width="1.5" PointX="40.5" PointY="634.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.credit_event_type" Width="1.5" PointX="15" PointY="612.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.credit_file" Width="1.5" PointX="52.5" PointY="588.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.credit_file_add_data" Width="1.5" PointX="32.25" PointY="626.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.credit_file_comment" Width="1.5" PointX="54.75" PointY="587.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.credit_file_condition" Width="1.5" PointX="66.75" PointY="602.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.credit_file_condition_fees" Width="1.5" PointX="81" PointY="608.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.credit_file_covenant" Width="1.5" PointX="63.75" PointY="599.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.credit_file_cpty" Width="1.5" PointX="63.75" PointY="618.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.credit_file_generic" Width="1.5" PointX="66.75" PointY="616.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.credit_file_mitigant" Width="1.5" PointX="63.75" PointY="594.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.credit_file_opinion" Width="1.5" PointX="60.75" PointY="590.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.credit_file_rating" Width="1.5" PointX="66.75" PointY="597.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.credit_file_transaction" Width="1.5" PointX="69.75" PointY="611.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.credit_file_user" Width="1.5" PointX="57.75" PointY="587.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.criteria_field" Width="1.5" PointX="15" PointY="607.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.currency" Width="1.5" PointX="18" PointY="597.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.currency_exchange_rate" Width="1.5" PointX="20.25" PointY="590" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.decision_tree_eligibility" Width="1.5" PointX="60.75" PointY="627.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.deviation_log" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.document_category" Width="1.5" PointX="9" PointY="624.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.document_sub_category" Width="1.5" PointX="11.25" PointY="639.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.economic_sector" Width="1.5" PointX="15" PointY="618.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.economic_sector_parent" Width="1.5" PointX="26.25" PointY="633.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.eligibility_condition" Width="1.5" PointX="43.5" PointY="611.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.eligibility_criteria" Width="1.5" PointX="63.75" PointY="611.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.eligibility_criteria_fields" Width="1.5" PointX="15" PointY="602.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.email_out" Width="1.5" PointX="15" PointY="623.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.enforcing_log" Width="1.5" PointX="9" PointY="599.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.estimated_probabilities" Width="1.5" PointX="3" PointY="627.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.estimated_probabilities_his" Width="1.5" PointX="33.75" PointY="589.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.estimated_probability" Width="1.5" PointX="33.75" PointY="647.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.exposure" Width="1.5" PointX="42.75" PointY="635.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.exposure_real_time" Width="1.5" PointX="39.75" PointY="640.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.fields_access_right" Width="1.5" PointX="26.25" PointY="603.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.fields_access_right_mc" Width="1.5" PointX="29.25" PointY="605.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.file_upload" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_analysis_session" Width="1.5" PointX="55.5" PointY="623.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_benchmark" Width="1.5" PointX="6" PointY="597.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_data_category" Width="1.5" PointX="12" PointY="597.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_data_element" Width="1.5" PointX="15" PointY="597.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_data_forecast_formula" Width="1.5" PointX="20.25" PointY="584.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_data_forecast_model" Width="1.5" PointX="43.5" PointY="591" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_data_formula" Width="1.5" PointX="29.25" PointY="584.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_data_model" Width="1.5" PointX="41.25" PointY="606.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_data_structure" Width="1.5" PointX="32.25" PointY="593.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_data_type" Width="1.5" PointX="3" PointY="595.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_element" Width="1.5" PointX="6" PointY="630.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_element_scoring_tier" Width="1.5" PointX="8.25" PointY="641" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_forecast_scenario" Width="1.5" PointX="9" PointY="629.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_forecasting" Width="1.5" PointX="48.5" PointY="636.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_mitigant_recovery" Width="1.5" PointX="37.5" PointY="650.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_node" Width="1.5" PointX="21" PointY="612.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_stress_scenario" Width="1.5" PointX="12" PointY="629.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_structure" Width="1.5" PointX="38.25" PointY="633.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_structure_benchmark" Width="1.5" PointX="17.25" PointY="586.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_structure_forecast_scenario" Width="1.5" PointX="45.5" PointY="641.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_structure_stress_scenario" Width="1.5" PointX="48.5" PointY="642.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.financial_template" Width="1.5" PointX="21" PointY="605.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.folder_structuring" Width="1.5" PointX="21" PointY="618.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.group" Width="1.5" PointX="15" PointY="630.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.group_access_right" Width="1.5" PointX="32.25" PointY="638" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.group_access_right_mc" Width="1.5" PointX="35.25" PointY="637.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.group_mc" Width="1.5" PointX="21" PointY="623.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.holidays_config" Width="1.5" PointX="9" PointY="594.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.html_to_image" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.impact_generation" Width="1.5" PointX="66.75" PointY="633.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.impact_generation_real_time" Width="1.5" PointX="69.75" PointY="630.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.industry_sector" Width="1.5" PointX="21" PointY="600.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.industry_sector_parent" Width="1.5" PointX="29.25" PointY="617.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.internal_entity" Width="1.5" PointX="21.75" PointY="559.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.internal_entity_group" Width="1.5" PointX="19.5" PointY="570.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.internal_entity_parent" Width="1.5" PointX="5.25" PointY="635.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.internal_segment" Width="1.5" PointX="0.75" PointY="604.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.internal_segment_parent" Width="1.5" PointX="21" PointY="628.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.item_lock" Width="1.5" PointX="21" PointY="593.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.lgd_result" Width="1.5" PointX="69.75" PointY="616.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.limit" Width="1.5" PointX="42.75" PointY="642.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.limit_monitoring_mitigant" Width="1.5" PointX="46.5" PointY="612.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.limit_transaction_curve" Width="1.5" PointX="63.75" PointY="624" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.link_type" Width="1.5" PointX="3" PointY="632.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.log_deviation" Width="1.5" PointX="48.75" PointY="590.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.marketing_action" Width="1.5" PointX="55.5" PointY="630.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.marketing_campaign" Width="1.5" PointX="24" PointY="610.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.mitigant" Width="1.5" PointX="81.75" PointY="620.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.mitigant_action" Width="1.5" PointX="84" PointY="626.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.mitigant_add_data" Width="1.5" PointX="26.25" PointY="627.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.mitigant_address" Width="1.5" PointX="87" PointY="629.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.mitigant_collateral" Width="1.5" PointX="87" PointY="615.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.mitigant_comment" Width="1.5" PointX="84" PointY="635.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.mitigant_generic" Width="1.5" PointX="90" PointY="612.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.mitigant_participant" Width="1.5" PointX="57.75" PointY="612.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.mitigant_rating" Width="1.5" PointX="84" PointY="619.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.mitigant_time_to_recovery" Width="1.5" PointX="37.5" PointY="654.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.mitigant_transaction" Width="1.5" PointX="87" PointY="609.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.mitigant_transaction_type" Width="1.5" PointX="90" PointY="629.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.mitigant_valuation" Width="1.5" PointX="93" PointY="618.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.new_credit_file_generic" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.outstanding" Width="1.5" PointX="58.5" PointY="602.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.participant_type" Width="1.5" PointX="46.5" PointY="607.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.payment" Width="1.5" PointX="58.5" PointY="618.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.payment_posting" Width="1.5" PointX="81" PointY="615.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.pricing_condition" Width="1.5" PointX="32.25" PointY="610.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.pricing_condition_fees" Width="1.5" PointX="43.5" PointY="605.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.profile" Width="1.5" PointX="6" PointY="590.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.profile_access_right" Width="1.5" PointX="29.25" PointY="611.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.profile_access_right_mc" Width="1.5" PointX="29.25" PointY="599.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.profile_mc" Width="1.5" PointX="18" PointY="592.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.profile_workflow_right" Width="1.5" PointX="8.25" PointY="590.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.qualitative_answer" Width="1.5" PointX="47.25" PointY="647.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.qualitative_element" Width="1.5" PointX="18" PointY="644.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.qualitative_element_answer" Width="1.5" PointX="49.5" PointY="647.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.qualitative_node" Width="1.5" PointX="18" PointY="648.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.qualitative_structure" Width="1.5" PointX="20.25" PointY="638.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.qualitative_template" Width="1.5" PointX="18" PointY="632" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.qualitative_template_ceiling_link_type" Width="1.5" PointX="23.25" PointY="638.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.rating" Width="1.5" PointX="31.5" PointY="598.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.rating_agency" Width="1.5" PointX="12" PointY="592.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.rating_qualitative_template" Width="1.5" PointX="40.75" PointY="623.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.rating_type" Width="1.5" PointX="14.25" PointY="586.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.recovery_action_fate" Width="1.5" PointX="15" PointY="592.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.recovery_arrangement_action" Width="1.5" PointX="92.25" PointY="603" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.recovery_credit_event" Width="1.5" PointX="95.25" PointY="613" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.recovery_type" Width="1.5" PointX="24" PointY="604.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.recovery_type_category" Width="1.5" PointX="21.75" PointY="645.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.recovery_type_fate" Width="1.5" PointX="26.25" PointY="599.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.recovery_type_parameter_counterparty" Width="1.5" PointX="43.5" PointY="595.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.recovery_type_parameters" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.scoring_session" Width="1.5" PointX="29.25" PointY="623.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.scoring_template" Width="1.5" PointX="16.5" PointY="638.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.scoring_template_warning" Width="1.5" PointX="26.25" PointY="622" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.screen" Width="1.5" PointX="24" PointY="620" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.screen_mc" Width="1.5" PointX="24" PointY="598.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.security" Width="1.5" PointX="58.5" PointY="625.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.security_quote" Width="1.5" PointX="69.75" PointY="625.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.sms_out" Width="1.5" PointX="41.25" PointY="611.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.software_user" Width="1.5" PointX="24" PointY="586" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.software_user_mc" Width="1.5" PointX="24" PointY="626.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.software_user_target" Width="1.5" PointX="38.25" PointY="591.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.specific_agreement" Width="1.5" PointX="29.25" PointY="631" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.static_data_table" Width="1.5" PointX="21" PointY="633.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.status" Width="1.5" PointX="27" PointY="609.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.stopwf_log" Width="1.5" PointX="26.25" PointY="591.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.strategy" Width="1.5" PointX="32.25" PointY="631.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.strategy_criteria" Width="1.5" PointX="45.5" PointY="636.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.strategy_exposure" Width="1.5" PointX="34.5" PointY="660" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.sysdiagrams" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction" Width="1.5" PointX="61.5" PointY="595.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_action" Width="1.5" PointX="63.75" PointY="627.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_add_data" Width="1.5" PointX="35.25" PointY="626.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_amount" Width="1.5" PointX="58.5" PointY="593.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_amount_fees" Width="1.5" PointX="69.75" PointY="607.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_comment" Width="1.5" PointX="63.75" PointY="632" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_condition" Width="1.5" PointX="72.75" PointY="601.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_condition_fees" Width="1.5" PointX="84" PointY="611.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_condition_tier" Width="1.5" PointX="75.75" PointY="607.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_covenant" Width="1.5" PointX="72.75" PointY="617.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_covenant_history" Width="1.5" PointX="81" PointY="603" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_cpty" Width="1.5" PointX="69.75" PointY="599.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_credit_event" Width="1.5" PointX="75.75" PointY="621.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_credit_event_detail" Width="1.5" PointX="78" PointY="629" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_excess" Width="1.5" PointX="75.75" PointY="600" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_generic" Width="1.5" PointX="78.75" PointY="605.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_hierarchy" Width="1.5" PointX="5.25" PointY="642.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_limit_monitoring" Width="1.5" PointX="46.5" PointY="617.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_overtaken" Width="1.5" PointX="72.75" PointY="594" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_rating" Width="1.5" PointX="75.75" PointY="595.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_rating_el" Width="1.5" PointX="33.75" PointY="651.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_reallocation" Width="1.5" PointX="72.75" PointY="624.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_recovery" Width="1.5" PointX="90" PointY="599.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_recovery_mitigant" Width="1.5" PointX="93" PointY="624.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_related_utilizations" Width="1.5" PointX="78.75" PointY="622.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_type" Width="1.5" PointX="35.25" PointY="604.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_type_agreement" Width="1.5" PointX="43.5" PointY="619" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_type_document" Width="1.5" PointX="37.5" PointY="659" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_type_eligibility_condition" Width="1.5" PointX="63.75" PointY="606.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_type_fees" Width="1.5" PointX="46.5" PointY="601.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_type_hierarchy" Width="1.5" PointX="43.5" PointY="624.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_type_reporting" Width="1.5" PointX="37.5" PointY="664" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_type_workflow" Width="1.5" PointX="37.5" PointY="667.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transaction_user" Width="1.5" PointX="69.75" PointY="594.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.transition_matrix" Width="1.5" PointX="33.75" PointY="655" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.user_activity" Width="1.5" PointX="26.25" PointY="594.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.user_group" Width="1.5" PointX="41.25" PointY="601.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.user_group_mc" Width="1.5" PointX="41.25" PointY="618.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.user_profile" Width="1.5" PointX="29.25" PointY="590" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.user_profile_mc" Width="1.5" PointX="29.25" PointY="594.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.warning_signal" Width="1.5" PointX="24" PointY="633.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.wf_sql_log" Width="1.5" PointX="3" PointY="589.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.wf_task_dispatch" Width="1.5" PointX="41.25" PointY="596" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.working_hours_config" Width="1.5" PointX="9" PointY="634.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.Doc_Covenant" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.interface" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.interface_WS" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.load_account_type" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.load_branch_code" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.load_counterparty_account" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.load_counterparty_address" Width="1.5" PointX="12.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.load_currency_exchange_rate" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.load_legal_structure" Width="1.5" PointX="2.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.load_product_code" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.account_type1" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFAxeCreditFull.load_counterparty_contacts" Width="1.5" PointX="14.75" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_account_type_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_account_type_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_account_account_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_account_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_accounting_output_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_accounting_output_counterparty1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_accounting_output_counterparty2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_accounting_output_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_accounting_output_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_accounting_output_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_action_type_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_action_type_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_addition_data_profiles_additional_data" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_additional_data_domain_additional_data" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_additional_data_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_additional_data_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_add_data_additional_data" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_add_data_additional_data_litigation" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_add_data_additional_data" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_add_data_additional_data" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_add_data_additional_data" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_addition_data_profiles_profile" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_aggregation_criteria_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_aggregation_criteria_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_amortization_type_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_amortization_type_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_condition_amortization_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_pricing_condition_template_amortization_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_amortization_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_tier_amortization_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_amortization_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_arrangement_type_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_arrangement_type_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_arrangement_action_arrangement_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_asset_class_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_asset_class_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_software_user_target_asset_class" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_asset_class" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_base_rate_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_base_rate_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_base_rate_value" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_condition_base_rate" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_pricing_condition_template_base_rate" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_base_rate" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_tier_base_rate" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_base_rate" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkp_estimated_probability_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkp_financial_mitigant_recovery_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkp_mitigant_time_to_recovery_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkp_transaction_rating_el_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_ccf_history_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_cure_probability_history_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_discriminatory_history_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_discriminatory_history_detail_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_discriminatory_history_detail_counterparty_final_rating_id" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_discriminatory_history_detail_rating_id" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_financial_mitigant_history_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_lgd_history_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_lgd_history_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_pd_history_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_pd_history_detail_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_pd_history_detail_counterparty_final_rating_id" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_pd_history_detail_rating_id" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_pd_history_detail_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_rest_probability_history_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_bkt_time_to_recovery_history_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_classification" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_classification" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_collateral_type_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_collateral_type_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_collateral_collateral_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_collateral_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_Collect_question_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_combinaison_hierarchy_criteria_1_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_combinaison_hierarchy_criteria_1_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_combinaison_hierarchy_criteria_2_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_combinaison_hierarchy_criteria_2_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_combinaison_hierarchy_criteria_3_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_combinaison_hierarchy_criteria_3_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_combinaison_hierarchy_criteria_4_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_combinaison_hierarchy_criteria_4_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_commodity_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_commodity_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_commodity_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_commodity_quote_commodity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_collateral_commodity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_commodity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_commodity_quote_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_constants_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_constants_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_core_banking_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_core_banking_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_core_banking_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_core_banking_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_account_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_account_counterparty1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_action_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_amount_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_comment_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_contacts_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_counterparty_category" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_counterparty_classification" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_counterparty_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_counterparty1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_country" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_country1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_country2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_country3" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_country4" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_cpty_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_cpty_counterparty1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_credit_amount_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_credit_state_history_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_economic_sector" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_economic_sector1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_economic_sector2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_external_rating_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_financial_data_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_financial_structure_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_generic" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_industry_sector" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_industry_sector1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_industry_sector2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_internal_rating_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_parent_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_parent_counterparty2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_partner_counterparty_classification_" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_profit_margin_ccy_id" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_qualitative_data" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_qualitative_element_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_qualitative_node_counterparty_" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_rating_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_scoring_template" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_shareholders_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_software_user1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_software_user2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_status_prospecting" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_user_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_address_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_cpty_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_analysis_session_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_marketing_action_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_participant_participant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_outstanding_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_payment_counterparty_id" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_type_parameter_counterparty_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_security_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_amount_counterparty1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_amount_counterparty2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_reallocation_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_counterparty2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_account_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_account_currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_account_currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_account_currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_account_currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_account_currency5" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_account_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_account_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_action_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_add_data_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_add_data_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_add_data_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_add_data_currency_litigation" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_add_data_litigation_recovery_action_fate" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_add_data_litigation_transaction_recovery" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_add_data_recovery_type_litigation" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_address" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_region_address" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_amount_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_model_counterparty_category" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_cpty_counterparty_category" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_contact" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_region_contact" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_cpty_link_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_credit_state_history_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_credit_state_history_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_external_rating_rating_agency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_financial_data_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_financial_structure_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_financial_structure_financial_analysis_session" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_financial_structure_financial_structure" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_financial_structure_scoring_session" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_generic_currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_generic_currency10" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_generic_currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_generic_currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_generic_currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_generic_currency5" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_generic_currency6" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_generic_currency7" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_generic_currency8" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_generic_currency9" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_internal_rating_rating_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_internal_rating_scoring_session" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_internal_rating_scoring_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_internal_rating_software_user1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_internal_rating_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_internal_rating_warning_counterparty_internal_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_initial_counterparty_internal_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_internal_rating_warning_signal" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_parent_link_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_qualitative_element_qualitative_answer" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_qualitative_element_qualitative_structure" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_qualitative_element_scoring_session" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_qualitative_node_qualitative_structure" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_qualitative_node_scoring_session" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_shareholders_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_type_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_type_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_software_user_target_counterparty_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_counterparty_user_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_link_country" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_mitigant_address" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_region" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_model_country" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_group_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_group_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_link_country_group" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_link_link_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_country_region_mitigant_address" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_covenant_financial_structure" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_covenant_covenant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_covenant_covenant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_event_type_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_event_type_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_credit_event_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_comment_credit_file" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_condition_credit_file" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_covenant_credit_file" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_cpty_credit_file" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_generic_credit_file" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_mitigant_credit_file" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_on_credit_file" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_opinion_credit_file" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_rating_credit_file" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_software_user1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_software_user2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_software_user3" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_software_user4" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_transaction_credit_file" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_add_data_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_add_data_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_add_data_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_condition_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_condition_currency_mf" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_condition_currency_na" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_condition_currency17" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_condition_fees" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_condition_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_condition_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_condition_fees_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_covenant_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_covenant_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_cpty_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_generic_currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_generic_currency10" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_generic_currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_generic_currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_generic_currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_generic_currency5" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_generic_currency6" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_generic_currency7" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_generic_currency8" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_generic_currency9" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_mitigant_mitigant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_mitigant_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_opinion_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_rating_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_transaction_link_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_transaction_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_credit_file_user_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_criteria_field_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_criteria_field_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_decision_tree_eligibility_criteria_field" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_eligibility_criteria_criteria_field" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_log_deviation_criteria_field" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_currency_exchange_rate_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_currency_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_currency_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_lgd_result_ifrs_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_add_data_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_collateral_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_collateral_currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_collateral_currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_collateral_currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_collateral_currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_currency5" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_generic_currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_generic_currency10" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_generic_currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_generic_currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_generic_currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_generic_currency5" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_generic_currency6" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_generic_currency7" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_generic_currency8" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_generic_currency9" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_participant_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_transaction_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_valuation_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_outstanding_currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_outstanding_currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_outstanding_currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_outstanding_currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_outstanding_currency5" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_payment_payment_amount_ccy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_payment_posted_amount_ccy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_payment_posting_outstanding_amount_ccy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_payment_posting_payment_posting_amount_ccy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_pricing_condition_commision_ccy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_pricing_condition_fees_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_arrangement_action_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_security_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_security_quote_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_specific_agreement_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_strategy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction__tier_installment_ccy_id" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_add_data_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_amount_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_amount_fees_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_advance_ccy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_currency_mf" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_currency_na" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_currency17" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_fees_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_tier_comission_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_tier_currency_mf" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_tier_currency_na" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_tier_currency_ra" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_tier_currency_tna" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_tier_max_notional_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_counteprarty_ccy1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_counterparty_ccy2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_covenant_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_covenant_history_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_cpty_counterparty" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_cpty_outstanding_ccy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_credit_event_amount_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_credit_event_fees_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_credit_event_initial_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_credit_event_unpaid_commission_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_currency19" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_currency20" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_currency5" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_currency6" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_currency7" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_currency8" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_generic_currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_generic_currency10" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_generic_currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_generic_currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_generic_currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_generic_currency5" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_generic_currency6" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_generic_currency7" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_generic_currency8" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_generic_currency9" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_ifrs_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_limit_monitoring_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_reallocation_amount_ccy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_reallocation_outstanding_ccy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_arrangement_amount_ccy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_currency_adjustment_amount" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_currency_amount" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_currency_recovery_cost" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_mitigant_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_mitigation_ccy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_related_utilizations_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_self_financial_ccy_id" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_commission_ccy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_fees_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_decision_tree_eligibility_decision_tree_eligibility" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_decision_tree_eligibility_eligibility_condition" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_decision_tree_eligibility_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_decision_tree_eligibility_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_document_category_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_document_category_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_document_sub_category_document_category" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_economic_sector_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_economic_sector_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_economic_sector_parent_economic_sector" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_economic_sector_parent_economic_sector2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_economic_sector_parent_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_economic_sector_parent_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_economic_sector_parent_link_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_eligibility_condition_eligibility_condition" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_eligibility_condition_eligibility_condition2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_eligibility_condition_pricing_condition" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_eligibility_criteria_condition" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_log_deviation_eligibility_condition" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_elibility_condition" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_eligibility_criteria_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_eligibility_criteria_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_eligibility_criteria_fields_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_eligibility_criteria_fields_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_email_out_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_email_out_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_email_out_marketing_campaign_id" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_enforcing_log_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_enforcing_log_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_enforcing_log_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_estimated_probabilities_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_estimated_probabilities_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_ESTIMATED_PROBABILITIES_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_estimated_probabilities_his" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_estimated_probability_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_exposure_exposure" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_exposure_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_exposure_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_exposure_strategy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_exposure_real_time_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_exposure_real_time_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_exposure_real_time_strategy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_exposure_real_time_strategy_exposure" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_profile_id" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_screen_id" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_profile_id_mc" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_screen_id_mc" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_analysis_session_scoring_template" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_analysis_session_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_benchmark_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_benchmark_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_structure_benchmark_financial_benchmark" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_category_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_category_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_forecast_formula_category" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_formula_financial_data_category" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_structure_financial_data_category" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_element_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_element_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_forecast_formula_data_element" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_formula_financial_data_element" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_structure_financial_data_element" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_forecast_formula_data_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_forecast_model_forecast" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_forecast_model_model" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_formula_financial_data_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_model_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_model_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_model_sector" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_structure_financial_data_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_type_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_data_type_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_element_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_element_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_element_scoring_tier_financial_element" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_structure_financial_element" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_forecast_scenario_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_forecast_scenario_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_structure_forecast_scenario_financial_forecast_scenario" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_forecasting_financial_structure" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_forecasting_financial_template" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_forecasting_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_forecasting_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_forecasting_scoring_template" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_mitigant_recovery_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_node_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_node_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_structure_financial_node1" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_structure_financial_node2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_stress_scenario_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_stress_scenario_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_structure_stress_scenario_financial_stress_scenario" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_structure_benchmark_financial_structure" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_structure_financial_template" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_structure_forecast_scenario_financial_structure" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_structure_stress_scenario_financial_structure" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_template_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_financial_template_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_folder_structuring_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_folder_structuring_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_group_access_right_group" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_group_access_right_group_mc" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_group_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_group_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_user_group_group" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_user_group_mc_group" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_wf_task_dispatch_group" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_group_access_right_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_group_access_right_internal_segment_mc" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_group_mc_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_group_mc_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_holidays_config_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_holidays_config_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_impact_generation_exposure" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_impact_generation_strategy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_Impact_Generation_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_impact_generation_real_time_exposure" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_impact_generation_real_time_strategy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_impact_generation_real_time_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_industry_sector_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_industry_sector_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_industry_sector_parent_industry_sector" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_industry_sector_parent_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_industry_sector_parent_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_industry_sector_parent_link_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_eligibility_condition_ie" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_internal_entity_internal_entity_group" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_internal_entity_parent_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_internal_entity_parent_internal_entity2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_item_lock_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_link_type_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_marketing_campaign_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_add_data_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_outstanding_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_participant_type_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_pricing_condition_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_profile_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_profile_mc_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_qualitative_template_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_rating_agency_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_rating_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_action_fate_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_type_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_scoring_template_warning_ie" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_screen_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_screen_mc_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_security_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_sms_out_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_software_user_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_software_user_mc_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_specific_agreement_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_static_data_table_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_status_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_strategy_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_add_data_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_cpty_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_reallocation_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_agreement_ie" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_warning_signal_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_wf_sql_log_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_working_hours_config_internal_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_internal_entity_parent_link_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_eligibility_condition_is" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_internal_segment_parent_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_internal_segment_parent_internal_segment2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_item_lock_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_link_type_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_marketing_campaign_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_add_data_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_participant_type_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_pricing_condition_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_profile_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_profile_mc_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_qualitative_template_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_rating_agency_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_rating_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_action_fate_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_type_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_scoring_template_warning_is" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_screen_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_screen_mc_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_security_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_sms_out_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_software_user_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_software_user_mc_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_specific_agreement_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_static_data_table_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_status_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_strategy_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_add_data_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_cpty_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_reallocation_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_agreement_is" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_warning_signal_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_wf_sql_log_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_working_hours_config_internal_segment" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_internal_segment_parent_link_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_item_lock_profile" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_lgd_result_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_Limit_exposure" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_Limit_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_Limit_strategy" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_limit_monitoring_mitigant_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_limit_monitoring_mitigant_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_limit_transaction_curve_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_criteria_link_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_qualitative_template_ceiling_link_type_link_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_hierarchy_link_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_related_utilizations_link_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_parent_link_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_log_deviation_user_id" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_marketing_action_marketing_campaign" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_sms_out_marketing_campaign_id" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_action_mitigant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_address_mitigant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_collateral_mitigant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_comment_mitigant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_generic" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_participant_mitigant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_rating_mitigant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_security" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_transaction_mitigant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_transaction_type_mitigant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_valuation_mitigant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_mitigant_mitigant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_related_mitigant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_collateral_security" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_participant_participant_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_rating_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_time_to_recovery_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_transaction_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_transaction_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_transaction_type_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_mitigant_valuation_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_outstanding_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_particpant_type_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_payment_posting_payment_id" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_payment_posting_credit_event" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_pricing_condition_fees_pricing_condition" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_agreement_pricing_condition" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_profile_access_right_mc_profile2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_profile_access_right_profile2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_profile_profile_access_right" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_profile_profile_access_right_mc" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_profile_workflow_right_profile" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_user_profile_mc_profile" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_user_profile_profile" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_profile_access_right_screen" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_screen_profile_access_right" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_profile_access_right_mc_screen" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_screen_profile_access_right_mc" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_qualitative_element_answer_qualitative_answer" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_qualitative_element_answer_qualitative_element" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_qualitative_structure_qualitative_element" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_qualitative_structure_qualitative_node" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_qualitative_structure_qualitative_node_parent" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_qualitative_structure_qualitative_template" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_qualitative_template_ceiling_link_type_qualitative_template" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_rating_qualitative_template_qualitative_template" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_rating_qualitative_template_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_rating_rating_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_limit_monitoring_rating_from" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_limit_monitoring_rating_to" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_rating_el_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_rating_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transition_matrix_rating_id_from" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transition_matrix_rating_id_to" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_Agency_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_scoring_template_rating" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_type_fate_recovery_action_fate" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_fate" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_arrangement_action_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_arrangement_action_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_arrangement_action_transaction_recovery" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_credit_event_transaction_credit_event" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_credit_event_transaction_recovery" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_type_fate_recovery_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_type_parameter_counterparty_recovery_type2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_recovery_type_recovery_type_category" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_recovery_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_scoring_session_scoring_template" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_scoring_session_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_scoring_template_warning_scoring_template" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_scoring_template_warning_signal" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_security_quote_security" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_software_user_target_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_stopwf_log_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_software_user2" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_user_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_user_activity_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_user_group_mc_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_user_group_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_user_profile_mc_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_user_profile_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_wf_task_dispatch_software_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_specific_agreement" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_agreement_specific_agreement" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_specific_agreement" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_state_id_status_id" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_amount_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_tier_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_covenant_history_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_covenant_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_credit_event_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_excess_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_limit_monitoring_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_overtaken_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_rating_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_reallocation_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_arrangement_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_related_utilizations_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_status" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_Strategy_Criteria" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_Strategy_Exposure" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_action_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_amount_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_comment_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_tier_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_covenant_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_cpty_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_credit_event_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_excess_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_generic_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_overtaken_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_rating_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_reallocation_source_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_reallocation_target_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_reallocation_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_related_utilizations_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_user_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_amount_fees_transaction_amount" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_condition_fees" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_covenant_history_transaction_covenant" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_credit_event_detail_transaction_credit_event" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_excess_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_limit_monitoring_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_overtaken_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_reallocation_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_recovery_mitigant_transaction_recovery" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_related_utilizations_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_fees_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_agreement_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_eligibility_transaction_type" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_parent_transaction_type_parent" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_reporting" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_transaction_type_document" ManuallyRouted="false" />
+        <AssociationConnector Association="EFAxeCreditFull.FK_transaction_type_workflow" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

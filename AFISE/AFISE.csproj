@@ -41,10 +41,10 @@
       <HintPath>..\packages\DevExpressMvvm.15.2.5.0\lib\net40-client\DevExpress.Mvvm.UI.dll</HintPath>
     </Reference>
     <Reference Include="Dragablz">
-      <HintPath>..\..\..\..\..\Desktop\work\Dynamic.Trader-master\Trader.Client\bin\Debug\Dragablz.dll</HintPath>
+      <HintPath>..\..\..\AFISEV1\AFISE\bin\Debug\Dragablz.dll</HintPath>
     </Reference>
     <Reference Include="EFAxeCreditFull">
-      <HintPath>..\..\..\..\..\Desktop\MapperAssistantFull\bin\Debug\EFAxeCreditFull.dll</HintPath>
+      <HintPath>..\EFAxeCreditFull\bin\Debug\EFAxeCreditFull.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\..\..\..\..\Desktop\MapperAssistantFull\bin\Debug\EntityFramework.dll</HintPath>
@@ -258,6 +258,9 @@
   <ItemGroup>
     <Resource Include="Images\arrow.png" />
     <Resource Include="Images\Key-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SqlKeyWords.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

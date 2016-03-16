@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CE8807B-755C-4B27-B300-E3FFFDEE2DED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EFAxeCreditFull</RootNamespace>
+    <AssemblyName>EFAxeCreditFull</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\MapperAssistantFull\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\MapperAssistantFull\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="accounting_output.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="account_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="account_type1.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="acp_parameters.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="action_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="additional_data.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="additional_data_domain.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="additional_data_profiles.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aggregation_criteria.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="amortization_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="arrangement_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="asset_class.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="audit_trail.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="base_rate.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="base_rate_value.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bkp_constant.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bkp_estimated_probability.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bkp_financial_mitigant_recovery.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bkp_mitigant_time_to_recovery.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bkp_transaction_rating_el.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bkt_ccf_history.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bkt_cure_probability_history.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bkt_discriminatory_history.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bkt_discriminatory_history_detail.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bkt_financial_mitigant_history.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bkt_lgd_history.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bkt_pd_history.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bkt_pd_history_detail.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bkt_rest_probability_history.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bkt_time_to_recovery_history.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="classification.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="collateral_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="collect_question.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="combinaison_hierarchy_criteria_1.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="combinaison_hierarchy_criteria_2.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="combinaison_hierarchy_criteria_3.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="combinaison_hierarchy_criteria_4.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="commodity.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="commodity_quote.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="communication_log.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="confidence_index.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConstantQuery.cs" />
+    <Compile Include="constants.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="constant_matrix.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="core_banking.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_account.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_action.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_address.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_add_data.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_add_data_litigation.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_amount.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_category.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_classification.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_comment.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_contacts.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_cpty.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_credit_state_history.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_external_rating.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_financial_data.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_financial_structure.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_generic.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_internal_rating.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_internal_rating_warning.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_parent.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_qualitative_data.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_qualitative_element.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_qualitative_node.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_shareholders.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="counterparty_user.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="country.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="country_group.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="country_link.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="country_region.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="covenant.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="credit_event_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="credit_file.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="credit_file_add_data.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="credit_file_comment.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="credit_file_condition.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="credit_file_condition_fees.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="credit_file_covenant.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="credit_file_cpty.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="credit_file_generic.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="credit_file_mitigant.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="credit_file_opinion.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="credit_file_rating.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="credit_file_transaction.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="credit_file_user.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="criteria_field.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="currency.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="currency_exchange_rate.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="decision_tree_eligibility.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DependencyUtilities.cs" />
+    <Compile Include="deviation_log.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="document_category.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="document_sub_category.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Doc_Covenant.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="economic_sector.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="economic_sector_parent.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFAxeCreditFull.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFAxeCreditFull.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFAxeCreditFull.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFAxeCreditFull.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFAxeCreditFull.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="eligibility_condition.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="eligibility_criteria.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="eligibility_criteria_fields.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="email_out.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="enforcing_log.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="estimated_probabilities.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="estimated_probabilities_his.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="estimated_probability.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="exposure.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="exposure_real_time.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fields_access_right.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fields_access_right_mc.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="file_upload.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_analysis_session.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_benchmark.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_data_category.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_data_element.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_data_forecast_formula.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_data_forecast_model.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_data_formula.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_data_model.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_data_structure.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_data_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_element.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_element_scoring_tier.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_forecasting.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_forecast_scenario.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_mitigant_recovery.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_node.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_stress_scenario.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_structure.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_structure_benchmark.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_structure_forecast_scenario.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_structure_stress_scenario.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="financial_template.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="folder_structuring.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Foreignkey.cs" />
+    <Compile Include="group.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="group_access_right.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="group_access_right_mc.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="group_mc.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="holidays_config.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="html_to_image.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="impact_generation.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="impact_generation_real_time.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="industry_sector.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="industry_sector_parent.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="interface.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="interface_WS.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="internal_entity.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="internal_entity_group.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="internal_entity_parent.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="internal_segment.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="internal_segment_parent.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="item_lock.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lgd_result.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="limit.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="limit_monitoring_mitigant.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="limit_transaction_curve.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="link_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="load_account_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="load_branch_code.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="load_counterparty_account.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="load_counterparty_address.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="load_counterparty_contacts.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="load_currency_exchange_rate.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="load_legal_structure.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="load_product_code.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="log_deviation.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="marketing_action.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="marketing_campaign.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mitigant.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mitigant_action.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mitigant_address.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mitigant_add_data.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mitigant_collateral.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mitigant_comment.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mitigant_generic.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mitigant_participant.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mitigant_rating.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mitigant_time_to_recovery.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mitigant_transaction.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mitigant_transaction_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mitigant_valuation.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="new_credit_file_generic.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="outstanding.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="participant_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="payment.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="payment_posting.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pricing_condition.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pricing_condition_fees.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="profile.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="profile_access_right.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="profile_access_right_mc.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="profile_mc.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="profile_workflow_right.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="qualitative_answer.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qualitative_element.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qualitative_element_answer.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qualitative_node.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qualitative_structure.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qualitative_template.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qualitative_template_ceiling_link_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QueryUtilies.cs" />
+    <Compile Include="rating.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rating_agency.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rating_qualitative_template.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rating_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="recovery_action_fate.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="recovery_arrangement_action.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="recovery_credit_event.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="recovery_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="recovery_type_category.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="recovery_type_fate.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="recovery_type_parameters.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="recovery_type_parameter_counterparty.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="scoring_session.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="scoring_template.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="scoring_template_warning.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="screen.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="screen_mc.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="security.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="security_quote.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sms_out.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="software_user.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="software_user_mc.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="software_user_target.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="specific_agreement.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="static_data_table.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="status.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="stopwf_log.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="strategy.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="strategy_criteria.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="strategy_exposure.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_action.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_add_data.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_amount.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_amount_fees.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_comment.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_condition.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_condition_fees.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_condition_tier.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_covenant.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_covenant_history.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_cpty.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_credit_event.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_credit_event_detail.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_excess.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_generic.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_hierarchy.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_limit_monitoring.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_overtaken.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_rating.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_rating_el.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_reallocation.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_recovery.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_recovery_mitigant.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_related_utilizations.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_type.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_type_agreement.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_type_document.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_type_eligibility_condition.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_type_fees.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_type_hierarchy.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_type_reporting.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_type_workflow.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_user.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transition_matrix.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_activity.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_group.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_group_mc.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_profile.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_profile_mc.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="warning_signal.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="wf_sql_log.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="wf_task_dispatch.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+    <Compile Include="working_hours_config.cs">
+      <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="EFAxeCreditFull.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EFAxeCreditFull.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EFAxeCreditFull.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EFAxeCreditFull.edmx</DependentUpon>
+      <LastGenOutput>EFAxeCreditFull.Context.cs</LastGenOutput>
+    </None>
+    <None Include="EFAxeCreditFull.edmx.diagram">
+      <DependentUpon>EFAxeCreditFull.edmx</DependentUpon>
+    </None>
+    <None Include="EFAxeCreditFull.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EFAxeCreditFull.edmx</DependentUpon>
+      <LastGenOutput>EFAxeCreditFull.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

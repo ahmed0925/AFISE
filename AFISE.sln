@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Model", "Common.Mode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPCoreGenerator", "SPBasicGenerator\SPCoreGenerator.csproj", "{572588D0-8357-489D-9517-B19DA7B6A14B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFAxeCreditFull", "EFAxeCreditFull\EFAxeCreditFull.csproj", "{9CE8807B-755C-4B27-B300-E3FFFDEE2DED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,16 @@ Global
 		{572588D0-8357-489D-9517-B19DA7B6A14B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{572588D0-8357-489D-9517-B19DA7B6A14B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{572588D0-8357-489D-9517-B19DA7B6A14B}.Release|x86.ActiveCfg = Release|Any CPU
+		{9CE8807B-755C-4B27-B300-E3FFFDEE2DED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE8807B-755C-4B27-B300-E3FFFDEE2DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE8807B-755C-4B27-B300-E3FFFDEE2DED}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9CE8807B-755C-4B27-B300-E3FFFDEE2DED}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9CE8807B-755C-4B27-B300-E3FFFDEE2DED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9CE8807B-755C-4B27-B300-E3FFFDEE2DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE8807B-755C-4B27-B300-E3FFFDEE2DED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CE8807B-755C-4B27-B300-E3FFFDEE2DED}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9CE8807B-755C-4B27-B300-E3FFFDEE2DED}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9CE8807B-755C-4B27-B300-E3FFFDEE2DED}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -91,7 +91,7 @@ namespace AFISE.ViewModel
     }
     public class MappingViewModel : INotifyPropertyChanged
     {
-        public Foreignkey[] ForeignKeys;
+        public Common.Model.Foreignkey[] ForeignKeys;
         public List<string> EntiyList { get; set; }
         public string selectedItem { get; set; }
 
@@ -122,8 +122,8 @@ namespace AFISE.ViewModel
             IEnumerable<Type> typelist = DependencyUtilities.GetTypesInNamespace(Assembly.GetAssembly(typeof(AxeCreditConnection)), "EFAxeCreditFull");
             EntiyList = typelist.Select(t => t.FullName).ToList();
             int i = 0;
-            ForeignKeys = QueryUtilities.QueryFK();
-            var damn = new List<Foreignkey>(ForeignKeys);
+            ForeignKeys = Common.Model.QueryUtilities.QueryFK();
+            var damn = new List<Common.Model.Foreignkey>(ForeignKeys);
             foreach (var t in typelist)
             {
                 CompositeCollection temp2 = new CompositeCollection();

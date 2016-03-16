@@ -58,6 +58,17 @@ namespace AFISE.View
                 Debug.WriteLine(myStagingTable.Columns[i].ColumnName);
                 i++;
             }
+            /// Special Columns ///
+            DBTableColumnInfo Error_Message = new DBTableColumnInfo();
+            Error_Message.CreateSpecialColumn("Error_Message", SqlTtypes.Int);
+            myStagingTable.Columns.Add(Error_Message);
+            DBTableColumnInfo Is_Interfaced = new DBTableColumnInfo();
+            Is_Interfaced.CreateSpecialColumn("Is_Interfaced", SqlTtypes.Bit);
+            myStagingTable.Columns.Add(Is_Interfaced);
+            DBTableColumnInfo Interface_date = new DBTableColumnInfo();
+            Interface_date.CreateSpecialColumn("Interface_Date", SqlTtypes.datetime2);
+            myStagingTable.Columns.Add(Interface_date);
+            ////             ////
             viewStagingTable = myStagingTable.Columns;
 
             SqlConnection sqlConn = new SqlConnection(Global.Connection);
