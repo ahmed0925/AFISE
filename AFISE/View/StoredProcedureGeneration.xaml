@@ -1,0 +1,18 @@
+﻿<Controls:MetroWindow  x:Class="AFISE.View.StoredProcedureGeneration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:AFISE.ViewModel"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Generate insertion script" Height="599.3" Width="745.5" WindowStartupLocation="CenterScreen"
+        DataContext="{DynamicResource ViewModelStoredProcedureGeneration}">
+
+    <Window.Resources>
+        <vm:ViewModelStoredProcedureGeneration x:Key="ViewModelStoredProcedureGeneration"/>
+    </Window.Resources>
+    <Grid>
+        <DataGrid ItemsSource="{Binding SPMappingTable}" HorizontalAlignment="Left" Margin="142,114,0,0"  VerticalAlignment="Top" Height="211" Width="428"/>
+        <Button Name="spgeneration" Content="Generate stored procedure" Command="{Binding SPStagingInsertCommand}" HorizontalAlignment="Left" Margin="280,432,0,0" VerticalAlignment="Top" Width="173" Click="Button_Click"/>
+        <Button Name="showscript" Content="SHOW SCRIPT"  HorizontalAlignment="Left" Margin="280,480,0,0" VerticalAlignment="Top" Width="173" Click="Button_Click_1" Visibility="Hidden" />
+    </Grid>
+</Controls:MetroWindow>

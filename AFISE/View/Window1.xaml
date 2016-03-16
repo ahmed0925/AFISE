@@ -1,0 +1,24 @@
+﻿<Controls:MetroWindow  x:Class="AFISE.View.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:AFISE.ViewModel"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Select Table from Database" Height="599.3" Width="745.5" WindowStartupLocation="CenterScreen"
+        DataContext="{DynamicResource ViewModelWindow1}">
+
+    <Window.Resources>
+        <vm:ViewModelWindow1 x:Key="ViewModelWindow1"/>
+    </Window.Resources>
+    <Grid>
+        <Label Content="Connection Name" HorizontalAlignment="Left" Margin="127,158,0,0" VerticalAlignment="Top" Width="110"/>
+        <TextBox Text="{Binding TextProperty3, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="293,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListBox ItemsSource="{Binding TblData}" DisplayMemberPath="database_name" SelectedItem="{Binding SelectedDataBase, Mode=TwoWay}" HorizontalAlignment="Left" Height="144" Margin="127,254,0,0" VerticalAlignment="Top" Width="160"/>
+        <Label Content="Database Name" HorizontalAlignment="Left" Margin="127,204,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.026,-0.269" Width="101"/>
+        <Label Content="Table Name" HorizontalAlignment="Left" Margin="355,204,0,0" VerticalAlignment="Top" Width="120"/>
+        <ListBox ItemsSource="{Binding TblData1}" SelectedItem="{Binding SelectedTable, Mode=TwoWay}" DisplayMemberPath="TABLE_NAME" HorizontalAlignment="Left" Height="144" Margin="345,254,0,0" VerticalAlignment="Top" Width="140"/>
+        <Button Content="Connect" Command="{Binding ConnectServerCommand}" HorizontalAlignment="Left" Margin="430,158,0,0" VerticalAlignment="Top" Width="85"/>
+        <Button Content="Next" HorizontalAlignment="Left" Margin="620,499,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="540,499,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+    </Grid>
+</Controls:MetroWindow>
