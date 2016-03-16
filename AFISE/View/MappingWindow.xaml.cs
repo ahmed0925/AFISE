@@ -146,8 +146,20 @@ namespace AFISE.View
             Global.TblData4.Rows.RemoveAt(SourceselectedIndex);
             L.SelectedIndex = 0;
             L.DataContext = Global.TblData4;
-            mapping = mapping + "  <Column SourceColumn=\"" + SelectedSourceText + "\"  DestinationTable=\"" + SelectedTable + "\"  DestinationColumn=\"" + SelectedColumn + "\"/> \n";
-            
+            if (L3.SelectedItem.GetType() == typeof(NonNavigationProperty))
+            {
+                mapping = mapping + "  <Column SourceColumn=\"" + SelectedSourceText + "\"  DestinationTable=\"" + SelectedTable + "\"  DestinationColumn=\"" + SelectedColumn + "\"/> \n";
+
+            }
+            else if (L3.SelectedItem.GetType()==typeof(NavigationProperty)&& L4.SelectedItem != null )
+            {
+                NavigationProperty auxL3 = new NavigationProperty();
+                auxL3 = L3.SelectedItem as NavigationProperty;
+                NonNavigationProperty auxL4 = new NonNavigationProperty("");
+                auxL4 = L4.SelectedItem as NonNavigationProperty;
+                mapping = mapping + "  <Column SourceColumn=\"" + SelectedSourceText + "\"  DestinationTable=\"" + SelectedTable + "\"  FKColumn=\"" + auxL3.KeyName + "\"  ReferencedTable=\""+SelectedColumn +"\""+" DestinationColumn=\""+auxL4.NonNavigationName + "\"/> \n";
+                
+            }
          
             
         }
