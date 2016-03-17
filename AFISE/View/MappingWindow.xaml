@@ -12,28 +12,29 @@
             <local:TaskListDataTemplateSelector x:Key="myDataTemplateSelector"/>
             <BitmapImage x:Key="key" UriSource="../Images/arrow.png"/>
             <BitmapImage x:Key="KEY" UriSource="../Images/Key-icon.png"/>
-
+            <BitmapImage x:Key="PKEY" UriSource="../Images/primarykey32.png"/>
 
             <DataTemplate x:Key="NavigationTemplate" DataType="{x:Type local:NavigationProperty}">
-
-
-
                 <StackPanel Orientation="Horizontal">
                     <Image Source="{StaticResource key}"/>
                     <TextBlock>
                         <Run Text="{Binding Path= KeyName }" />  
                         <Run Text="->" />
                         <Run Text="{Binding Path= NavigationName }" />
-
-
                     </TextBlock>
                 </StackPanel>
-
             </DataTemplate>
+            
             <DataTemplate x:Key="NonNavigationTemplate" DataType="{x:Type local:NonNavigationProperty}">
                 <TextBlock Text="{Binding Path= NonNavigationName}" />
             </DataTemplate>
-
+            <DataTemplate  x:Key="NonNavigationPk" DataType="{x:Type local:NonNavigationProperty}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="{StaticResource PKEY }"/>
+                    <TextBlock Text="{Binding Path= NonNavigationName }"  >
+                    </TextBlock>
+                </StackPanel>
+            </DataTemplate>
 
         </ResourceDictionary>
     </Window.Resources>

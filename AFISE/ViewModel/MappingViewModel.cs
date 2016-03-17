@@ -47,6 +47,7 @@ namespace AFISE.ViewModel
         public string ParentTable { get; set; }
         public string NonNavigationName { get; set; }
         public string NonNavigationType { get; set; }
+        public bool isPrimaryKey { get; set; }
         public NonNavigationProperty(string s)
         {
             NonNavigationName = s;
@@ -69,8 +70,7 @@ namespace AFISE.ViewModel
 
     public class TaskListDataTemplateSelector : DataTemplateSelector
     {
-        public override DataTemplate
-            SelectTemplate(object item, DependencyObject container)
+        public override DataTemplate SelectTemplate(object item, DependencyObject container)
         {
             FrameworkElement element = container as FrameworkElement;
 
@@ -81,9 +81,16 @@ namespace AFISE.ViewModel
                 if (taskitem.GetType() == typeof(NavigationProperty))
                     return
                         element.FindResource("NavigationTemplate") as DataTemplate;
-                else
-                    return
+                else if (taskitem.GetType() == typeof(NonNavigationProperty))
+                {
+                    NonNavigationProperty nn = taskitem as NonNavigationProperty;
+                    if (nn.isPrimaryKey == false)
+                        return
                         element.FindResource("NonNavigationTemplate") as DataTemplate;
+                    else
+                        return
+                        element.FindResource("NonNavigationPk") as DataTemplate;
+                } 
             }
 
             return null;
@@ -92,6 +99,7 @@ namespace AFISE.ViewModel
     public class MappingViewModel : INotifyPropertyChanged
     {
         public Common.Model.Foreignkey[] ForeignKeys;
+        public PrimaryKey[] PrimaryKeys;
         public List<string> EntiyList { get; set; }
         public string selectedItem { get; set; }
 
@@ -123,12 +131,26 @@ namespace AFISE.ViewModel
             EntiyList = typelist.Select(t => t.FullName).ToList();
             int i = 0;
             ForeignKeys = Common.Model.QueryUtilities.QueryFK();
+            PrimaryKeys = Common.Model.QueryUtilities.QueryPK();
             var damn = new List<Common.Model.Foreignkey>(ForeignKeys);
             foreach (var t in typelist)
             {
+                var tname = t.FullName.Substring(16);
                 CompositeCollection temp2 = new CompositeCollection();
                 List<NavigationProperty> v = GetNavPropertyList(t);
                 List<NonNavigationProperty> u = GetNonNavPropertyList(t);
+                foreach (NonNavigationProperty nonNavigationProperty in u)
+                {
+                    var p = PrimaryKeys.FirstOrDefault(pk => pk.TableName == tname && pk.ColumnName==nonNavigationProperty.NonNavigationName);
+                    if (p != null) 
+                    {
+                        nonNavigationProperty.isPrimaryKey = true;
+                    }
+                    else
+                    {
+                        nonNavigationProperty.isPrimaryKey = false;
+                    }
+                }
                 foreach (NavigationProperty n in v)
                 {
                     int len = n.NavigationName.Length;
@@ -166,8 +188,8 @@ namespace AFISE.ViewModel
 
             allproperties = temp;
 
-
-
+        
+        
         }
         public string truncateNumbers(string s)
         {

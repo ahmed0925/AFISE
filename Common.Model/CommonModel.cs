@@ -14,29 +14,29 @@ namespace Common.Model
         private string _ColumnName;
         private SqlTtypes _DataType;
         private int _CharacterMaximumLength;
-        private int _NumericPrecision;
-        private int _NumericPrecisionRadix;
+       // private int _NumericPrecision;
+       // private int _NumericPrecisionRadix;
         private bool _IsIdentity;
         private bool _IsPrimaryKey;
         private bool _Exclude;
-        private string _Schema;
+    //    private string _Schema;
         private string _DefaultValue;
         public string ColumnName { get { return _ColumnName; } set { _ColumnName = value; OnPropertyChanged("ColumnName"); } }
         public SqlTtypes DataType { get { return _DataType; } set { _DataType = value; OnPropertyChanged("DataType"); } }
         public int CharacterMaximumLength { get { return _CharacterMaximumLength; } set { _CharacterMaximumLength = value; OnPropertyChanged("CharacterMaximumLength"); } }
-        public int NumericPrecision { get { return _NumericPrecision; } set { _NumericPrecision = value; OnPropertyChanged("NumericPrecision"); } }
-        public int NumericPrecisionRadix { get { return _NumericPrecisionRadix; } set { _NumericPrecisionRadix = value; OnPropertyChanged("NumericPrecisionRadix"); } }
+      //  public int NumericPrecision { get { return _NumericPrecision; } set { _NumericPrecision = value; OnPropertyChanged("NumericPrecision"); } }
+      //  public int NumericPrecisionRadix { get { return _NumericPrecisionRadix; } set { _NumericPrecisionRadix = value; OnPropertyChanged("NumericPrecisionRadix"); } }
         public bool IsIdentity { get { return _IsIdentity; } set { _IsIdentity = value; OnPropertyChanged("IsIdentity"); } }
         public bool IsPrimaryKey { get { return _IsPrimaryKey; } set { _IsPrimaryKey = value; OnPropertyChanged("IsPrimaryKey"); } }
         public bool Exclude { get { return _Exclude; } set { _Exclude = value; OnPropertyChanged("Exclude"); } }
-        public string Schema { get { return _Schema; } set { _Schema = value; OnPropertyChanged("Schema"); } }
+       // public string Schema { get { return _Schema; } set { _Schema = value; OnPropertyChanged("Schema"); } }
         public string DefaultValue { get { return _DefaultValue; } set { _DefaultValue = value; OnPropertyChanged("DefaultValue"); } }
         public DBTableColumnInfo()
         {
             _DataType = SqlTtypes.nvarchar;
             _CharacterMaximumLength = 200;
-            _NumericPrecision = 0;
-            _NumericPrecisionRadix = 0;
+          //  _NumericPrecision = 0;
+         //   _NumericPrecisionRadix = 0;
             _IsIdentity = false;
             _IsPrimaryKey = false;
             _Exclude = false;
@@ -46,8 +46,8 @@ namespace Common.Model
             _ColumnName = c;
             _DataType = SqlTtypes.Int;
             _CharacterMaximumLength = 20;
-            _NumericPrecision = 0;
-            _NumericPrecisionRadix = 0;
+        //    _NumericPrecision = 0;
+        //    _NumericPrecisionRadix = 0;
             _IsIdentity = true;
             _IsPrimaryKey = true;
             _Exclude = false;
@@ -57,8 +57,8 @@ namespace Common.Model
             _DataType = SqlTtypes.datetime2;
             _ColumnName = c;
             _CharacterMaximumLength = 20;
-            _NumericPrecision = p;
-            _NumericPrecisionRadix = 0;
+        //    _NumericPrecision = p;
+        //    _NumericPrecisionRadix = 0;
             _IsIdentity = true;
             _IsPrimaryKey = false;
             _Exclude = false;
@@ -85,7 +85,7 @@ namespace Common.Model
 
 
     public class DBTableInfo : ObservableCollection<DBTableColumnInfo>
-    {
+    {   
         public string TableName;
         public ObservableCollection<DBTableColumnInfo> Columns;
         public DBTableInfo()

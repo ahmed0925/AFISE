@@ -14,4 +14,10 @@ namespace Common.Model
         public string Constraint_Name { get; set; }
 
     }
+    public class PrimaryKey
+    {
+        public string IndexName {get;set;}
+        public string TableName { get; set; }
+        public string ColumnName { get; set; }
+    }
 }
