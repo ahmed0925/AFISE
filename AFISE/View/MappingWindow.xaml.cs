@@ -31,6 +31,8 @@ namespace AFISE.View
 
     public partial class MappingWindow : MetroWindow, INotifyPropertyChanged
     {
+        public NonNavigationProperty PK ;
+        public NonNavigationProperty PK2;
         private int selectedIndex_;
         DataRowView _SelectedSource;
         StringBuilder srtb = new StringBuilder();
@@ -66,7 +68,7 @@ namespace AFISE.View
             EntiyList = evm.EntiyList;
             L2.DataContext = evm.EntiyList;
             allproperties = evm.allproperties;
-            L3.DataContext = allproperties;
+            //L3.DataContext = allproperties;
             L.DataContext = Global.TblData4;
 
 
@@ -93,7 +95,8 @@ namespace AFISE.View
             //
             currentproperties = allproperties[selectedIndex];
             OnPropertyChanged("currentproperties");
-
+            PK = FindPrimaryKey(currentproperties);
+           
         }
 
         private void L3_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -105,7 +108,7 @@ namespace AFISE.View
                 var selectedItem = L3.Items[nextselectedIndex];
                 List<string> Lii = new List<string>();
                 if (selectedItem.GetType() == typeof(NavigationProperty))
-                {
+                {   
                     SelectedColumn = (L3.SelectedItem as NavigationProperty).NavigationName.ToString();
                     NavigationProperty inter = new NavigationProperty();
                     inter = selectedItem as NavigationProperty;
@@ -117,20 +120,37 @@ namespace AFISE.View
                     {
                         CompositeCollection h = allproperties[EntityIndex];
                         L4.DataContext = h;
+                        PK2 = FindPrimaryKey(h); 
                     }
                     else L4.DataContext = null;
-
+                        
 
                 }
                 else
                 {
+                    PK2 = new NonNavigationProperty("");
                     SelectedColumn = (L3.SelectedItem as NonNavigationProperty).NonNavigationName.ToString();
+                    L4.DataContext = null;
                 }
             }
             else
                 L4.DataContext = null;
         }
 
+        private NonNavigationProperty FindPrimaryKey(CompositeCollection CC )
+        {
+            NonNavigationProperty bbb = new NonNavigationProperty("");
+            foreach (var bb in CC)
+            {
+                if (bb.GetType() == typeof(NonNavigationProperty))
+                {
+                    bbb = bb as NonNavigationProperty;
+                    if (bbb.isPrimaryKey == true)
+                    { return bbb; }
+                }
+            }
+            return bbb; 
+        }
         private void L_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -148,16 +168,16 @@ namespace AFISE.View
             L.DataContext = Global.TblData4;
             if (L3.SelectedItem.GetType() == typeof(NonNavigationProperty))
             {
-                mapping = mapping + "  <Column SourceColumn=\"" + SelectedSourceText + "\"  DestinationTable=\"" + SelectedTable + "\"  DestinationColumn=\"" + SelectedColumn + "\"/> \n";
+                mapping = mapping + "  <Column SourceColumn=\"" + SelectedSourceText + "\"  DestinationTable=\"" + SelectedTable + "\"  DestinationColumn=\"" + SelectedColumn + "\"" +" PK=\""+PK.NonNavigationName + "\""+  "/> \n";
 
             }
             else if (L3.SelectedItem.GetType()==typeof(NavigationProperty)&& L4.SelectedItem != null )
-            {
+            {  
                 NavigationProperty auxL3 = new NavigationProperty();
                 auxL3 = L3.SelectedItem as NavigationProperty;
                 NonNavigationProperty auxL4 = new NonNavigationProperty("");
                 auxL4 = L4.SelectedItem as NonNavigationProperty;
-                mapping = mapping + "  <Column SourceColumn=\"" + SelectedSourceText + "\"  DestinationTable=\"" + SelectedTable + "\"  FKColumn=\"" + auxL3.KeyName + "\"  ReferencedTable=\""+SelectedColumn +"\""+" DestinationColumn=\""+auxL4.NonNavigationName + "\"/> \n";
+                mapping = mapping + "  <Column SourceColumn=\"" + SelectedSourceText + "\"  DestinationTable=\"" + SelectedTable + "\"  FKColumn=\"" + auxL3.KeyName + "\"  ReferencedTable=\"" + SelectedColumn + "\"" + " DestinationColumn=\"" + auxL4.NonNavigationName +"\"" +" PK=\"" + PK.NonNavigationName + "\"" +" PK2=\""+PK2.NonNavigationName + "\""+ "/> \n";
                 
             }
          
@@ -180,8 +200,6 @@ namespace AFISE.View
             StoredProcedureGeneration w6 = new StoredProcedureGeneration();
             w6.Show();
             this.Close();
-
-            
 
         }
 

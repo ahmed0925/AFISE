@@ -20,7 +20,7 @@ namespace Common.Model
             {
                 connection.ConnectionString = "data source=" + Global.DataSource + ";initial catalog=Axe_Credit;UserID=" + Global.username + "Password=" + Global.password + "";
             }
-            using (SqlCommand cmd = new SqlCommand(ConstantQuery.query, connection))
+            using (SqlCommand cmd = new SqlCommand(ConstantQuery.queryFK, connection))
             {
                 connection.Open();
 
@@ -39,6 +39,38 @@ namespace Common.Model
                         });
                     Foreignkey[] allForeignKeys = list.ToArray();
                     return allForeignKeys;
+                }
+            }
+        }
+        public static PrimaryKey[] QueryPK()
+        {
+            SqlConnection connection = new SqlConnection();
+            if (Global.ConnectionType == 0)
+            {
+                connection.ConnectionString = "data source=" + Global.DataSource + ";initial catalog=Axe_Credit;integrated security=True";
+            }
+            else
+            {
+                connection.ConnectionString = "data source=" + Global.DataSource + ";initial catalog=Axe_Credit;UserID=" + Global.username + "Password=" + Global.password + "";
+            }
+            using (SqlCommand cmd = new SqlCommand(ConstantQuery.queryPK, connection))
+            {
+                connection.Open();
+
+                var reader = cmd.ExecuteReader();
+                {
+                    var list = new List<PrimaryKey>();
+                    while (reader.Read())
+                        list.Add(new PrimaryKey
+                        {
+                            IndexName = reader.GetString(0),
+                            TableName = reader.GetString(1),
+                            ColumnName= reader.GetString(2),
+                            
+
+                        });
+                    PrimaryKey[] allPrimaryKeys = list.ToArray();
+                    return allPrimaryKeys;
                 }
             }
         }

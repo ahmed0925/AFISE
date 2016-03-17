@@ -19,8 +19,8 @@ namespace SPCoreGenerator
             StringBuilder sbValues = new StringBuilder();
             var schema = "";
 
-            if (!string.IsNullOrEmpty(selectedFields[0].Schema))
-                schema = "[" + selectedFields[0].Schema + "].";
+             // if (!string.IsNullOrEmpty(selectedFields[0].Schema))
+             //   schema = "[" + selectedFields[0].Schema + "].";
 
             sb.Append(Environment.NewLine + "\tUPDATE " + schema + WrapIfKeyWord(tableName) + " SET ");
 

@@ -204,6 +204,8 @@ namespace AFISE.View
                     }
                     MappingWindow mp = new MappingWindow();
                     mp.Show();
+                    mp.L3.DataContext = null;
+                    mp.L4.DataContext = null;
                     this.Close();
                 
             }

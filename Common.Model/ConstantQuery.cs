@@ -8,7 +8,7 @@ namespace Common.Model
 {
     public static class ConstantQuery
     {
-        public static string query = @"SELECT
+        public static string queryFK = @"SELECT
     FK_Table = FK.TABLE_NAME,
     FK_Column = CU.COLUMN_NAME,
     PK_Table = PK.TABLE_NAME,
@@ -35,5 +35,15 @@ INNER JOIN (
            ) PT
     ON PT.TABLE_NAME = PK.TABLE_NAME";
 
+        public static string queryPK = @"  
+
+SELECT i.name AS IndexName, OBJECT_NAME(ic.OBJECT_ID) AS TableName, 
+       COL_NAME(ic.OBJECT_ID,ic.column_id) AS ColumnName
+FROM sys.indexes AS i
+INNER JOIN sys.index_columns AS ic
+ON i.OBJECT_ID = ic.OBJECT_ID
+AND i.index_id = ic.index_id
+WHERE i.is_primary_key = 1";
     }
+    
 }
