@@ -43,9 +43,6 @@
     <Reference Include="Dragablz">
       <HintPath>..\..\..\AFISEV1\AFISE\bin\Debug\Dragablz.dll</HintPath>
     </Reference>
-    <Reference Include="EFAxeCreditFull">
-      <HintPath>..\EFAxeCreditFull\bin\Debug\EFAxeCreditFull.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\..\..\..\..\Desktop\MapperAssistantFull\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
@@ -237,6 +234,10 @@
     <ProjectReference Include="..\Common.Model\Common.Model.csproj">
       <Project>{f59fd941-eae1-4934-868f-508a7378d1ff}</Project>
       <Name>Common.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFAxeCreditFull\EFAxeCreditFull.csproj">
+      <Project>{9ce8807b-755c-4b27-b300-e3fffdee2ded}</Project>
+      <Name>EFAxeCreditFull</Name>
     </ProjectReference>
     <ProjectReference Include="..\SPBasicGenerator\SPCoreGenerator.csproj">
       <Project>{572588d0-8357-489d-9517-b19da7b6a14b}</Project>

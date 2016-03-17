@@ -18,8 +18,9 @@ namespace SPCoreGenerator
         {
             foreach (DataRow dr in datatable.Rows)
             {
-                builder.AppendLine("DECLARE @" + dr[0].ToString() + " as NVARCHAR(100)           DECLARE @" + dr[0].ToString() + "_error as NVARCHAR(100)");
+                builder.AppendLine("DECLARE @" + dr[0].ToString() + " as NVARCHAR(100)           DECLARE @" + dr[0].ToString() + "_error as NVARCHAR(100)");             
             }
+            builder.AppendLine("DECLARE @MSG AS NVARCHAR(MAX) ");
             return builder.ToString();
         }
 
@@ -72,7 +73,7 @@ namespace SPCoreGenerator
             builder.AppendLine("SET @MSG = ''");
             foreach (DataRow dr in datatable.Rows)
             {
-                builder.AppendLine("IF (" + dr[0].ToString() + " is null  ) BEGIN SET @MSG= @MSG+@" + dr[0].ToString() + "_error  END");
+                builder.AppendLine("IF (@" + dr[0].ToString() + " = ''  ) BEGIN SET @MSG= @MSG+@" + dr[0].ToString() + "_error  END");
             }
             return builder.ToString();
 
@@ -114,14 +115,14 @@ namespace SPCoreGenerator
 
         public string UpdateSetEror(StringBuilder builder, string stagingtable)
         {
-            builder.AppendLine("UPDATE " + stagingtable + "  set error_msg = @MSG + ERROR_MESSAGE(), interfaced=0 WHERE CURRENT OF cur_StagingArea");
+            builder.AppendLine("UPDATE " + stagingtable + "  set Error_message = @MSG + ERROR_MESSAGE(), Is_interfaced=0 WHERE CURRENT OF cur_StagingArea");
             return builder.ToString();
 
         }
 
         public string UpdateNoteInterfaced(StringBuilder builder, string stagingTable)
         {
-            builder.AppendLine("UPDATE " + stagingTable + "  set error_msg = @MSG + ERROR_MESSAGE(), Is_interfaced=0 WHERE CURRENT OF cur_StagingArea");
+            builder.AppendLine("UPDATE " + stagingTable + "  set Error_message = @MSG + ERROR_MESSAGE(), Is_interfaced=0 WHERE CURRENT OF cur_StagingArea");
             return builder.ToString();
         }
 

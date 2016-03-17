@@ -60,10 +60,10 @@ namespace AFISE.View
             }
             /// Special Columns ///
             DBTableColumnInfo Error_Message = new DBTableColumnInfo();
-            Error_Message.CreateSpecialColumn("Error_Message", SqlTtypes.Int);
+            Error_Message.CreateSpecialColumn("Error_Msg", SqlTtypes.Int);
             myStagingTable.Columns.Add(Error_Message);
             DBTableColumnInfo Is_Interfaced = new DBTableColumnInfo();
-            Is_Interfaced.CreateSpecialColumn("Is_Interfaced", SqlTtypes.Bit);
+            Is_Interfaced.CreateSpecialColumn("Is_Interfaced", SqlTtypes.Int);
             myStagingTable.Columns.Add(Is_Interfaced);
             DBTableColumnInfo Interface_date = new DBTableColumnInfo();
             Interface_date.CreateSpecialColumn("Interface_Date", SqlTtypes.datetime2);

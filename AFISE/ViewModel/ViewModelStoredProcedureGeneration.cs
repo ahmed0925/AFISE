@@ -7,6 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Common.Model;
 using SPCoreGenerator;
+using System.Data.SqlClient;
+using Microsoft.SqlServer.Management.Smo;
+using Microsoft.SqlServer.Management.Common;
 
 namespace AFISE.ViewModel
 {
@@ -36,7 +39,13 @@ namespace AFISE.ViewModel
         {
             StoredProcedureGenerator sp = new StoredProcedureGenerator();
             StringBuilder builder = new StringBuilder();
-            builder.AppendLine("CREATE PROCEDURE Test");
+            builder.AppendLine("USE ["+Global.CurrentBase+"]");
+            builder.AppendLine("GO");
+            builder.AppendLine("SET ANSI_NULLS ON");
+            builder.AppendLine("GO");
+            builder.AppendLine("SET QUOTED_IDENTIFIER ON");
+            builder.AppendLine("GO");
+            builder.AppendLine("CREATE PROCEDURE Test22");
             builder.AppendLine("AS");
             builder.AppendLine("BEGIN");
             builder.AppendLine("SET NOCOUNT ON;"); 
@@ -64,8 +73,31 @@ namespace AFISE.ViewModel
             builder.AppendLine("CLOSE cur_StagingArea");
             builder.AppendLine("DEALLOCATE cur_StagingArea");
             builder.AppendLine("END");
-            
             Global.sptest = builder.ToString();
+            if(Global.ConnectionType == 0)
+            {
+                SqlConnectionStringBuilder sqlcon = new SqlConnectionStringBuilder();
+                sqlcon.DataSource = Global.DataSource;
+                sqlcon.InitialCatalog = Global.CurrentBase;
+                sqlcon.IntegratedSecurity = true;
+                string connection = sqlcon.ToString();
+                SqlConnection conn = new SqlConnection(connection);
+                Server server = new Server(new ServerConnection(conn));
+                server.ConnectionContext.ExecuteNonQuery(builder.ToString());
+            }
+            if (Global.ConnectionType == 1)
+            {
+                SqlConnectionStringBuilder sqlcon = new SqlConnectionStringBuilder();
+                sqlcon.DataSource = Global.DataSource;
+                sqlcon.InitialCatalog = Global.CurrentBase;
+                sqlcon.UserID = Global.username;
+                sqlcon.Password = Global.password;
+                string connection = sqlcon.ToString();
+                SqlConnection conn = new SqlConnection(connection);
+                Server server = new Server(new ServerConnection(conn));
+                server.ConnectionContext.ExecuteNonQuery(builder.ToString());
+            }
+            
 
 
 
