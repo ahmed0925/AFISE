@@ -38,7 +38,8 @@ namespace AFISE.ViewModel
             StringBuilder builder = new StringBuilder();
             builder.AppendLine("CREATE PROCEDURE Test");
             builder.AppendLine("AS");
-            builder.AppendLine("BEGIN");           
+            builder.AppendLine("BEGIN");
+            builder.AppendLine("SET NOCOUNT ON;"); 
             sp.VariableDeclaration(SPMappingTable, builder);
             sp.ConstantsDeclaration(SPMappingTable, builder);
             sp.CursorDeclaration(SPMappingTable, builder, Global.stagingTable);
