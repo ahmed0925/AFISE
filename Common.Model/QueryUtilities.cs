@@ -18,7 +18,7 @@ namespace Common.Model
             }
             else
             {
-                connection.ConnectionString = "data source=" + Global.DataSource + ";initial catalog=Axe_Credit;UserID=" + Global.username + "Password=" + Global.password + "";
+                connection.ConnectionString = "data source=" + Global.DataSource + ";initial catalog=Axe_Credit;User ID=" + Global.username  +";Password=" + Global.password + "";
             }
             using (SqlCommand cmd = new SqlCommand(ConstantQuery.queryFK, connection))
             {
@@ -51,7 +51,7 @@ namespace Common.Model
             }
             else
             {
-                connection.ConnectionString = "data source=" + Global.DataSource + ";initial catalog=Axe_Credit;UserID=" + Global.username + "Password=" + Global.password + "";
+                connection.ConnectionString = "data source=" + Global.DataSource + ";initial catalog=Axe_Credit;User ID=" + Global.username + ";Password=" + Global.password ;
             }
             using (SqlCommand cmd = new SqlCommand(ConstantQuery.queryPK, connection))
             {

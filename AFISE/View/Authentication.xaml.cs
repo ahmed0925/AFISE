@@ -62,6 +62,7 @@ namespace AFISE.View
                 {
                     SqlConnectionStringBuilder connection = new SqlConnectionStringBuilder();
                     connection.DataSource = servercbx.Text;
+                    Global.DataSource = servercbx.Text;
                     connection.UserID = usernamecbx.Text;
                     Global.username = usernamecbx.Text;
                     connection.Password = passwcbx.Password;
