@@ -11,6 +11,7 @@ namespace Common.Model
     {
         public static Foreignkey[] QueryFK()
         {
+            int i = 0;
             SqlConnection connection = new SqlConnection();
             if (Global.ConnectionType == 0)
             {
