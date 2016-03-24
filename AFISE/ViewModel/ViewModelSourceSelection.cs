@@ -151,6 +151,7 @@ namespace AFISE.ViewModel
 
 
         }
+        //Delimit the file in case there is no delimiter 
         void selectColumn(object parameter)
         {
 

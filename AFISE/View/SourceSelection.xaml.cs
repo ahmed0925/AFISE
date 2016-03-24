@@ -19,7 +19,7 @@ namespace AFISE.ViewModel
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class SourceSelection : MetroWindow
+    internal sealed partial class SourceSelection : MetroWindow
     {
 
         public SourceSelection()
@@ -60,7 +60,6 @@ namespace AFISE.ViewModel
                 cbxdelimiter.Visibility = Visibility.Hidden;
                 resetbtn.Visibility = Visibility.Visible;
                 mapfilebtn.Visibility = Visibility.Hidden;
-                stroredatebtn.Visibility = Visibility.Visible;
                 MappGrid.Visibility = Visibility.Hidden;
                 MappNext.Visibility = Visibility.Hidden;
                 btnNext.Visibility = Visibility.Visible;
@@ -90,7 +89,6 @@ namespace AFISE.ViewModel
                     cbxdelimiter.Visibility = Visibility.Hidden;
                     mapfilebtn.Visibility = Visibility.Hidden;
                     resetbtn.Visibility = Visibility.Hidden;
-                    stroredatebtn.Visibility = Visibility.Visible;
                     MappGrid.Visibility = Visibility.Hidden;
                     MappNext.Visibility = Visibility.Hidden;
                     btnNext.Visibility = Visibility.Visible;
@@ -120,7 +118,6 @@ namespace AFISE.ViewModel
                     cbxdelimiter.Visibility = Visibility.Visible;
                     mapfilebtn.Visibility = Visibility.Hidden;
                     resetbtn.Visibility = Visibility.Hidden;
-                    stroredatebtn.Visibility = Visibility.Visible;
                     MappGrid.Visibility = Visibility.Hidden;
                     MappNext.Visibility = Visibility.Hidden;
                     btnNext.Visibility = Visibility.Visible;
@@ -149,7 +146,6 @@ namespace AFISE.ViewModel
                     cbxdelimiter.Visibility = Visibility.Hidden;
                     resetbtn.Visibility = Visibility.Hidden;
                     mapfilebtn.Visibility = Visibility.Visible;
-                    stroredatebtn.Visibility = Visibility.Hidden;
                     btnNext.Visibility = Visibility.Hidden;
                     MappGrid.Visibility = Visibility.Visible;
                     MappNext.Visibility = Visibility.Visible;

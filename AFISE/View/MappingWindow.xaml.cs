@@ -29,8 +29,9 @@ namespace AFISE.View
     /// Interaction logic for MainWindow.xaml
     /// </summary>
 
-    public partial class MappingWindow : MetroWindow, INotifyPropertyChanged
+    internal sealed partial class MappingWindow : MetroWindow, INotifyPropertyChanged
     {
+        
         public NonNavigationProperty PK ;
         public NonNavigationProperty PK2;
         private int selectedIndex_;
@@ -63,6 +64,7 @@ namespace AFISE.View
             allproperties = new List<CompositeCollection>();
 
             InitializeComponent();
+            Popup2.IsOpen = false;
             MappingViewModel evm = new MappingViewModel();
             
             EntiyList = evm.EntiyList;
@@ -70,6 +72,7 @@ namespace AFISE.View
             allproperties = evm.allproperties;
             //L3.DataContext = allproperties;
             L.DataContext = Global.TblData4;
+            
 
 
         }
@@ -161,45 +164,60 @@ namespace AFISE.View
 
         private void Match_btn(object sender, RoutedEventArgs e)
         {
-            
-            SelectedSourceText = (L.SelectedItem as DataRowView)["test"].ToString();
-            Global.TblData4.Rows.RemoveAt(SourceselectedIndex);
-            L.SelectedIndex = 0;
-            L.DataContext = Global.TblData4;
-            if (L3.SelectedItem.GetType() == typeof(NonNavigationProperty))
+            try
             {
-                mapping = mapping + "  <Column SourceColumn=\"" + SelectedSourceText + "\"  DestinationTable=\"" + SelectedTable + "\"  DestinationColumn=\"" + SelectedColumn + "\"" +" PK=\""+PK.NonNavigationName + "\""+  "/> \n";
-
-            }
-            else if (L3.SelectedItem.GetType()==typeof(NavigationProperty)&& L4.SelectedItem != null )
-            {  
-                NavigationProperty auxL3 = new NavigationProperty();
-                auxL3 = L3.SelectedItem as NavigationProperty;
-                NonNavigationProperty auxL4 = new NonNavigationProperty("");
-                auxL4 = L4.SelectedItem as NonNavigationProperty;
-                mapping = mapping + "  <Column SourceColumn=\"" + SelectedSourceText + "\"  DestinationTable=\"" + SelectedTable + "\"  FKColumn=\"" + auxL3.KeyName + "\"  ReferencedTable=\"" + SelectedColumn + "\"" + " DestinationColumn=\"" + auxL4.NonNavigationName +"\"" +" PK=\"" + PK.NonNavigationName + "\"" +" PK2=\""+PK2.NonNavigationName + "\""+ "/> \n";
+                SelectedSourceText = (L.SelectedItem as DataRowView)["test"].ToString();
                 
+                L.SelectedIndex = 0;
+                L.DataContext = Global.TblData4;
+                if (L3.SelectedItem.GetType() == typeof(NonNavigationProperty))
+                {
+                    mapping = mapping + "  <Column SourceColumn=\"" + SelectedSourceText + "\"  DestinationTable=\"" + SelectedTable + "\"  DestinationColumn=\"" + SelectedColumn + "\"" + " PK=\"" + PK.NonNavigationName + "\"" + "/> \n";
+
+                }
+                else if (L3.SelectedItem.GetType() == typeof(NavigationProperty) && L4.SelectedItem != null)
+                {
+                    NavigationProperty auxL3 = new NavigationProperty();
+                    auxL3 = L3.SelectedItem as NavigationProperty;
+                    NonNavigationProperty auxL4 = new NonNavigationProperty("");
+                    auxL4 = L4.SelectedItem as NonNavigationProperty;
+                    mapping = mapping + "  <Column SourceColumn=\"" + SelectedSourceText + "\"  DestinationTable=\"" + SelectedTable + "\"  FKColumn=\"" + auxL3.KeyName + "\"  ReferencedTable=\"" + SelectedColumn + "\"" + " DestinationColumn=\"" + auxL4.NonNavigationName + "\"" + " PK=\"" + PK.NonNavigationName + "\"" + " PK2=\"" + PK2.NonNavigationName + "\"" + "/> \n";
+
+                }
+                Global.TblData4.Rows.RemoveAt(SourceselectedIndex);
             }
+            
+                 catch
+                {
+                    Popup2.IsOpen = true;
+                }
          
             
         }
 
         private void MappingGenerationbtn(object sender, RoutedEventArgs e)
         {
-            srtb.AppendLine("<Columns>");
-            srtb.AppendLine(mapping);
-            srtb.AppendLine("</Columns>");               
-            var now = DateTime.Now;
-            var timestamp = "Mapping" + now.Hour + now.Minute + now.Second;
-            var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            File.AppendAllText(string.Format("{0}\\{1}.xml", path, timestamp), srtb.ToString());
-            DataSet ds = new DataSet();
-            ds.ReadXml(string.Format("{0}\\{1}.xml", path, timestamp));
-            DataTable dt = ds.Tables[0];
-            Global.SpDataTable = dt;
-            StoredProcedureGeneration w6 = new StoredProcedureGeneration();
-            w6.Show();
-            this.Close();
+            try
+            {
+                srtb.AppendLine("<Columns>");
+                srtb.AppendLine(mapping);
+                srtb.AppendLine("</Columns>");
+                var now = DateTime.Now;
+                var timestamp = "Mapping" + now.Hour + now.Minute + now.Second;
+                var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                File.AppendAllText(string.Format("{0}\\{1}.xml", path, timestamp), srtb.ToString());
+                DataSet ds = new DataSet();
+                ds.ReadXml(string.Format("{0}\\{1}.xml", path, timestamp));
+                DataTable dt = ds.Tables[0];
+                Global.SpDataTable = dt;
+                StoredProcedureGeneration w6 = new StoredProcedureGeneration();
+                w6.Show();
+                this.Close();
+            }
+            catch
+            {
+                Popup2.IsOpen = true;
+            }
 
         }
 
@@ -214,8 +232,12 @@ namespace AFISE.View
         {
             
         }
-      
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Popup2.IsOpen = false;
+            
+        }
 
 
        

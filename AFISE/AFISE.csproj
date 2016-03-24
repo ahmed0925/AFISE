@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>axefinance.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Mvvm">
       <HintPath>..\packages\DevExpressMvvm.15.2.5.0\lib\net40-client\DevExpress.Mvvm.dll</HintPath>
@@ -57,10 +60,13 @@
       <HintPath>..\packages\MahApps.Metro.1.2.3.0\lib\net45\MahApps.Metro.dll</HintPath>
     </Reference>
     <Reference Include="MaterialDesignColors">
-      <HintPath>..\..\..\..\..\Desktop\work\Dynamic.Trader-master\Trader.Client\bin\Debug\MaterialDesignColors.dll</HintPath>
+      <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.MahApps">
+      <HintPath>..\packages\MaterialDesignThemes.MahApps.0.0.4\lib\net45\MaterialDesignThemes.MahApps.dll</HintPath>
     </Reference>
     <Reference Include="MaterialDesignThemes.Wpf">
-      <HintPath>..\..\..\..\..\Desktop\work\Dynamic.Trader-master\Trader.Client\bin\Debug\MaterialDesignThemes.Wpf.dll</HintPath>
+      <HintPath>..\packages\MaterialDesignThemes.1.5.0-ci502\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
@@ -114,8 +120,6 @@
     <Compile Include="ObservableObject.cs" />
     <Compile Include="ViewModel\MappingViewModel.cs" />
     <Compile Include="ViewModel\StagingWindowViewModel.cs" />
-    <Compile Include="ViewModel\ViewModelWindow1.cs" />
-    <Compile Include="ViewModel\ViewModelWindow2.cs" />
     <Compile Include="ViewModel\ViewModelBIMLGeneration.cs" />
     <Compile Include="ViewModel\ViewModelStoredProcedureGeneration.cs" />
     <Compile Include="View\CreateStaging.xaml.cs">
@@ -123,12 +127,6 @@
     </Compile>
     <Compile Include="View\MappingWindow.xaml.cs">
       <DependentUpon>MappingWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Window2.xaml.cs">
-      <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Authentication.xaml.cs">
       <DependentUpon>Authentication.xaml</DependentUpon>
@@ -147,7 +145,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\MaterialDesign.xaml">
+    <Page Include="Themes\Dialogs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MaterialDesignTheme.MahApps.Defaults.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MaterialDesignTheme.MahApps.Dialogs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MaterialDesignTheme.MahApps.Flyout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MaterialDesignTheme.MahApps.Fonts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MaterialDesignTheme.MahApps.RangeSlider.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -175,14 +193,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\MappingWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Window1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Window2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -251,9 +261,6 @@
     <Resource Include="Resources\Entypo-license.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\axefinance.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\icon_music.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -265,6 +272,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\primarykey32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="axefinance.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Themes\axefinance.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -21,7 +21,7 @@ namespace AFISE.View
     /// <summary>
     /// Interaction logic for Window3.xaml
     /// </summary>
-    public partial class Authentication : MetroWindow
+    internal sealed partial class Authentication : MetroWindow
     {
         public Authentication()
         {
@@ -32,7 +32,7 @@ namespace AFISE.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            // authentication in case of Windows authentication type
             if (authcbx.SelectedIndex == 0)
             {
                 Global.ConnectionType = 0;
@@ -50,11 +50,13 @@ namespace AFISE.View
                     mn.Show();
                     this.Close();
                 }
+                    // show popup if failed to connect
                 catch
                 {
                     Popup1.IsOpen = true;
                 }
             }
+            // authentication in case of SQL Server authentication type
             if (authcbx.SelectedIndex == 1)
             {
                 Global.ConnectionType = 1;

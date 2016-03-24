@@ -15,7 +15,16 @@ namespace AFISE.ViewModel
 {
     class ViewModelStoredProcedureGeneration : ViewModelBase
     {
-
+        string _spName;
+        public string spName
+        {
+            get { return _spName; }
+            set
+            {
+                _spName = value;
+                RaisePropertyChanged("spName");
+            }
+        }
         DataTable _MappingTable;
         public RelayCommand SPStagingInsertCommand { get; set; }
         public DataTable SPMappingTable
@@ -37,6 +46,7 @@ namespace AFISE.ViewModel
 
         public void SPStagingInsert(object parameter)
         {
+
             StoredProcedureGenerator sp = new StoredProcedureGenerator();
             StringBuilder builder = new StringBuilder();
             builder.AppendLine("USE ["+Global.CurrentBase+"]");
@@ -45,7 +55,7 @@ namespace AFISE.ViewModel
             builder.AppendLine("GO");
             builder.AppendLine("SET QUOTED_IDENTIFIER ON");
             builder.AppendLine("GO");
-            builder.AppendLine("CREATE PROCEDURE Test22");
+            builder.AppendLine("CREATE PROCEDURE " + spName);
             builder.AppendLine("AS");
             builder.AppendLine("BEGIN");
             builder.AppendLine("SET NOCOUNT ON;"); 
@@ -58,6 +68,8 @@ namespace AFISE.ViewModel
             builder.AppendLine("IF (@MSG = '')");
             builder.AppendLine("BEGIN");
             builder.AppendLine("BEGIN TRY");
+            sp.UpdateIfExists(SPMappingTable, builder, Global.sourceunique, Global.destunique);
+            builder.AppendLine("ELSE");
             sp.Insertion(SPMappingTable, builder);
             builder.AppendLine("END TRY");
             builder.AppendLine("BEGIN CATCH");

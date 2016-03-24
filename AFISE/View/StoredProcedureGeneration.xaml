@@ -4,6 +4,17 @@
         xmlns:vm="clr-namespace:AFISE.ViewModel"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Icon="../Themes/axefinance.ico"
+                      Background="{DynamicResource MaterialDesignPaper}"
+                      FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+                      GlowBrush="{DynamicResource AccentColorBrush}"
+                      ShowIconOnTitleBar="True"
+                      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+                      TitleCaps="False"
+                      x:ClassModifier="internal"
+                      mc:Ignorable="d" 
         Title="Generate insertion script" Height="599.3" Width="745.5" WindowStartupLocation="CenterScreen"
         DataContext="{DynamicResource ViewModelStoredProcedureGeneration}">
 
@@ -11,8 +22,14 @@
         <vm:ViewModelStoredProcedureGeneration x:Key="ViewModelStoredProcedureGeneration"/>
     </Window.Resources>
     <Grid>
-        <DataGrid ItemsSource="{Binding SPMappingTable}" HorizontalAlignment="Left" Margin="142,114,0,0"  VerticalAlignment="Top" Height="211" Width="428"/>
-        <Button Name="spgeneration" Content="Generate stored procedure" Command="{Binding SPStagingInsertCommand}" HorizontalAlignment="Left" Margin="280,432,0,0" VerticalAlignment="Top" Width="173" Click="Button_Click"/>
-        <Button Name="showscript" Content="SHOW SCRIPT"  HorizontalAlignment="Left" Margin="280,480,0,0" VerticalAlignment="Top" Width="173" Click="Button_Click_1" Visibility="Hidden" />
+        <DataGrid ItemsSource="{Binding SPMappingTable}" HorizontalAlignment="Left" Margin="138,60,0,0"  VerticalAlignment="Top" Height="211" Width="428"/>
+        <Button Name="spgeneration" Content="Generate stored procedure" Command="{Binding SPStagingInsertCommand}" HorizontalAlignment="Left" Margin="503,393,0,0" VerticalAlignment="Top" Width="210" Click="Button_Click" Height="27"/>
+        <Button Name="showscript" Content="SHOW SCRIPT"  HorizontalAlignment="Left" Margin="503,448,0,0" VerticalAlignment="Top" Width="210" Click="Button_Click_1" Visibility="Hidden" />
+        <Label Content="Source unique key" HorizontalAlignment="Left" Margin="10,382,0,0" VerticalAlignment="Top" Width="135"/>
+        <ComboBox Name="sourcecolumns" DisplayMemberPath="Source"  HorizontalAlignment="Left" Margin="212,382,0,0" VerticalAlignment="Top" Width="159" SelectionChanged="sourcecolumns_SelectionChanged"/>
+        <Label Content="destination unique key" HorizontalAlignment="Left" Margin="10,414,0,0" VerticalAlignment="Top" Width="135"/>
+        <ComboBox Name="destinationcolumns" DisplayMemberPath="Destination"  HorizontalAlignment="Left" Margin="212,418,0,0" VerticalAlignment="Top" Width="159" SelectionChanged="destinationcolumns_SelectionChanged"/>
+        <Label Content="Stored procedure name" HorizontalAlignment="Left" Margin="10,323,0,0" VerticalAlignment="Top" Width="150"/>
+        <TextBox Name="spname" Text="{Binding spName , UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="33" Margin="212,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Controls:MetroWindow>

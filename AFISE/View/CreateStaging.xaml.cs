@@ -33,7 +33,7 @@ namespace AFISE.View
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class CreateStaging : MetroWindow, INotifyPropertyChanged
+    internal sealed partial class CreateStaging : MetroWindow, INotifyPropertyChanged
     {
         // public StagingViewModel svm = new StagingViewModel();
         public DBTableInfo myStagingTable = new DBTableInfo();
@@ -44,7 +44,7 @@ namespace AFISE.View
         {
             InitializeComponent();
             // myStagingTable = svm.stagingTable;
-
+            Popup1.IsOpen = false;
             DataContext = this;
             DBTableColumnInfo LoadIDcol = new DBTableColumnInfo("LoadID");
             myStagingTable.Columns.Add(LoadIDcol);
@@ -107,9 +107,7 @@ namespace AFISE.View
             model.RefreshSettings();
             var sb = new StringBuilder(10000);
             if (DropIfExistCheckBox.IsChecked == true)
-                sb.Append("IF Object_ID('dbo." + TableNameTextBox.Text + "', 'U') IS NOT NULL DROP TABLE dbo." + TableNameTextBox.Text);
-            // model.GenerateSp(myStagingTable.TableName, Constants.createTreeNodeText, ref sb, viewStagingTable.ToList(), new List<DBTableColumnInfo>());
-
+            sb.Append("IF Object_ID('dbo." + TableNameTextBox.Text + "', 'U') IS NOT NULL DROP TABLE dbo." + TableNameTextBox.Text);
             CreateSpGenerator spGenerator = new CreateSpGenerator();
             spGenerator.GenerateStatement(myStagingTable.TableName, sb, viewStagingTable.ToList(), new List<DBTableColumnInfo>());
             query = sb.ToString();
@@ -140,41 +138,44 @@ namespace AFISE.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (Global.ConnectionType == 0)
+            try
             {
-                SqlConnectionStringBuilder sqlcon = new SqlConnectionStringBuilder();
-                sqlcon.DataSource = Global.DataSource;
-                sqlcon.InitialCatalog = Global.CurrentBase;
-                sqlcon.IntegratedSecurity = true;
-                string connection = sqlcon.ToString();
-                SqlConnection conn = new SqlConnection(connection);
-                Server server = new Server(new ServerConnection(conn));
-                server.ConnectionContext.ExecuteNonQuery(query.ToString());
-                using (SqlBulkCopy sbc = new SqlBulkCopy(connection, SqlBulkCopyOptions.KeepIdentity))
+
+                if (Global.ConnectionType == 0)
                 {
-                    sbc.DestinationTableName = TableNameTextBox.Text;
-
-                    // Number of records to be processed in one go
-                    int batchSize = 5000;
-                    sbc.BatchSize = batchSize;
-
-                    // Add  column mappings here
-                    foreach (DataColumn dc in Global.datatable1.Columns)
+                    SqlConnectionStringBuilder sqlcon = new SqlConnectionStringBuilder();
+                    sqlcon.DataSource = Global.DataSource;
+                    sqlcon.InitialCatalog = Global.CurrentBase;
+                    sqlcon.IntegratedSecurity = true;
+                    string connection = sqlcon.ToString();
+                    SqlConnection conn = new SqlConnection(connection);
+                    Server server = new Server(new ServerConnection(conn));
+                    server.ConnectionContext.ExecuteNonQuery(query.ToString());
+                    using (SqlBulkCopy sbc = new SqlBulkCopy(connection, SqlBulkCopyOptions.KeepIdentity))
                     {
-                        sbc.ColumnMappings.Add(dc.ColumnName, dc.ColumnName);
+                        sbc.DestinationTableName = TableNameTextBox.Text;
+
+                        // Number of records to be processed in one go
+                        int batchSize = 5000;
+                        sbc.BatchSize = batchSize;
+
+                        // Add  column mappings here
+                        foreach (DataColumn dc in Global.datatable1.Columns)
+                        {
+                            sbc.ColumnMappings.Add(dc.ColumnName, dc.ColumnName);
+                        }
+
+                        // Finally write to server
+                        sbc.WriteToServer(Global.datatable1);
+
                     }
-
-                    // Finally write to server
-                    sbc.WriteToServer(Global.datatable1);
-
+                    MappingWindow mp = new MappingWindow();
+                    mp.Show();
+                    this.Close();
                 }
-                MappingWindow mp = new MappingWindow();
-                mp.Show();
-                this.Close();
-            }
-            else if (Global.ConnectionType == 1)
-            {
-                
+                else if (Global.ConnectionType == 1)
+                {
+
                     SqlConnectionStringBuilder sqlcon = new SqlConnectionStringBuilder();
                     sqlcon.DataSource = Global.DataSource;
                     sqlcon.InitialCatalog = Global.CurrentBase;
@@ -207,12 +208,25 @@ namespace AFISE.View
                     mp.L3.DataContext = null;
                     mp.L4.DataContext = null;
                     this.Close();
-                
-            }
-            
 
-            
+                }
+
+
+
+            }
+            catch
+            {
+                Popup1.IsOpen = true;
+            }
+            }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Popup1.IsOpen = false;
+
         }
+        
+        
 
 
     }

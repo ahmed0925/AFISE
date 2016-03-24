@@ -5,6 +5,17 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:i="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
         Title="Choose your source" 
+                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Icon="../Themes/axefinance.ico"
+                      Background="{DynamicResource MaterialDesignPaper}"
+                      FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+                      GlowBrush="{DynamicResource AccentColorBrush}"
+                      ShowIconOnTitleBar="True"
+                      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+                      TitleCaps="False"
+                      x:ClassModifier="internal"
+                      mc:Ignorable="d" 
         x:Class="AFISE.ViewModel.SourceSelection" Height="599.3" Width="745.5" WindowStartupLocation="CenterScreen"
          DataContext="{DynamicResource ViewModelSourceSelection}">
     <Window.Resources>
@@ -18,13 +29,13 @@
         <TextBox x:Name="FilePath" Text="{Binding TextProperty1, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Height="23" Margin="132,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
         <TextBox x:Name="txtFilePath"  HorizontalAlignment="Left" Height="23" Margin="194,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
 
-        <Button Name="Load" Content="Get File" Command="{Binding LoadFileCommand}" CommandParameter="{Binding Text, ElementName=tb1}" HorizontalAlignment="Left" Margin="314,106,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden"/>
+        <Button Name="Load" Content="Get File" Command="{Binding LoadFileCommand}" CommandParameter="{Binding Text, ElementName=tb1}" HorizontalAlignment="Left" Margin="300,106,0,0" VerticalAlignment="Top" Width="102" Visibility="Hidden"/>
         <TextBox x:Name="txt" IsReadOnly="True" Text="{Binding TextProperty2, UpdateSourceTrigger=PropertyChanged}"   HorizontalAlignment="Left" Height="25" Margin="131,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="417" Visibility="Hidden">
             <i:Interaction.Behaviors>
                 <i:DependencyPropertyBehavior PropertyName="SelectedText" EventName="SelectionChanged" Binding="{Binding SelectedText, Mode=TwoWay}"/>
             </i:Interaction.Behaviors>
         </TextBox>
-        <Button x:Name="Tex"  Content="Select Column" Command="{Binding SelectedColumnCommand}" HorizontalAlignment="Left" Margin="586,223,0,0" VerticalAlignment="Top" Width="112" Visibility="Hidden">
+        <Button x:Name="Tex"  Content="Select Column" Command="{Binding SelectedColumnCommand}" HorizontalAlignment="Left" Margin="586,223,0,0" VerticalAlignment="Top" Width="130" Visibility="Hidden">
 
         </Button>
         <DataGrid  x:Name="DtGrid"  ItemsSource="{Binding TblData2, Mode=TwoWay}"  HorizontalAlignment="Left" Margin="132,302,0,0" VerticalAlignment="Top" Height="204" Width="416" Visibility="Hidden" CanUserAddRows="False"/>
@@ -41,9 +52,9 @@
 
         </ComboBox>
         <Button Name="ExcelButon" Content="Get Excel" HorizontalAlignment="Left" Margin="258,156,0,0" VerticalAlignment="Top" Width="144" Visibility="Hidden" Click="ExcelButon_Click"/>
-        <Button Name="GetFile" Content="Get File" Command="{Binding LoadDelimitedFileCommand}"  HorizontalAlignment="Left" Margin="300,164,0,0" VerticalAlignment="Top" Width="76" Visibility="Hidden"/>
+        <Button Name="GetFile" Content="Get File" Command="{Binding LoadDelimitedFileCommand}"  HorizontalAlignment="Left" Margin="300,164,0,0" VerticalAlignment="Top" Width="102" Visibility="Hidden"/>
         <DataGrid Name="DelimitedDataGrid" ItemsSource="{Binding TblData2, Mode=TwoWay}" HorizontalAlignment="Left" Margin="147,248,0,0" VerticalAlignment="Top" Height="232" Width="401" Visibility="Hidden" />
-        <Label Name="delimiterlbl" Content="Delimiter" HorizontalAlignment="Left" Margin="147,79,0,0" VerticalAlignment="Top" Width="83" Visibility="Hidden"/>
+        <Label Name="delimiterlbl" Content="Delimiter" HorizontalAlignment="Left" Margin="137,79,0,0" VerticalAlignment="Top" Width="83" Visibility="Hidden"/>
         <ComboBox Name="cbxdelimiter"  HorizontalAlignment="Left" Margin="257,79,0,0" VerticalAlignment="Top" Width="57" Visibility="Hidden" SelectionChanged="cbxdelimiter_SelectionChanged">
             <ComboBoxItem Content="|"/>
             <ComboBoxItem Content="#"/>
@@ -54,19 +65,18 @@
   IsOpen="{Binding IsOpen}" Placement="Center" >
             <StackPanel Width="276" >
                 <TextBlock x:Name="McTextBlock"   
-            		Background="BlueViolet" Text="    Please  start your selection from the begining" Height="38" ><InlineUIContainer/><InlineUIContainer>
+            		Background="DarkKhaki" Text="    Please  start your selection from the begining" Height="38" ><InlineUIContainer/><InlineUIContainer>
             			
             		</InlineUIContainer></TextBlock>
                 <Button Content="OK" Command="{Binding ClosePopUpCommand}"/>
             </StackPanel>
         </Popup>
-        <Button  Name="resetbtn"  Content="Reset" Command="{Binding resetColumnCommand}" HorizontalAlignment="Left" Margin="586,253,0,0" VerticalAlignment="Top" Width="112" Visibility="Hidden" Click="resetbtn_Click"/>
-        <Button Name="stroredatebtn" Content="Store Data" Command="{Binding StoreDataCommand}" HorizontalAlignment="Left" Margin="300,506,0,0" VerticalAlignment="Top" Width="102" Visibility="Hidden"/>
+        <Button  Name="resetbtn"  Content="Reset" Command="{Binding resetColumnCommand}" HorizontalAlignment="Left" Margin="586,253,0,0" VerticalAlignment="Top" Width="130" Visibility="Hidden" Click="resetbtn_Click"/>
         <Button Name="mapfilebtn" Command="{Binding LoadMappingFileCommand}" Content="Get Mapping File" HorizontalAlignment="Left" Margin="274,105,0,0" VerticalAlignment="Top" Width="147" Visibility="Hidden"/>
         <DataGrid Name="MappGrid" ItemsSource="{Binding MappingTable, Mode=TwoWay}" CanUserAddRows="False"  HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top" Height="273" Width="697" Visibility="Hidden"/>
         <Button Name="stgareabtn" Content="generate Staging Area" Command="{Binding CreateStagingAreaCommand}" HorizontalAlignment="Left" Margin="239,514,0,0" VerticalAlignment="Top" Width="182" Visibility="Hidden"/>
-        <CheckBox Name="CHECKCOL" Content="" HorizontalAlignment="Left" Margin="319,113,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CHECKCOL_Checked_1" Unchecked="CHECKCOL_Unchecked"/>
-        <Label Name="checkcoll" Content="First row has columns names" HorizontalAlignment="Left" Margin="147,108,0,0" VerticalAlignment="Top" Width="162" Visibility="Hidden"/>
+        <CheckBox Name="CHECKCOL" Content="" HorizontalAlignment="Left" Margin="330,111,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CHECKCOL_Checked_1" Unchecked="CHECKCOL_Unchecked"/>
+        <Label Name="checkcoll" Content="First row has columns name" HorizontalAlignment="Left" Margin="137,106,0,0" VerticalAlignment="Top" Width="177" Visibility="Hidden"/>
     </Grid>
 
 

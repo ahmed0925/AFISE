@@ -3,13 +3,26 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Icon="../Themes/axefinance.ico"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+                      Background="{DynamicResource MaterialDesignPaper}"
+                      DataContext="{Binding RelativeSource={RelativeSource Self}}"
+                      FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+                      GlowBrush="{DynamicResource AccentColorBrush}"
+                      ShowIconOnTitleBar="True"
+                      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+                      TitleCaps="False"
+                      x:ClassModifier="internal"
+                      mc:Ignorable="d" 
         Title="Integration Services" Height="342.8" Width="615" WindowStartupLocation="CenterScreen">
 
 
     <Grid Margin="0,0,2,2">
         <Label Name="usrlbl" Content="User name" HorizontalAlignment="Left" Margin="140,142,0,0" VerticalAlignment="Top" Width="100"/>
         <Label Name="pwdlbl" Content="Password" HorizontalAlignment="Left" Margin="140,188,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBox Name="usernamecbx" HorizontalAlignment="Left" Height="23" Margin="245,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182"/>
+        <TextBox Name="usernamecbx" HorizontalAlignment="Left" Height="34" Margin="245,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182"/>
         <Button Name="conbtn" Content="Connect" HorizontalAlignment="Left" Margin="245,276,0,0" VerticalAlignment="Top" Width="134" Click="Button_Click"/>
         <PasswordBox Name="passwcbx" HorizontalAlignment="Left" Margin="245,188,0,0" VerticalAlignment="Top" Width="182"/>
         <ComboBox Name="authcbx" HorizontalAlignment="Left" Margin="245,85,0,0" VerticalAlignment="Top" Width="182" SelectionChanged="authcbx_SelectionChanged" >
@@ -20,7 +33,7 @@
   IsOpen="True" Placement="Center" >
             <StackPanel Width="288" >
                 <TextBlock x:Name="McTextBlock"   
-            		Background="BlueViolet" Text="   Invalid Data" Height="38" RenderTransformOrigin="-0.19,0.145" ><InlineUIContainer/><InlineUIContainer/></TextBlock>
+            		Background="DarkKhaki" Text="   Invalid Data" Height="38" RenderTransformOrigin="-0.19,0.145" ><InlineUIContainer/><InlineUIContainer/></TextBlock>
                 <Button Content="OK" Click="Button_Click_1"/>
             </StackPanel>
         </Popup>

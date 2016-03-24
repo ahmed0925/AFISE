@@ -16,16 +16,30 @@ using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using AFISE.ViewModel;
 using Common.Model;
+using System.Data;
 namespace AFISE.View
 {
     /// <summary>
     /// Interaction logic for Window6.xaml
     /// </summary>
-    public partial class StoredProcedureGeneration : MetroWindow
+    internal sealed partial class StoredProcedureGeneration : MetroWindow
     {
         public StoredProcedureGeneration()
         {
             InitializeComponent();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Source");
+            dt.Columns.Add("Destination");
+            foreach(DataRow dr in Global.SpDataTable.Rows)
+            {
+                DataRow dtr = dt.NewRow();
+                dtr["Source"] = dr[0];
+                dtr["Destination"] = dr[2];
+                dt.Rows.Add(dtr);
+            }
+            sourcecolumns.ItemsSource = dt.DefaultView;
+            destinationcolumns.ItemsSource = dt.DefaultView;
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
@@ -38,6 +52,20 @@ namespace AFISE.View
         {
             spgeneration.Visibility = Visibility.Hidden;
             await this.ShowMessageAsync("", Global.sptest);
+        }
+
+        private void sourcecolumns_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataRowView oDataRowView = sourcecolumns.SelectedItem as DataRowView;
+
+            Global.sourceunique = oDataRowView.Row["Source"] as string;
+        }
+
+        private void destinationcolumns_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataRowView oDataRowView = destinationcolumns.SelectedItem as DataRowView;
+
+            Global.destunique = oDataRowView.Row["Destination"] as string;
         }
 
 

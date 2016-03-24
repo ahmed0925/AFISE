@@ -115,14 +115,14 @@ namespace SPCoreGenerator
 
         public string UpdateSetEror(StringBuilder builder, string stagingtable)
         {
-            builder.AppendLine("UPDATE " + stagingtable + "  set Error_message = @MSG + ERROR_MESSAGE(), Is_interfaced=0 WHERE CURRENT OF cur_StagingArea");
+            builder.AppendLine("UPDATE " + stagingtable + "  set Error_msg = @MSG + ERROR_MESSAGE(), Is_interfaced=0 WHERE CURRENT OF cur_StagingArea");
             return builder.ToString();
 
         }
 
         public string UpdateNoteInterfaced(StringBuilder builder, string stagingTable)
         {
-            builder.AppendLine("UPDATE " + stagingTable + "  set Error_message = @MSG + ERROR_MESSAGE(), Is_interfaced=0 WHERE CURRENT OF cur_StagingArea");
+            builder.AppendLine("UPDATE " + stagingTable + "  set Error_msg = @MSG + ERROR_MESSAGE(), Is_interfaced=0 WHERE CURRENT OF cur_StagingArea");
             return builder.ToString();
         }
 
@@ -148,5 +148,26 @@ namespace SPCoreGenerator
             }
             return builder.ToString();
         }
+
+        public string UpdateIfExists(DataTable datatable, StringBuilder builder, string uniquesource, string uniquedestination)
+        {
+            builder.AppendLine("IF EXISTS (SELECT 1 FROM " + datatable.Rows[1][1].ToString() + " WHERE  " + uniquedestination + " = @" + uniquesource + ")");
+            builder.AppendLine("UPDATE " + datatable.Rows[1][1].ToString() + " SET");
+            foreach(DataRow dr in datatable.Rows)
+            {
+                if (datatable.Rows.IndexOf(dr) == 0)
+                {
+                    builder.AppendLine(dr[2].ToString() + "=@" + dr[0].ToString());
+                }
+                else
+                {
+                    builder.AppendLine(","+dr[2].ToString() + "=@" + dr[0].ToString());
+                }
+            }
+
+            builder.AppendLine("WHERE " + uniquedestination + "=@" + uniquesource);
+            return builder.ToString();
+        }
+       
     }
 }

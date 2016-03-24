@@ -25,7 +25,7 @@ namespace AFISE.View
     /// <summary>
     /// Interaction logic for Window4.xaml
     /// </summary>
-    public partial class BIMLGeneration : MetroWindow
+    internal sealed partial class BIMLGeneration : MetroWindow
     {
         public BIMLGeneration()
         {
