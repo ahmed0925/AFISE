@@ -31,11 +31,16 @@ namespace AFISE.View
             DataTable dt = new DataTable();
             dt.Columns.Add("Source");
             dt.Columns.Add("Destination");
-            foreach(DataRow dr in Global.SpDataTable.Rows)
+            foreach (DataRow dr in Global.SpDataTable.Rows)
             {
                 DataRow dtr = dt.NewRow();
                 dtr["Source"] = dr[0];
-                dtr["Destination"] = dr[2];
+                if (dr[4].ToString() != "")
+                {
+                    dtr["Destination"] = dr[4];
+                }
+                else
+                    dtr["Destination"] = dr[2];
                 dt.Rows.Add(dtr);
             }
             sourcecolumns.ItemsSource = dt.DefaultView;
@@ -69,6 +74,6 @@ namespace AFISE.View
         }
 
 
-        
+
     }
 }

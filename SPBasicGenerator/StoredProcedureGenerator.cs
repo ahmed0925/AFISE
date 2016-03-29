@@ -13,7 +13,20 @@ namespace SPCoreGenerator
         {
 
         }
-
+        public string SPHeader(string currentbase, string SPName, StringBuilder builder)
+        {
+            builder.AppendLine("USE [" + currentbase + "]");
+            builder.AppendLine("GO");
+            builder.AppendLine("SET ANSI_NULLS ON");
+            builder.AppendLine("GO");
+            builder.AppendLine("SET QUOTED_IDENTIFIER ON");
+            builder.AppendLine("GO");
+            builder.AppendLine("CREATE PROCEDURE " + SPName);
+            builder.AppendLine("AS");
+            builder.AppendLine("BEGIN");
+            builder.AppendLine("SET NOCOUNT ON;");
+            return builder.ToString();
+        }
         public string VariableDeclaration(DataTable datatable, StringBuilder builder)
         {
             foreach (DataRow dr in datatable.Rows)
@@ -86,14 +99,30 @@ namespace SPCoreGenerator
             builder.AppendLine("(");
             foreach (DataRow dr in datatable.Rows)
             {
-                if (datatable.Rows.IndexOf(dr) == 0)
+                if (dr[4].ToString() == "")
                 {
-                    builder.AppendLine(dr[2].ToString());
+                    if (datatable.Rows.IndexOf(dr) == 0)
+                    {
+                        builder.AppendLine(dr[2].ToString());
+                    }
+                    else
+                    {
+                        builder.AppendLine("," + dr[2].ToString());
+                    }
                 }
                 else
+                    if (dr[4].ToString() != "")
                 {
-                    builder.AppendLine("," + dr[2].ToString());
+                    if (datatable.Rows.IndexOf(dr)==0)
+                    {
+                        builder.AppendLine(dr[4].ToString());
+                    }
+                    else
+                    {
+                        builder.AppendLine("," + dr[4].ToString());
+                    }
                 }
+            
             }
             builder.AppendLine(")");
             builder.AppendLine("VALUES");
@@ -155,14 +184,30 @@ namespace SPCoreGenerator
             builder.AppendLine("UPDATE " + datatable.Rows[1][1].ToString() + " SET");
             foreach(DataRow dr in datatable.Rows)
             {
-                if (datatable.Rows.IndexOf(dr) == 0)
+                if (dr[4].ToString() == "")
                 {
-                    builder.AppendLine(dr[2].ToString() + "=@" + dr[0].ToString());
+                    if (datatable.Rows.IndexOf(dr) == 0)
+                    {
+                        builder.AppendLine(dr[2].ToString() + "=@" + dr[0].ToString());
+                    }
+                    else
+                    {
+                        builder.AppendLine("," + dr[2].ToString() + "=@" + dr[0].ToString());
+                    }
                 }
                 else
-                {
-                    builder.AppendLine(","+dr[2].ToString() + "=@" + dr[0].ToString());
-                }
+                    if (dr[4].ToString() != "")
+                    {
+                        if (datatable.Rows.IndexOf(dr) == 0)
+                        {
+                            builder.AppendLine(dr[4].ToString() + "=@" + dr[0].ToString());
+                        }
+                        else
+                        {
+                            builder.AppendLine("," + dr[4].ToString() + "=@" + dr[0].ToString());
+                        }
+                    }
+                   
             }
 
             builder.AppendLine("WHERE " + uniquedestination + "=@" + uniquesource);

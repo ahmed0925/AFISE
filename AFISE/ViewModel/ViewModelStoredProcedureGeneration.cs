@@ -49,16 +49,7 @@ namespace AFISE.ViewModel
 
             StoredProcedureGenerator sp = new StoredProcedureGenerator();
             StringBuilder builder = new StringBuilder();
-            builder.AppendLine("USE ["+Global.CurrentBase+"]");
-            builder.AppendLine("GO");
-            builder.AppendLine("SET ANSI_NULLS ON");
-            builder.AppendLine("GO");
-            builder.AppendLine("SET QUOTED_IDENTIFIER ON");
-            builder.AppendLine("GO");
-            builder.AppendLine("CREATE PROCEDURE " + spName);
-            builder.AppendLine("AS");
-            builder.AppendLine("BEGIN");
-            builder.AppendLine("SET NOCOUNT ON;"); 
+            sp.SPHeader(Global.CurrentBase, spName, builder); 
             sp.VariableDeclaration(SPMappingTable, builder);
             sp.ConstantsDeclaration(SPMappingTable, builder);
             sp.CursorDeclaration(SPMappingTable, builder, Global.stagingTable);

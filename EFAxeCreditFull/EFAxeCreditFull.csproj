@@ -670,7 +670,6 @@
     <Compile Include="qualitative_template_ceiling_link_type.cs">
       <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
     </Compile>
-    <Compile Include="QueryUtilies.cs" />
     <Compile Include="rating.cs">
       <DependentUpon>EFAxeCreditFull.tt</DependentUpon>
     </Compile>

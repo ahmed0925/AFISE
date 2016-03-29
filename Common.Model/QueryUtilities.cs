@@ -15,11 +15,11 @@ namespace Common.Model
             SqlConnection connection = new SqlConnection();
             if (Global.ConnectionType == 0)
             {
-                connection.ConnectionString = "data source=" + Global.DataSource + ";initial catalog=Axe_Credit;integrated security=True";
+                connection.ConnectionString = "data source=" + Global.DataSource + ";initial catalog=" + Global.CurrentBase + ";integrated security=True";
             }
             else
             {
-                connection.ConnectionString = "data source=" + Global.DataSource + ";initial catalog=Axe_Credit;User ID=" + Global.username  +";Password=" + Global.password + "";
+                connection.ConnectionString = "data source=" + Global.DataSource + ";initial catalog=" + Global.CurrentBase + ";User ID=" + Global.username + ";Password=" + Global.password + "";
             }
             using (SqlCommand cmd = new SqlCommand(ConstantQuery.queryFK, connection))
             {
