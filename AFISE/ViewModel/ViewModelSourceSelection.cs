@@ -21,7 +21,6 @@ namespace AFISE.ViewModel
 
         public RelayCommand LoadFileCommand { get; set; }
         public RelayCommand SelectedColumnCommand { get; set; }
-        public RelayCommand NextWindowCommand { get; set; }
         public RelayCommand LoadDelimitedFileCommand { get; set; }
         public RelayCommand ConnectServerCommand { get; set; }
         public RelayCommand ClosePopUpCommand { get; set; }

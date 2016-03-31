@@ -119,6 +119,7 @@
     </ApplicationDefinition>
     <Compile Include="comman\Settings.cs" />
     <Compile Include="Model\MainWindowModel.cs" />
+    <Compile Include="Model\SimpleCommand.cs" />
     <Compile Include="ObservableObject.cs" />
     <Compile Include="ViewModel\MappingViewModel.cs" />
     <Compile Include="ViewModel\StagingWindowViewModel.cs" />

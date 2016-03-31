@@ -28,7 +28,7 @@
 
         <TextBox x:Name="FilePath" Text="{Binding TextProperty1, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Height="23" Margin="132,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
         <TextBox x:Name="txtFilePath"  HorizontalAlignment="Left" Height="23" Margin="194,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
-
+        
         <Button Name="Load" Content="Get File" Command="{Binding LoadFileCommand}" CommandParameter="{Binding Text, ElementName=tb1}" HorizontalAlignment="Left" Margin="300,106,0,0" VerticalAlignment="Top" Width="102" Visibility="Hidden"/>
         <TextBox x:Name="txt" IsReadOnly="True" Text="{Binding TextProperty2, UpdateSourceTrigger=PropertyChanged}"   HorizontalAlignment="Left" Height="25" Margin="131,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="417" Visibility="Hidden">
             <i:Interaction.Behaviors>
@@ -69,6 +69,14 @@
             			
             		</InlineUIContainer></TextBlock>
                 <Button Content="OK" Command="{Binding ClosePopUpCommand}"/>
+            </StackPanel>
+        </Popup>
+        <Popup Name="Popup2"   
+  IsOpen="True" Placement="Center" >
+            <StackPanel Width="288" >
+                <TextBlock x:Name="MTextBlock"   
+            		Background="DarkKhaki" Text="                                      ERROR" Height="38" RenderTransformOrigin="-0.19,0.145" ><InlineUIContainer/><InlineUIContainer/></TextBlock>
+                <Button Content="OK" Click="Button_Click_popup"/>
             </StackPanel>
         </Popup>
         <Button  Name="resetbtn"  Content="Reset" Command="{Binding resetColumnCommand}" HorizontalAlignment="Left" Margin="586,253,0,0" VerticalAlignment="Top" Width="130" Visibility="Hidden" Click="resetbtn_Click"/>

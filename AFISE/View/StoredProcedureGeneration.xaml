@@ -15,6 +15,8 @@
                       TitleCaps="False"
                       x:ClassModifier="internal"
                       mc:Ignorable="d" 
+                       xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+        Dialog:DialogParticipation.Register="{Binding}"
         Title="Generate insertion script" Height="599.3" Width="745.5" WindowStartupLocation="CenterScreen"
         DataContext="{DynamicResource ViewModelStoredProcedureGeneration}">
 
@@ -22,9 +24,29 @@
         <vm:ViewModelStoredProcedureGeneration x:Key="ViewModelStoredProcedureGeneration"/>
     </Window.Resources>
     <Grid>
+        <Popup Name="Popup2"   
+  IsOpen="{Binding IsOpen}" Placement="Center" >
+            <StackPanel Width="276" >
+                <TextBlock x:Name="McTextBlock"   
+            		Background="DarkKhaki" Text="                                    ERROR" Height="38" ><InlineUIContainer/><InlineUIContainer>
+            			
+            		</InlineUIContainer></TextBlock>
+                <Button Content="OK" Command="{Binding ClosePopUpCommand}"/>
+            </StackPanel>
+        </Popup>
+        <Popup Name="Popup3"   
+  IsOpen="{Binding IsOpen1}" Placement="Center" >
+            <StackPanel Width="276" >
+                <TextBlock x:Name="McTextBlockk"   
+            		Background="DarkKhaki" Text="                           SCRIPT GENERATED" Height="38" ><InlineUIContainer/><InlineUIContainer>
+            			
+            		</InlineUIContainer></TextBlock>
+                <Button Content="OK" Command="{Binding ClosePopUpCommand}"/>
+            </StackPanel>
+        </Popup>
         <DataGrid ItemsSource="{Binding SPMappingTable}" HorizontalAlignment="Left" Margin="138,60,0,0"  VerticalAlignment="Top" Height="211" Width="428"/>
-        <Button Name="spgeneration" Content="Generate stored procedure" Command="{Binding SPStagingInsertCommand}" HorizontalAlignment="Left" Margin="503,393,0,0" VerticalAlignment="Top" Width="210" Click="Button_Click" Height="27"/>
-        <Button Name="showscript" Content="SHOW SCRIPT"  HorizontalAlignment="Left" Margin="503,448,0,0" VerticalAlignment="Top" Width="210" Click="Button_Click_1" Visibility="Hidden" />
+        <Button Name="spgeneration" Content="Generate stored procedure" Command="{Binding SPStagingInsertCommand}" HorizontalAlignment="Left" Margin="503,393,0,0" VerticalAlignment="Top" Width="210"  Height="36"/>
+        <Button Name="showscript" Content="SHOW SCRIPT"  HorizontalAlignment="Left" Margin="503,448,0,0" VerticalAlignment="Top" Width="210" Click="Button_Click_1" />
         <Label Content="Source unique key" HorizontalAlignment="Left" Margin="10,382,0,0" VerticalAlignment="Top" Width="135"/>
         <ComboBox Name="sourcecolumns" DisplayMemberPath="Source"  HorizontalAlignment="Left" Margin="212,382,0,0" VerticalAlignment="Top" Width="159" SelectionChanged="sourcecolumns_SelectionChanged"/>
         <Label Content="destination unique key" HorizontalAlignment="Left" Margin="10,414,0,0" VerticalAlignment="Top" Width="135"/>

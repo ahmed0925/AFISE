@@ -27,6 +27,7 @@ namespace AFISE.ViewModel
 
             InitializeComponent();
             var viewModel = new ViewModelSourceSelection();
+            Popup2.IsOpen = false;
 
 
         }
@@ -34,11 +35,16 @@ namespace AFISE.ViewModel
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            CreateStaging cs = new CreateStaging();
-            cs.Show();
-            //MappingWindow w2 = new MappingWindow();
-            //w2.Show();
-            this.Close();
+            try
+            {
+                CreateStaging cs = new CreateStaging();
+                cs.Show();
+                this.Close();
+            }
+            catch
+            {
+                Popup2.IsOpen = true;
+            }
         }
 
         private void combo_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
@@ -261,6 +267,11 @@ namespace AFISE.ViewModel
         private void CHECKCOL_Unchecked(object sender, RoutedEventArgs e)
         {
             Global.ischeked = 0;
+        }
+
+        private void Button_Click_popup(object sender, RoutedEventArgs e)
+        {
+            Popup2.IsOpen = false;
         }
 
         

@@ -27,6 +27,7 @@ namespace SPCoreGenerator
             builder.AppendLine("SET NOCOUNT ON;");
             return builder.ToString();
         }
+
         public string VariableDeclaration(DataTable datatable, StringBuilder builder)
         {
             foreach (DataRow dr in datatable.Rows)
@@ -95,11 +96,37 @@ namespace SPCoreGenerator
         public string Insertion(DataTable datatable, StringBuilder builder)
         {
 
-            builder.AppendLine("INSERT INTO " + datatable.Rows[1][1].ToString());
+            builder.AppendLine("INSERT INTO " + datatable.Rows[0][1].ToString());
             builder.AppendLine("(");
             foreach (DataRow dr in datatable.Rows)
             {
-                if (dr[4].ToString() == "")
+                if (dr.ItemArray.Length >= 5)
+                {
+                    if (dr[4].ToString() == "")
+                    {
+                        if (datatable.Rows.IndexOf(dr) == 0)
+                        {
+                            builder.AppendLine(dr[2].ToString());
+                        }
+                        else
+                        {
+                            builder.AppendLine("," + dr[2].ToString());
+                        }
+                    }
+                    else
+                        if (dr[4].ToString() != "")
+                        {
+                            if (datatable.Rows.IndexOf(dr) == 0)
+                            {
+                                builder.AppendLine(dr[4].ToString());
+                            }
+                            else
+                            {
+                                builder.AppendLine("," + dr[4].ToString());
+                            }
+                        }
+                }
+                else
                 {
                     if (datatable.Rows.IndexOf(dr) == 0)
                     {
@@ -108,18 +135,6 @@ namespace SPCoreGenerator
                     else
                     {
                         builder.AppendLine("," + dr[2].ToString());
-                    }
-                }
-                else
-                    if (dr[4].ToString() != "")
-                {
-                    if (datatable.Rows.IndexOf(dr)==0)
-                    {
-                        builder.AppendLine(dr[4].ToString());
-                    }
-                    else
-                    {
-                        builder.AppendLine("," + dr[4].ToString());
                     }
                 }
             
@@ -180,11 +195,37 @@ namespace SPCoreGenerator
 
         public string UpdateIfExists(DataTable datatable, StringBuilder builder, string uniquesource, string uniquedestination)
         {
-            builder.AppendLine("IF EXISTS (SELECT 1 FROM " + datatable.Rows[1][1].ToString() + " WHERE  " + uniquedestination + " = @" + uniquesource + ")");
-            builder.AppendLine("UPDATE " + datatable.Rows[1][1].ToString() + " SET");
+            builder.AppendLine("IF EXISTS (SELECT 1 FROM " + datatable.Rows[0][1] + " WHERE  " + uniquedestination + " = @" + uniquesource + ")");
+            builder.AppendLine("UPDATE " + datatable.Rows[0][1].ToString() + " SET");
             foreach(DataRow dr in datatable.Rows)
             {
-                if (dr[4].ToString() == "")
+                if (dr.ItemArray.Length >= 5)
+                {
+                    if (dr[4].ToString() == "")
+                    {
+                        if (datatable.Rows.IndexOf(dr) == 0)
+                        {
+                            builder.AppendLine(dr[2].ToString() + "=@" + dr[0].ToString());
+                        }
+                        else
+                        {
+                            builder.AppendLine("," + dr[2].ToString() + "=@" + dr[0].ToString());
+                        }
+                    }
+                    else
+                        if (dr[4].ToString() != "")
+                        {
+                            if (datatable.Rows.IndexOf(dr) == 0)
+                            {
+                                builder.AppendLine(dr[4].ToString() + "=@" + dr[0].ToString());
+                            }
+                            else
+                            {
+                                builder.AppendLine("," + dr[4].ToString() + "=@" + dr[0].ToString());
+                            }
+                        }
+                }
+                else
                 {
                     if (datatable.Rows.IndexOf(dr) == 0)
                     {
@@ -195,18 +236,7 @@ namespace SPCoreGenerator
                         builder.AppendLine("," + dr[2].ToString() + "=@" + dr[0].ToString());
                     }
                 }
-                else
-                    if (dr[4].ToString() != "")
-                    {
-                        if (datatable.Rows.IndexOf(dr) == 0)
-                        {
-                            builder.AppendLine(dr[4].ToString() + "=@" + dr[0].ToString());
-                        }
-                        else
-                        {
-                            builder.AppendLine("," + dr[4].ToString() + "=@" + dr[0].ToString());
-                        }
-                    }
+
                    
             }
 

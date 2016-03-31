@@ -12,7 +12,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using AFISE.ViewModel;
 using Common.Model;
@@ -23,11 +22,13 @@ namespace AFISE.View
     /// Interaction logic for Window6.xaml
     /// </summary>
     internal sealed partial class StoredProcedureGeneration : MetroWindow
+
     {
+
         public StoredProcedureGeneration()
         {
             InitializeComponent();
-
+    
             DataTable dt = new DataTable();
             dt.Columns.Add("Source");
             dt.Columns.Add("Destination");
@@ -35,11 +36,11 @@ namespace AFISE.View
             {
                 DataRow dtr = dt.NewRow();
                 dtr["Source"] = dr[0];
-                if (dr[4].ToString() != "")
-                {
-                    dtr["Destination"] = dr[4];
-                }
-                else
+                //if (dr[4].ToString() != "")
+                //{
+                //    dtr["Destination"] = dr[4];
+                //}
+                //else
                     dtr["Destination"] = dr[2];
                 dt.Rows.Add(dtr);
             }
@@ -47,15 +48,10 @@ namespace AFISE.View
             destinationcolumns.ItemsSource = dt.DefaultView;
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
-        {
-            showscript.Visibility = Visibility.Visible;
-            await this.ShowMessageAsync("MESSAGE", "Your Script has been generated");
-        }
+      
 
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            spgeneration.Visibility = Visibility.Hidden;
             await this.ShowMessageAsync("", Global.sptest);
         }
 
