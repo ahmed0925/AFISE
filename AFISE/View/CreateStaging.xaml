@@ -3,6 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:AFISE.View"
+                      WindowState="Maximized"
+    WindowStyle="None"
                       Icon="../Themes/axefinance.ico"
         xmlns:Model="clr-namespace:Common.Model;assembly=Common.Model"
                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -17,7 +19,7 @@
                       TitleCaps="False"
                       x:ClassModifier="internal"
                       mc:Ignorable="d" 
-        Title="Create Staging" Height="700" Width="1000" WindowStartupLocation="CenterScreen">
+        Title="Create Staging" Height="700" Width="1285" WindowStartupLocation="CenterScreen">
     <Window.Resources>
 
 
@@ -36,11 +38,11 @@
         </Grid.RowDefinitions>
         <DataGrid  AutoGenerateColumns="True" ItemsSource="{Binding viewStagingTable, Mode=TwoWay,UpdateSourceTrigger=LostFocus}"  Name ="DataGridx" Grid.Column="1" Grid.Row="1"  />
         <TextBox x:Name="TableNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="292,11,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Table Name" VerticalAlignment="Top" Width="197" GotFocus="TextBox_GotFocus" TextChanged="TextBox_TextChanged"/>
-        <Button Content="Create Table" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="665,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="128" Click="Button_Click_1"/>
+        <Button Content="Create Table" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="872,16,0,0" Grid.Row="2" VerticalAlignment="Top" Width="128" Click="Button_Click_1"/>
         <ComboBox Name="DbCombo" Grid.Column="1" DisplayMemberPath="database_name" HorizontalAlignment="Left" Margin="119,11,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" SelectionChanged="DbCombo_SelectionChanged"/>
         <Label Content="DATABASE" Grid.Column="1" HorizontalAlignment="Left" Margin="46,11,0,0" Grid.Row="2" VerticalAlignment="Top" Width="85"/>
-        <Button Content="NEXT" Grid.Column="1" HorizontalAlignment="Left" Margin="853,11,0,0" Grid.Row="2" VerticalAlignment="Top" Width="101" Click="Button_Click" Height="26"/>
-        <CheckBox Name="DropIfExistCheckBox" Content="DropIfExist" Grid.Column="1" HorizontalAlignment="Left" Margin="540,16,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <Button Content="NEXT" Grid.Column="1" HorizontalAlignment="Left" Margin="1060,17,0,0" Grid.Row="2" VerticalAlignment="Top" Width="101" Click="Button_Click" Height="26"/>
+        <CheckBox Name="DropIfExistCheckBox" Content="DropIfExist" Grid.Column="1" HorizontalAlignment="Left" Margin="615,19,0,0" Grid.Row="2" VerticalAlignment="Top"/>
         <Popup Name="Popup1"   
   IsOpen="True" Placement="Center" >
             <StackPanel Width="288" >

@@ -95,9 +95,9 @@ namespace AFISE.ViewModel
                 builder.AppendLine("IF (@MSG = '')");
                 builder.AppendLine("BEGIN");
                 builder.AppendLine("BEGIN TRY");
-                sp.UpdateIfExists(SPMappingTable, builder, Global.sourceunique, Global.destunique);
+                sp.UpdateIfExists(Global.TableSP,SPMappingTable, builder, Global.sourceunique, Global.destunique);
                 builder.AppendLine("ELSE");
-                sp.Insertion(SPMappingTable, builder);
+                sp.Insertion(Global.TableSP,SPMappingTable, builder);
                 builder.AppendLine("END TRY");
                 builder.AppendLine("BEGIN CATCH");
                 sp.UpdateSetEror(builder, Global.stagingTable);
@@ -112,6 +112,7 @@ namespace AFISE.ViewModel
                 builder.AppendLine("CLOSE cur_StagingArea");
                 builder.AppendLine("DEALLOCATE cur_StagingArea");
                 builder.AppendLine("END");
+                Global.spName = spName;
                 Global.sptest = builder.ToString();
                 if (Global.ConnectionType == 0)
                 {

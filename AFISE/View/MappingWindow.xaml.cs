@@ -197,8 +197,8 @@ namespace AFISE.View
 
         private void MappingGenerationbtn(object sender, RoutedEventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 srtb.AppendLine("<Columns>");
                 srtb.AppendLine(mapping);
                 srtb.AppendLine("</Columns>");
@@ -213,24 +213,21 @@ namespace AFISE.View
                 StoredProcedureGeneration w6 = new StoredProcedureGeneration();
                 w6.Show();
                 this.Close();
-            }
-            catch
-            {
-                Popup2.IsOpen = true;
-            }
+            
+            //catch
+            //{
+            //    Popup2.IsOpen = true;
+            //}
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+    
+
+        private void ResetMappingBtn(object sender, RoutedEventArgs e)
         {
             SourceSelection sr = new SourceSelection();
             sr.Show();
             this.Close();
-        }
-
-        private void ResetMappingBtn(object sender, RoutedEventArgs e)
-        {
-            
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

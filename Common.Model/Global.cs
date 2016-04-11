@@ -25,7 +25,7 @@ namespace Common.Model
         public static List<string> datatypedest { get { return _datatypedest; } set { _datatypedest = value; } }
         public static string StagingTable { get; set; }
         public static DataTable SpDataTable { get; set; }
-        public static int ischeked { get; set; }
+        public static bool ischeked { get; set; }
         public static string Connection { get; set; }
         public static string CurrentBase { get; set; }
         public static string username { get; set; }
@@ -36,8 +36,7 @@ namespace Common.Model
         public static string sptest { get; set; }
         public static string sourceunique { get; set; }
         public static string destunique { get; set; }
-
-
-
+         public static string spName { get; set; }
+         public static string TableSP { get; set; }
     }
 }

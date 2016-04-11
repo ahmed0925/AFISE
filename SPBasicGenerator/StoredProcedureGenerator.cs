@@ -93,66 +93,58 @@ namespace SPCoreGenerator
 
         }
 
-        public string Insertion(DataTable datatable, StringBuilder builder)
+        public string Insertion(string destination, DataTable datatable, StringBuilder builder)
         {
 
-            builder.AppendLine("INSERT INTO " + datatable.Rows[0][1].ToString());
+            builder.AppendLine("INSERT INTO " + destination);
             builder.AppendLine("(");
             foreach (DataRow dr in datatable.Rows)
             {
-                if (dr.ItemArray.Length >= 5)
+                if (dr[1].ToString() == destination)
                 {
-                    if (dr[4].ToString() == "")
+                    if (dr.ItemArray.Length >= 5)
                     {
-                        if (datatable.Rows.IndexOf(dr) == 0)
+                        if (dr[4].ToString() == "")
                         {
-                            builder.AppendLine(dr[2].ToString());
+
+                            builder.AppendLine(dr[2].ToString() + ",");
+                           
+                                
+                            
                         }
                         else
-                        {
-                            builder.AppendLine("," + dr[2].ToString());
-                        }
-                    }
-                    else
-                        if (dr[4].ToString() != "")
-                        {
-                            if (datatable.Rows.IndexOf(dr) == 0)
+                            if (dr[4].ToString() != "")
                             {
-                                builder.AppendLine(dr[4].ToString());
+
+                                builder.AppendLine(dr[4].ToString() + ",");
+                                
                             }
-                            else
-                            {
-                                builder.AppendLine("," + dr[4].ToString());
-                            }
-                        }
-                }
-                else
-                {
-                    if (datatable.Rows.IndexOf(dr) == 0)
-                    {
-                        builder.AppendLine(dr[2].ToString());
                     }
                     else
                     {
-                        builder.AppendLine("," + dr[2].ToString());
+
+                        builder.AppendLine(dr[2].ToString() + ",");
+                       
+                        
                     }
                 }
             
             }
+
+            builder.Replace(',', ' ', builder.Length - 3, 1);
             builder.AppendLine(")");
             builder.AppendLine("VALUES");
             builder.AppendLine("(");
             foreach (DataRow dr in datatable.Rows)
             {
-                if (datatable.Rows.IndexOf(dr) == 0)
+                if (dr[1].ToString() == destination)
                 {
-                    builder.AppendLine("@" + dr[0].ToString());
-                }
-                else
-                {
-                    builder.AppendLine(",@" + dr[0].ToString());
+
+                    builder.AppendLine("@" + dr[0].ToString() + ",");
+                   
                 }
             }
+            builder.Replace(',', ' ', builder.Length - 3, 1);
             builder.AppendLine(")");
             return builder.ToString();
         }
@@ -193,54 +185,43 @@ namespace SPCoreGenerator
             return builder.ToString();
         }
 
-        public string UpdateIfExists(DataTable datatable, StringBuilder builder, string uniquesource, string uniquedestination)
+        public string UpdateIfExists(string table, DataTable datatable, StringBuilder builder, string uniquesource, string uniquedestination)
         {
-            builder.AppendLine("IF EXISTS (SELECT 1 FROM " + datatable.Rows[0][1] + " WHERE  " + uniquedestination + " = @" + uniquesource + ")");
-            builder.AppendLine("UPDATE " + datatable.Rows[0][1].ToString() + " SET");
-            foreach(DataRow dr in datatable.Rows)
+            builder.AppendLine("IF EXISTS (SELECT 1 FROM " + table + " WHERE  " + uniquedestination + " = @" + uniquesource + ")");
+            builder.AppendLine("UPDATE " + table + " SET");
+            foreach (DataRow dr in datatable.Rows)
             {
-                if (dr.ItemArray.Length >= 5)
+                if (dr[1].ToString() == table)
                 {
-                    if (dr[4].ToString() == "")
+                    if (dr.ItemArray.Length >= 5)
                     {
-                        if (datatable.Rows.IndexOf(dr) == 0)
+                        if (dr[4].ToString() == "")
                         {
-                            builder.AppendLine(dr[2].ToString() + "=@" + dr[0].ToString());
+
+                            builder.AppendLine(dr[2].ToString() + "=@" + dr[0].ToString() + ",");
+                          
                         }
                         else
-                        {
-                            builder.AppendLine("," + dr[2].ToString() + "=@" + dr[0].ToString());
-                        }
-                    }
-                    else
-                        if (dr[4].ToString() != "")
-                        {
-                            if (datatable.Rows.IndexOf(dr) == 0)
+                            if (dr[4].ToString() != "")
                             {
-                                builder.AppendLine(dr[4].ToString() + "=@" + dr[0].ToString());
-                            }
-                            else
-                            {
-                                builder.AppendLine("," + dr[4].ToString() + "=@" + dr[0].ToString());
-                            }
-                        }
-                }
-                else
-                {
-                    if (datatable.Rows.IndexOf(dr) == 0)
-                    {
-                        builder.AppendLine(dr[2].ToString() + "=@" + dr[0].ToString());
-                    }
-                    else
-                    {
-                        builder.AppendLine("," + dr[2].ToString() + "=@" + dr[0].ToString());
-                    }
-                }
 
-                   
+                                builder.AppendLine(dr[4].ToString() + "=@" + dr[0].ToString() + ",");
+                                
+                            }
+                    }
+                    else
+                    {
+
+                        builder.AppendLine(dr[2].ToString() + "=@" + dr[0].ToString() + ",");
+                        
+                    }
+
+                }
             }
 
-            builder.AppendLine("WHERE " + uniquedestination + "=@" + uniquesource);
+                builder.Replace(',', ' ', builder.Length - 3, 1);
+                builder.AppendLine("WHERE " + uniquedestination + "=@" + uniquesource);
+            
             return builder.ToString();
         }
        

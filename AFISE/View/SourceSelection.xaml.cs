@@ -261,12 +261,12 @@ namespace AFISE.ViewModel
 
         private void CHECKCOL_Checked_1(object sender, RoutedEventArgs e)
         {
-            Global.ischeked = 1;
+            Global.ischeked = true;
         }
 
         private void CHECKCOL_Unchecked(object sender, RoutedEventArgs e)
         {
-            Global.ischeked = 0;
+            Global.ischeked = false;
         }
 
         private void Button_Click_popup(object sender, RoutedEventArgs e)

@@ -4,7 +4,8 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        
+        WindowState="Maximized"
+    WindowStyle="None"
                       Background="{DynamicResource MaterialDesignPaper}"
                       DataContext="{Binding RelativeSource={RelativeSource Self}}"
                       FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
@@ -16,7 +17,7 @@
                       mc:Ignorable="d" 
                       Icon="../Themes/axefinance.ico"
         xmlns:local="clr-namespace:AFISE.ViewModel"
-        Title="Mapping" Height="600" Width="1200" WindowStartupLocation="CenterScreen"
+        Title="Mapping" Height="770" Width="1200" WindowStartupLocation="CenterScreen"
                       >
 
     <Window.Resources >
@@ -78,9 +79,8 @@
             <Label Content="Destination Column" HorizontalAlignment="Left" Margin="473,12,0,0" VerticalAlignment="Top" Width="279" Height="30" FontWeight="Bold" FontSize="16"/>
             <Label Content="Destination Column(FK)" HorizontalAlignment="Left" Margin="780,12,0,0" VerticalAlignment="Top" Height="32" Width="242" FontWeight="Bold" FontSize="16"/>
             <Button Content="Match" HorizontalAlignment="Left" Margin="1078,122,0,0" Grid.Row="1" VerticalAlignment="Top" Width="89" Click="Match_btn"/>
-            <Button Content="Generate Mapping file" HorizontalAlignment="Left" Margin="503,459,0,0" Grid.Row="1" VerticalAlignment="Top" Width="186" RenderTransformOrigin="0.067,0.16" Click="MappingGenerationbtn" Height="25"/>
-            <Button Content="Back" HorizontalAlignment="Left" Margin="43,459,0,0" Grid.Row="1" VerticalAlignment="Top" Width="81" Click="Button_Click_1" Height="25"/>
-            <Button Content="Reset" HorizontalAlignment="Left" Margin="1078,168,0,0" Grid.Row="1" VerticalAlignment="Top" Width="89" Click="ResetMappingBtn"/>
+            <Button Content="Generate Mapping file" HorizontalAlignment="Left" Margin="548,556,0,0" Grid.Row="1" VerticalAlignment="Top" Width="186" RenderTransformOrigin="0.067,0.16" Click="MappingGenerationbtn" Height="25"/>
+            <Button Content="HOME" HorizontalAlignment="Left" Margin="50,549,0,0" Grid.Row="1" VerticalAlignment="Top" Width="89" Click="ResetMappingBtn"/>
             <Popup Name="Popup2"   
   IsOpen="True" Placement="Center" >
                 <StackPanel Width="288" >

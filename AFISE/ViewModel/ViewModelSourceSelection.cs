@@ -291,7 +291,7 @@ namespace AFISE.ViewModel
 
                 var lines = File.ReadAllLines(openfile.FileName);
                 //assuming first row conatains columns information
-                if (Global.ischeked == 1)
+                if (Global.ischeked == true)
                 {
 
 

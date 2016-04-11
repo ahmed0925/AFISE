@@ -28,6 +28,10 @@ namespace AFISE.View
             InitializeComponent();
             authcbx.SelectedIndex = 0;
             Popup1.IsOpen = false;
+            servercbx.Text = AFISE.Properties.Settings.Default.servername;
+            usernamecbx.Text = AFISE.Properties.Settings.Default.username;
+            passwcbx.Password = AFISE.Properties.Settings.Default.password;
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -48,7 +52,10 @@ namespace AFISE.View
                     sqlConn.Open();
                     SourceSelection mn = new SourceSelection();
                     mn.Show();
+                    AFISE.Properties.Settings.Default.servername = servercbx.Text;
+                    AFISE.Properties.Settings.Default.Save();
                     this.Close();
+                    
                 }
                     // show popup if failed to connect
                 catch
@@ -75,6 +82,10 @@ namespace AFISE.View
                     sqlConn.Open();
                     SourceSelection mn = new SourceSelection();
                     mn.Show();
+                    AFISE.Properties.Settings.Default.servername = servercbx.Text;
+                    AFISE.Properties.Settings.Default.username = usernamecbx.Text;
+                    AFISE.Properties.Settings.Default.password = passwcbx.Password;
+                    AFISE.Properties.Settings.Default.Save();
                     this.Close();
                 }
                 catch
