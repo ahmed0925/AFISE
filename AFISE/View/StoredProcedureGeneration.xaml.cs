@@ -16,6 +16,8 @@ using MahApps.Metro.Controls.Dialogs;
 using AFISE.ViewModel;
 using Common.Model;
 using System.Data;
+using System.Collections;
+using SPCoreGenerator;
 namespace AFISE.View
 {
     /// <summary>
@@ -41,27 +43,21 @@ namespace AFISE.View
                 dtr["Destination"] = dr[2];
                 dt.Rows.Add(dtr);
             }
-            foreach(DataRow dr in Global.SpDataTable.Rows)
+            foreach (DataRow dr in Global.SpDataTable.Rows)
             {
                 DataRow dtr = dt1.NewRow();
                 dtr["Tables"] = dr[1];
                 dt1.Rows.Add(dtr);
-                
+
             }
-            for(int i =1; i< dt1.Rows.Count; i++)
-            {
-                if(dt1.Rows[i-1][0].ToString() == dt1.Rows[i][0].ToString())
-                {
-                    dt1.Rows.Remove(dt1.Rows[i]);
-                }
-            }
+            RemoveDuplicateRows(dt1, "Tables");
             Tables.ItemsSource = dt1.DefaultView;
             sourcecolumns.ItemsSource = dt.DefaultView;
             destinationcolumns.ItemsSource = dt.DefaultView;
         }
 
-
-
+        public string othertable;
+        int i = 0;
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
             await this.ShowMessageAsync("", Global.sptest);
@@ -97,30 +93,54 @@ namespace AFISE.View
         private void Tables_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             DataRowView oDataRowView = Tables.SelectedItem as DataRowView;
-
-            Global.TableSP = oDataRowView.Row["Tables"] as string;
+            if (i == 0)
+            {
+                Global.TableSP = oDataRowView.Row["Tables"] as string;
+            }
+            else
+            {
+                othertable = oDataRowView.Row["Tables"] as string;
+            }
+            i++;    
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private async void ADD_TO_SCRIPT(object sender, RoutedEventArgs e)
         {
 
+            if (i > 0)
+            {
+                Global.OtherTable = othertable;
+            }
+
+            i++;
+            await this.ShowMessageAsync("Message", "Informations were added to your script");
         }
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+
+        public DataTable RemoveDuplicateRows(DataTable dTable, string colName)
         {
-            lblsrc.Visibility = Visibility.Visible;
-            sourcecolumns.Visibility = Visibility.Visible;
-            lbldest.Visibility = Visibility.Visible;
-            destinationcolumns.Visibility = Visibility.Visible;
+            Hashtable hTable = new Hashtable();
+            ArrayList duplicateList = new ArrayList();
+
+            //Add list of all the unique item value to hashtable, which stores combination of key, value pair.
+            //And add duplicate item value in arraylist.
+            foreach (DataRow drow in dTable.Rows)
+            {
+                if (hTable.Contains(drow[colName]))
+                    duplicateList.Add(drow);
+                else
+                    hTable.Add(drow[colName], string.Empty);
+            }
+
+            //Removing a list of duplicate items from datatable.
+            foreach (DataRow dRow in duplicateList)
+                dTable.Rows.Remove(dRow);
+
+            //Datatable which contains unique records will be return as output.
+            return dTable;
         }
 
-        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
-        {
-            lblsrc.Visibility = Visibility.Hidden;
-            sourcecolumns.Visibility = Visibility.Hidden;
-            lbldest.Visibility = Visibility.Hidden;
-            destinationcolumns.Visibility = Visibility.Hidden;
-        }
+
 
 
 

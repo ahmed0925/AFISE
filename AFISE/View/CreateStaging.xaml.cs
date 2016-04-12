@@ -75,7 +75,8 @@ namespace AFISE.View
             sqlConn.Open();
             DataTable tblDatabases = sqlConn.GetSchema("Databases");
             DbCombo.ItemsSource = tblDatabases.DefaultView;
-
+            DbCombo.SelectedIndex = 6;
+            TableNameTextBox.Text = "xxxxx";
         }
 
 
@@ -107,12 +108,12 @@ namespace AFISE.View
             model.RefreshSettings();
             var sb = new StringBuilder(10000);
             if (DropIfExistCheckBox.IsChecked == true)
-            sb.Append("IF Object_ID('dbo." + TableNameTextBox.Text + "', 'U') IS NOT NULL DROP TABLE dbo." + TableNameTextBox.Text);
+                sb.Append("IF Object_ID('dbo." + TableNameTextBox.Text + "', 'U') IS NOT NULL DROP TABLE dbo." + TableNameTextBox.Text);
             CreateSpGenerator spGenerator = new CreateSpGenerator();
             spGenerator.GenerateStatement(myStagingTable.TableName, sb, viewStagingTable.ToList(), new List<DBTableColumnInfo>());
             query = sb.ToString();
             await this.ShowMessageAsync("Insertion Script", query);
-          
+
 
 
 
@@ -138,95 +139,89 @@ namespace AFISE.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            try
+
+
+
+            if (Global.ConnectionType == 0)
             {
-
-                if (Global.ConnectionType == 0)
+                SqlConnectionStringBuilder sqlcon = new SqlConnectionStringBuilder();
+                sqlcon.DataSource = Global.DataSource;
+                sqlcon.InitialCatalog = Global.CurrentBase;
+                sqlcon.IntegratedSecurity = true;
+                string connection = sqlcon.ToString();
+                SqlConnection conn = new SqlConnection(connection);
+                Server server = new Server(new ServerConnection(conn));
+                server.ConnectionContext.ExecuteNonQuery(query.ToString());
+                using (SqlBulkCopy sbc = new SqlBulkCopy(connection, SqlBulkCopyOptions.KeepIdentity))
                 {
-                    SqlConnectionStringBuilder sqlcon = new SqlConnectionStringBuilder();
-                    sqlcon.DataSource = Global.DataSource;
-                    sqlcon.InitialCatalog = Global.CurrentBase;
-                    sqlcon.IntegratedSecurity = true;
-                    string connection = sqlcon.ToString();
-                    SqlConnection conn = new SqlConnection(connection);
-                    Server server = new Server(new ServerConnection(conn));
-                    server.ConnectionContext.ExecuteNonQuery(query.ToString());
-                    using (SqlBulkCopy sbc = new SqlBulkCopy(connection, SqlBulkCopyOptions.KeepIdentity))
+                    sbc.DestinationTableName = TableNameTextBox.Text;
+
+                    // Number of records to be processed in one go
+                    int batchSize = 5000;
+                    sbc.BatchSize = batchSize;
+
+                    // Add  column mappings here
+                    foreach (DataColumn dc in Global.datatable1.Columns)
                     {
-                        sbc.DestinationTableName = TableNameTextBox.Text;
-
-                        // Number of records to be processed in one go
-                        int batchSize = 5000;
-                        sbc.BatchSize = batchSize;
-
-                        // Add  column mappings here
-                        foreach (DataColumn dc in Global.datatable1.Columns)
-                        {
-                            sbc.ColumnMappings.Add(dc.ColumnName, dc.ColumnName);
-                        }
-
-                        // Finally write to server
-                        sbc.WriteToServer(Global.datatable1);
-
+                        sbc.ColumnMappings.Add(dc.ColumnName, dc.ColumnName);
                     }
-                    MappingWindow mp = new MappingWindow();
-                    mp.Show();
-                    this.Close();
-                }
-                else if (Global.ConnectionType == 1)
-                {
 
-                    SqlConnectionStringBuilder sqlcon = new SqlConnectionStringBuilder();
-                    sqlcon.DataSource = Global.DataSource;
-                    sqlcon.InitialCatalog = Global.CurrentBase;
-                    sqlcon.UserID = Global.username;
-                    sqlcon.Password = Global.password;
-                    string connection = sqlcon.ToString();
-                    SqlConnection conn = new SqlConnection(connection);
-                    Server server = new Server(new ServerConnection(conn));
-                    server.ConnectionContext.ExecuteNonQuery(query.ToString());
-                    using (SqlBulkCopy sbc = new SqlBulkCopy(connection, SqlBulkCopyOptions.KeepIdentity))
-                    {
-                        sbc.DestinationTableName = TableNameTextBox.Text;
-
-                        // Number of records to be processed in one go
-                        int batchSize = 5000;
-                        sbc.BatchSize = batchSize;
-
-                        // Add  column mappings here
-                        foreach (DataColumn dc in Global.datatable1.Columns)
-                        {
-                            sbc.ColumnMappings.Add(dc.ColumnName, dc.ColumnName);
-                        }
-
-                        // Finally write to server
-                        sbc.WriteToServer(Global.datatable1);
-
-                    }
-                    MappingWindow mp = new MappingWindow();
-                    mp.Show();
-                    mp.L3.DataContext = null;
-                    mp.L4.DataContext = null;
-                    this.Close();
+                    // Finally write to server
+                    sbc.WriteToServer(Global.datatable1);
 
                 }
-
-
-
+                functions mp = new functions();
+                mp.Show();
+                this.Close();
             }
-            catch
+            else if (Global.ConnectionType == 1)
             {
-                Popup1.IsOpen = true;
+
+                SqlConnectionStringBuilder sqlcon = new SqlConnectionStringBuilder();
+                sqlcon.DataSource = Global.DataSource;
+                sqlcon.InitialCatalog = Global.CurrentBase;
+                sqlcon.UserID = Global.username;
+                sqlcon.Password = Global.password;
+                string connection = sqlcon.ToString();
+                SqlConnection conn = new SqlConnection(connection);
+                Server server = new Server(new ServerConnection(conn));
+                server.ConnectionContext.ExecuteNonQuery(query.ToString());
+                using (SqlBulkCopy sbc = new SqlBulkCopy(connection, SqlBulkCopyOptions.KeepIdentity))
+                {
+                    sbc.DestinationTableName = TableNameTextBox.Text;
+
+                    // Number of records to be processed in one go
+                    int batchSize = 5000;
+                    sbc.BatchSize = batchSize;
+
+                    // Add  column mappings here
+                    foreach (DataColumn dc in Global.datatable1.Columns)
+                    {
+                        sbc.ColumnMappings.Add(dc.ColumnName, dc.ColumnName);
+                    }
+
+                    // Finally write to server
+                    sbc.WriteToServer(Global.datatable1);
+
+                }
+                functions mp = new functions();
+                mp.Show();
+                this.Close();
+
             }
-            }
+
+
+
+
+        }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             Popup1.IsOpen = false;
 
         }
-        
-        
+
+
 
 
     }

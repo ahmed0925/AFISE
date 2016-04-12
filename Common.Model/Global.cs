@@ -11,7 +11,7 @@ namespace Common.Model
     {
         public static DataTable datatable1 { get; set; }
         public static DataRowView SelectedTable { get; set; }
-        public static DataTable TblData4 { get; set; }
+        public static List<String> TblData4 { get; set; }
         public static char Delimiter { get; set; }
         public static List<int> columnLength { get; set; }
         public static int combo { get; set; }
@@ -38,5 +38,7 @@ namespace Common.Model
         public static string destunique { get; set; }
          public static string spName { get; set; }
          public static string TableSP { get; set; }
+         public static  string InsertionUpdateScript { get; set; }
+         public static string  OtherTable { get; set; }
     }
 }

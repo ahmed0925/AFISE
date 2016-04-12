@@ -30,7 +30,7 @@ namespace AFISE.ViewModel
         public RelayCommand CreateStagingAreaCommand { get; set; }
         int i = 0;
         DataTable datatable = new DataTable();
-        
+
         string _SelectedText;
         string _TextProperty1;
         string _TextProperty2;
@@ -249,9 +249,9 @@ namespace AFISE.ViewModel
                                 {
                                     DataRow datarow = dt.NewRow();
                                     datarow["test"] = dc.ColumnName;
-                                    dt.Rows.Add(datarow);
+                                    Global.TblData4.Add(datarow.ToString());
                                 }
-                                Global.TblData4 = dt;
+
 
                             }
                         }
@@ -347,13 +347,14 @@ namespace AFISE.ViewModel
                 //creating the datatable that we'll use to mapp
                 DataTable dt = new DataTable();
                 dt.Columns.Add("test");
+                Global.TblData4 = new List<string>();
                 foreach (DataColumn dc in TblData2.Columns)
                 {
-                    DataRow datarow = dt.NewRow();
-                    datarow["test"] = dc.ColumnName;
-                    dt.Rows.Add(datarow);
+
+
+                    (Global.TblData4).Add(dc.ColumnName);
                 }
-                Global.TblData4 = dt;
+
             }
             catch
             {

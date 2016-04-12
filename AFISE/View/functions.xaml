@@ -1,4 +1,4 @@
-﻿<Controls:MetroWindow x:Class="AFISE.View.MappingWindow"
+﻿<Controls:MetroWindow x:Class="AFISE.View.functions"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
@@ -64,23 +64,18 @@
                 <RowDefinition Height="242*"/>
                 <RowDefinition Height="19*"/>
             </Grid.RowDefinitions>
-            <ListBox Name="L" ItemsSource= "{Binding}"   HorizontalAlignment="Left" Height="261" Grid.Row="1" VerticalAlignment="Top" Width="187" Margin="10,10,0,0" SelectionChanged="L_SelectionChanged">
+            <ListBox Name="parameter" ItemsSource= "{Binding}"    HorizontalAlignment="Left" Height="261" Grid.Row="1" VerticalAlignment="Top" Width="187" Margin="10,10,0,0"  SelectionMode="Multiple"  SelectionChanged="L_SelectionChanged">
 
             </ListBox>
-            <ListBox Name="L2"   ItemsSource="{Binding}"  HorizontalAlignment="Left" Height="261" Margin="226,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="213" SelectionChanged="L2_SelectionChanged">
+            <ListBox Name="function"   ItemsSource="{Binding}"  HorizontalAlignment="Left" Height="261" Margin="270,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="213" SelectionChanged="L2_SelectionChanged">
 
             </ListBox>
-            <ListBox  ItemTemplateSelector="{StaticResource myDataTemplateSelector}"  Name="L3"  ItemsSource="{Binding}" HorizontalAlignment="Left" Height="261" Margin="473,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="229" SelectionChanged="L3_SelectionChanged">
-
-            </ListBox>
-            <ListBox Name="L4" ItemTemplateSelector="{StaticResource myDataTemplateSelector}" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="261" Margin="760,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="242"/>
-            <Label Content="Source Columns" HorizontalAlignment="Left" Margin="25,12,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.422,-0.135" Width="148" FontWeight="Bold" FontSize="16"/>
-            <Label Content="Destination Table" HorizontalAlignment="Left" Margin="226,11,0,0" VerticalAlignment="Top" Width="225" FontWeight="Bold" FontSize="16" Height="27"/>
-            <Label Content="Destination Column" HorizontalAlignment="Left" Margin="473,12,0,0" VerticalAlignment="Top" Width="279" Height="30" FontWeight="Bold" FontSize="16"/>
-            <Label Content="Destination Column(FK)" HorizontalAlignment="Left" Margin="780,12,0,0" VerticalAlignment="Top" Height="32" Width="242" FontWeight="Bold" FontSize="16"/>
-            <Button Content="Match" HorizontalAlignment="Left" Margin="1078,122,0,0" Grid.Row="1" VerticalAlignment="Top" Width="89" Click="Match_btn"/>
-            <Button Content="Generate Mapping file" HorizontalAlignment="Left" Margin="548,556,0,0" Grid.Row="1" VerticalAlignment="Top" Width="186" RenderTransformOrigin="0.067,0.16" Click="MappingGenerationbtn" Height="25"/>
+            <Label Content="Parameters" HorizontalAlignment="Left" Margin="35,12,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.422,-0.135" Width="148" FontWeight="Bold" FontSize="16"/>
+            <Label Content="Function" HorizontalAlignment="Left" Margin="335,11,0,0" VerticalAlignment="Top" Width="225" FontWeight="Bold" FontSize="16" Height="27"/>
+            <Button Content="ADD" HorizontalAlignment="Left" Margin="1078,122,0,0" Grid.Row="1" VerticalAlignment="Top" Width="89" Click="Add_btn"/>
+            <Button Content="Go to Mapping" HorizontalAlignment="Left" Margin="548,556,0,0" Grid.Row="1" VerticalAlignment="Top" Width="186" RenderTransformOrigin="0.067,0.16" Click="MappingGenerationbtn" Height="25"/>
             <Button Content="HOME" HorizontalAlignment="Left" Margin="50,549,0,0" Grid.Row="1" VerticalAlignment="Top" Width="89" Click="ResetMappingBtn"/>
+          
             <Popup Name="Popup2"   
   IsOpen="True" Placement="Center" >
                 <StackPanel Width="288" >

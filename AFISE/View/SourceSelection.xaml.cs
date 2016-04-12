@@ -28,8 +28,8 @@ namespace AFISE.ViewModel
             InitializeComponent();
             var viewModel = new ViewModelSourceSelection();
             Popup2.IsOpen = false;
-
-
+            combo.SelectedIndex = 2;
+            cbxdelimiter.SelectedIndex = 0;
         }
 
 
@@ -75,7 +75,7 @@ namespace AFISE.ViewModel
 
 
                 Global.combo = 0;
-                
+
             }
             else
                 if (combo.SelectedIndex == 1)
@@ -106,7 +106,7 @@ namespace AFISE.ViewModel
 
                     Global.combo = 1;
                 }
-            else if (combo.SelectedIndex == 2)
+                else if (combo.SelectedIndex == 2)
                 {
 
                     label1.Visibility = Visibility.Hidden;
@@ -160,7 +160,7 @@ namespace AFISE.ViewModel
                     Global.combo = 3;
 
                 }
-               
+
 
         }
 
@@ -194,7 +194,7 @@ namespace AFISE.ViewModel
                     strColumn = (string)(excelRange.Cells[1, colCnt] as Microsoft.Office.Interop.Excel.Range).Value2;
                     dt.Columns.Add(strColumn, typeof(string));
                 }
-                
+
                 for (rowCnt = 2; rowCnt <= excelRange.Rows.Count; rowCnt++)
                 {
                     string strData = "";
@@ -223,9 +223,9 @@ namespace AFISE.ViewModel
                 {
                     DataRow datarow = dit.NewRow();
                     datarow["test"] = dc.ColumnName;
-                    dit.Rows.Add(datarow);
+                    Global.TblData4.Add(datarow.ToString());
                 }
-                Global.TblData4 = dit;
+
 
 
                 excelBook.Close(true, null, null);
@@ -235,7 +235,7 @@ namespace AFISE.ViewModel
 
         private void cbxdelimiter_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            if(cbxdelimiter.SelectedIndex == 0)
+            if (cbxdelimiter.SelectedIndex == 0)
             {
                 Global.Delimiter = '|';
             }
@@ -257,7 +257,7 @@ namespace AFISE.ViewModel
             this.Close();
         }
 
-      
+
 
         private void CHECKCOL_Checked_1(object sender, RoutedEventArgs e)
         {
@@ -274,10 +274,10 @@ namespace AFISE.ViewModel
             Popup2.IsOpen = false;
         }
 
-        
-      
 
-       
+
+
+
     }
 
 }

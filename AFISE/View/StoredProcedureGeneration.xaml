@@ -50,19 +50,17 @@
         <DataGrid ItemsSource="{Binding SPMappingTable}" HorizontalAlignment="Left" Margin="250,74,0,0"  VerticalAlignment="Top" Height="211" Width="792"/>
         <Button Name="spgeneration" Content="Generate stored procedure" Command="{Binding SPStagingInsertCommand}" HorizontalAlignment="Left" Margin="975,525,0,0" VerticalAlignment="Top" Width="210"  Height="36"/>
         <Button Name="showscript" Content="SHOW SCRIPT"  HorizontalAlignment="Left" Margin="975,568,0,0" VerticalAlignment="Top" Width="210" Click="Button_Click_1" />
-        <Label Name="lblsrc" Content="Source unique key" HorizontalAlignment="Left" Margin="48,509,0,0" VerticalAlignment="Top" Width="135" Visibility="Hidden"/>
-        <ComboBox Name="sourcecolumns" DisplayMemberPath="Source"  HorizontalAlignment="Left" Margin="250,509,0,0" VerticalAlignment="Top" Width="159" SelectionChanged="sourcecolumns_SelectionChanged" Visibility="Hidden"/>
-        <Label Name="lbldest" Content="destination unique key" HorizontalAlignment="Left" Margin="48,556,0,0" VerticalAlignment="Top" Width="135" Visibility="Hidden"/>
-        <ComboBox Name="destinationcolumns" DisplayMemberPath="Destination"  HorizontalAlignment="Left" Margin="250,556,0,0" VerticalAlignment="Top" Width="159" SelectionChanged="destinationcolumns_SelectionChanged" Visibility="Hidden"/>
+        <Label Name="lblsrc" Content="Source unique key" HorizontalAlignment="Left" Margin="48,478,0,0" VerticalAlignment="Top" Width="135" Visibility="Visible"/>
+        <ComboBox Name="sourcecolumns" DisplayMemberPath="Source"  HorizontalAlignment="Left" Margin="250,478,0,0" VerticalAlignment="Top" Width="159" SelectionChanged="sourcecolumns_SelectionChanged" Visibility="Visible"/>
+        <Label Name="lbldest" Content="destination unique key" HorizontalAlignment="Left" Margin="48,525,0,0" VerticalAlignment="Top" Width="135" Visibility="Visible"/>
+        <ComboBox Name="destinationcolumns" DisplayMemberPath="Destination"  HorizontalAlignment="Left" Margin="250,525,0,0" VerticalAlignment="Top" Width="159" SelectionChanged="destinationcolumns_SelectionChanged" Visibility="Visible"/>
         <Label Content="Stored procedure name" HorizontalAlignment="Left" Margin="48,303,0,0" VerticalAlignment="Top" Width="150"/>
         <TextBox Name="spname" Text="{Binding spName , UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="33" Margin="250,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="HOME PAGE" HorizontalAlignment="Left" Margin="975,643,0,0" VerticalAlignment="Top" Width="210" Click="Button_Click"/>
         <Button Content="GENERATE BIML" HorizontalAlignment="Left" Margin="975,606,0,0" VerticalAlignment="Top" Width="210" Height="30" Click="Button_Click_2"/>
-        <Label Content="Configure Destination Tables in order" HorizontalAlignment="Left" Margin="48,399,0,0" VerticalAlignment="Top" Width="301" FontWeight="Bold" FontSize="16"/>
-        <Label Content="Destination Table Name" HorizontalAlignment="Left" Margin="48,433,0,0" VerticalAlignment="Top" Width="150"/>
-        <ComboBox Name="Tables" HorizontalAlignment="Left" DisplayMemberPath="Tables" Margin="250,434,0,0" VerticalAlignment="Top" Width="159" SelectionChanged="Tables_SelectionChanged"/>
-        <Button Content="ADD TO SCRIPT" HorizontalAlignment="Left" Margin="163,622,0,0" VerticalAlignment="Top" Width="140" Click="Button_Click_3"/>
-        <CheckBox Content="" HorizontalAlignment="Left" Margin="250,471,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
-        <Label Content="Check unicity ?" HorizontalAlignment="Left" Margin="48,468,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label Content="Configure Destination Tables in order" HorizontalAlignment="Left" Margin="48,359,0,0" VerticalAlignment="Top" Width="301" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Destination Table Name" HorizontalAlignment="Left" Margin="48,427,0,0" VerticalAlignment="Top" Width="150"/>
+        <ComboBox Name="Tables" HorizontalAlignment="Left" DisplayMemberPath="Tables" Margin="250,428,0,0" VerticalAlignment="Top" Width="159" SelectionChanged="Tables_SelectionChanged"/>
+        <Button Content="ADD TO SCRIPT" HorizontalAlignment="Left" Margin="163,622,0,0" VerticalAlignment="Top" Width="140" Click="ADD_TO_SCRIPT"/>
     </Grid>
 </Controls:MetroWindow>

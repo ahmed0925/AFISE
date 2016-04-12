@@ -77,7 +77,7 @@ namespace AFISE.ViewModel
             SPMappingTable = Global.SpDataTable;
             SPStagingInsertCommand = new RelayCommand(SPStagingInsert);
         }
-        
+
 
         public void SPStagingInsert(object parameter)
         {
@@ -86,18 +86,27 @@ namespace AFISE.ViewModel
                 StoredProcedureGenerator sp = new StoredProcedureGenerator();
                 StringBuilder builder = new StringBuilder();
                 sp.SPHeader(Global.CurrentBase, spName, builder);
-                sp.VariableDeclaration(SPMappingTable, builder);
-                sp.ConstantsDeclaration(SPMappingTable, builder);
-                sp.CursorDeclaration(SPMappingTable, builder, Global.stagingTable);
+                sp.VariableDeclaration(Global.datatable1,SPMappingTable, builder);
+                sp.ConstantsDeclaration(Global.datatable1, builder);
+                sp.CursorDeclaration(Global.datatable1, builder, Global.stagingTable);
                 builder.AppendLine("WHILE(@@fetch_status=0)");
                 builder.AppendLine("BEGIN");
-                sp.NullValuesControl(SPMappingTable, builder);
+                sp.NullValuesControl(Global.datatable1, builder);
                 builder.AppendLine("IF (@MSG = '')");
                 builder.AppendLine("BEGIN");
                 builder.AppendLine("BEGIN TRY");
-                sp.UpdateIfExists(Global.TableSP,SPMappingTable, builder, Global.sourceunique, Global.destunique);
+                sp.UpdateIfExists(Global.TableSP, SPMappingTable, builder, Global.sourceunique, Global.destunique);
+                if (Global.OtherTable != null)
+                {
+                    sp.DeleteInsert(Global.OtherTable, SPMappingTable, builder, Global.sourceunique, Global.destunique);
+                }
                 builder.AppendLine("ELSE");
-                sp.Insertion(Global.TableSP,SPMappingTable, builder);
+                sp.Insertion(Global.TableSP, SPMappingTable, builder);
+                if (Global.OtherTable != null)
+                {
+                    sp.Insertion(Global.OtherTable, SPMappingTable, builder);
+                }
+                builder.AppendLine(Global.InsertionUpdateScript);
                 builder.AppendLine("END TRY");
                 builder.AppendLine("BEGIN CATCH");
                 sp.UpdateSetEror(builder, Global.stagingTable);
@@ -107,7 +116,7 @@ namespace AFISE.ViewModel
                 sp.UpdateNoteInterfaced(builder, Global.stagingTable);
                 builder.AppendLine("ELSE");
                 sp.UpdateInterfaced(builder, Global.stagingTable);
-                sp.FetchingCursor(SPMappingTable, builder);
+                sp.FetchingCursor(Global.datatable1, builder);
                 builder.AppendLine("END");
                 builder.AppendLine("CLOSE cur_StagingArea");
                 builder.AppendLine("DEALLOCATE cur_StagingArea");
@@ -143,7 +152,7 @@ namespace AFISE.ViewModel
             {
                 IsOpen = true;
             }
-            
+
 
 
 

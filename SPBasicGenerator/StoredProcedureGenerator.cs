@@ -28,21 +28,22 @@ namespace SPCoreGenerator
             return builder.ToString();
         }
 
-        public string VariableDeclaration(DataTable datatable, StringBuilder builder)
+        public string VariableDeclaration(DataTable datatable,DataTable datatable1, StringBuilder builder)
         {
-            foreach (DataRow dr in datatable.Rows)
+            foreach (DataColumn dr in datatable.Columns)
             {
-                builder.AppendLine("DECLARE @" + dr[0].ToString() + " as NVARCHAR(100)           DECLARE @" + dr[0].ToString() + "_error as NVARCHAR(100)");             
+                builder.AppendLine("DECLARE @" + dr.ColumnName.ToString() + " as NVARCHAR(100)           DECLARE @" + dr.ColumnName.ToString() + "_error as NVARCHAR(100)");             
             }
+            builder.AppendLine("DECLARE @" + datatable1.Rows[0][3] + " as INT");
             builder.AppendLine("DECLARE @MSG AS NVARCHAR(MAX) ");
             return builder.ToString();
         }
 
         public string ConstantsDeclaration(DataTable datatable, StringBuilder builder)
         {
-            foreach (DataRow dr in datatable.Rows)
+            foreach (DataColumn dr in datatable.Columns)
             {
-                builder.AppendLine("SET @" + dr[0].ToString() + "_error      ='" + dr[0].ToString() + " is invalid |'");
+                builder.AppendLine("SET @" + dr.ColumnName.ToString() + "_error      ='" + dr.ColumnName.ToString() + " is invalid |'");
             }
             return builder.ToString();
         }
@@ -51,33 +52,25 @@ namespace SPCoreGenerator
         {
             builder.AppendLine("DECLARE cur_StagingArea CURSOR FOR");
             builder.AppendLine("SELECT");
-            foreach (DataRow dr in datatable.Rows)
+            foreach (DataColumn dr in datatable.Columns)
             {
-                if (datatable.Rows.IndexOf(dr) == 0)
-                {
-                    builder.AppendLine("cr.[" + dr[0].ToString() + "]");
-                }
-                else
-                {
-                    builder.AppendLine(",cr.[" + dr[0].ToString() + "] ");
-                }
 
+                builder.AppendLine("cr.[" + dr.ColumnName.ToString() + "],");
+ 
             }
+            builder.Replace(',', ' ', builder.Length - 3, 1);
             builder.AppendLine("FROM " + stagingtable + " cr");
             builder.AppendLine("where Is_interfaced !=1 ");
             builder.AppendLine("OPEN cur_StagingArea");
             builder.AppendLine("FETCH NEXT FROM cur_StagingArea INTO");
-            foreach (DataRow dr in datatable.Rows)
+            foreach (DataColumn dr in datatable.Columns)
             {
-                if (datatable.Rows.IndexOf(dr) == 0)
-                {
-                    builder.AppendLine("@" + dr[0].ToString());
-                }
-                else
-                {
-                    builder.AppendLine(",@" + dr[0].ToString());
-                }
+
+                builder.AppendLine("@" + dr.ColumnName.ToString() + ",");
+
+                
             }
+            builder.Replace(',', ' ', builder.Length - 3, 1);
             return builder.ToString();
         }
 
@@ -85,9 +78,9 @@ namespace SPCoreGenerator
         {
 
             builder.AppendLine("SET @MSG = ''");
-            foreach (DataRow dr in datatable.Rows)
+            foreach (DataColumn dr in datatable.Columns)
             {
-                builder.AppendLine("IF (@" + dr[0].ToString() + " = ''  ) BEGIN SET @MSG= @MSG+@" + dr[0].ToString() + "_error  END");
+                builder.AppendLine("IF (@" + dr.ColumnName.ToString() + " = ''  ) BEGIN SET @MSG= @MSG+@" + dr.ColumnName.ToString() + "_error  END");
             }
             return builder.ToString();
 
@@ -139,9 +132,19 @@ namespace SPCoreGenerator
             {
                 if (dr[1].ToString() == destination)
                 {
+                    String build = dr[0].ToString();
+                    if (build.Contains("("))
+                    {
+                        build = build.Replace("(", "(@");
+                        build = build.Replace(",", ",@");
 
-                    builder.AppendLine("@" + dr[0].ToString() + ",");
-                   
+                    }
+                    else
+                    {
+                        build = "@" + build;
+                    }
+                    builder.AppendLine(build + ",");
+
                 }
             }
             builder.Replace(',', ' ', builder.Length - 3, 1);
@@ -171,17 +174,13 @@ namespace SPCoreGenerator
         public string FetchingCursor(DataTable datatable, StringBuilder builder)
         {
             builder.AppendLine("FETCH NEXT FROM cur_StagingArea INTO");
-            foreach (DataRow dr in datatable.Rows)
+            foreach (DataColumn dr in datatable.Columns)
             {
-                if (datatable.Rows.IndexOf(dr) == 0)
-                {
-                    builder.AppendLine("@" + dr[0].ToString());
-                }
-                else
-                {
-                    builder.AppendLine(",@" + dr[0].ToString());
-                }
+
+                builder.AppendLine("@" + dr.ColumnName.ToString() + ",");
+              
             }
+            builder.Replace(',', ' ', builder.Length - 3, 1);
             return builder.ToString();
         }
 
@@ -197,23 +196,59 @@ namespace SPCoreGenerator
                     {
                         if (dr[4].ToString() == "")
                         {
+                            String build = dr[0].ToString();
+                            if (build.Contains("("))
+                            {
+                                build = build.Replace("(", "(@");
+                                build = build.Replace(",", ",@");
 
-                            builder.AppendLine(dr[2].ToString() + "=@" + dr[0].ToString() + ",");
-                          
+                            }
+                            else
+                            {
+                                build = "@"+build;
+                            }
+
+
+
+                            builder.AppendLine(dr[2].ToString() + "=" + build + ",");
+
                         }
                         else
                             if (dr[4].ToString() != "")
                             {
+                                String build = dr[0].ToString();
+                                if (build.Contains("("))
+                                {
+                                    build = build.Replace("(", "(@");
+                                    build = build.Replace(",", ",@");
 
-                                builder.AppendLine(dr[4].ToString() + "=@" + dr[0].ToString() + ",");
-                                
+                                }
+
+                                else
+                                {
+                                    build = "@" + build;
+                                }
+
+                                builder.AppendLine(dr[4].ToString() + "=" + build + ",");
+
                             }
                     }
                     else
                     {
+                        String build = dr[0].ToString();
+                        if (build.Contains("("))
+                        {
+                            build = build.Replace("(", "(@");
+                            build = build.Replace(",", ",@");
 
-                        builder.AppendLine(dr[2].ToString() + "=@" + dr[0].ToString() + ",");
-                        
+                        }
+
+                        else
+                        {
+                            build = "@" + build;
+                        }
+                        builder.AppendLine(dr[2].ToString() + "=" + build + ",");
+
                     }
 
                 }
@@ -222,6 +257,77 @@ namespace SPCoreGenerator
                 builder.Replace(',', ' ', builder.Length - 3, 1);
                 builder.AppendLine("WHERE " + uniquedestination + "=@" + uniquesource);
             
+            return builder.ToString();
+        }
+
+        public string DeleteInsert(string table, DataTable datatable, StringBuilder builder, string uniquesource, string uniquedestination)
+        {
+            
+            builder.AppendLine("DELETE FROM " + table);
+            builder.AppendLine("WHERE " + uniquedestination + "=@" + uniquesource);
+            builder.AppendLine("INSERT INTO " + table);
+            builder.AppendLine("(");
+            foreach (DataRow dr in datatable.Rows)
+            {
+                if (dr[1].ToString() == table)
+                {
+                    if (dr.ItemArray.Length >= 5)
+                    {
+                        if (dr[4].ToString() == "")
+                        {
+
+                            builder.AppendLine(dr[2].ToString() + ",");
+
+
+
+                        }
+                        else
+                            if (dr[4].ToString() != "")
+                            {
+
+                                builder.AppendLine(dr[4].ToString() + ",");
+
+                            }
+                    }
+                    else
+                    {
+
+                        builder.AppendLine(dr[2].ToString() + ",");
+
+
+                    }
+                }
+
+            }
+
+            builder.Replace(',', ' ', builder.Length - 3, 1);
+            builder.AppendLine(")");
+            builder.AppendLine("VALUES");
+            builder.AppendLine("(");
+            foreach (DataRow dr in datatable.Rows)
+            {
+                if (dr[1].ToString() == table)
+                {
+                    String build = dr[0].ToString();
+                    if (build.Contains("("))
+                    {
+                        build = build.Replace("(", "(@");
+                        build = build.Replace(",", ",@");
+
+                    }
+                    else
+                    {
+                        build = "@" + build;
+                    }
+                    builder.AppendLine(build + ",");
+
+                }
+            }
+            builder.Replace(',', ' ', builder.Length - 3, 1);
+            builder.AppendLine(")");
+            
+            
+
             return builder.ToString();
         }
        
