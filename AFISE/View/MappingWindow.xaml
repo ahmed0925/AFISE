@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:control="clr-namespace:AFISE.View"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         WindowState="Maximized"
     WindowStyle="None"
@@ -15,6 +16,7 @@
                       TitleCaps="False"
                       x:ClassModifier="internal"
                       mc:Ignorable="d" 
+                      
                       Icon="../Themes/axefinance.ico"
         xmlns:local="clr-namespace:AFISE.ViewModel"
         Title="Mapping" Height="770" Width="1200" WindowStartupLocation="CenterScreen"
@@ -58,7 +60,7 @@
     <Grid>
 
         <Grid>
-
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="24*"/>
                 <RowDefinition Height="242*"/>
@@ -89,6 +91,7 @@
                     <Button Content="OK" Click="Button_Click_2"/>
                 </StackPanel>
             </Popup>
+            <!--<control:LoadingAnimation Name="loading" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="566,293,538,290" Grid.Row="1"/>-->
         </Grid>
 
     </Grid>

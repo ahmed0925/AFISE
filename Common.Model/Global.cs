@@ -38,7 +38,8 @@ namespace Common.Model
         public static string destunique { get; set; }
          public static string spName { get; set; }
          public static string TableSP { get; set; }
-         public static  string InsertionUpdateScript { get; set; }
-         public static string  OtherTable { get; set; }
+         public static List<string> _validationKeys = new List<string>();
+         public static List<string> validationKeys { get { return _validationKeys; } set { _validationKeys = value; } }
+         public static string TableScript { get; set; }
     }
 }

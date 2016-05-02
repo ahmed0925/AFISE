@@ -78,7 +78,7 @@ namespace AFISE.ViewModel
             SPStagingInsertCommand = new RelayCommand(SPStagingInsert);
         }
 
-
+        //Generation of the stored procedure
         public void SPStagingInsert(object parameter)
         {
             try
@@ -86,7 +86,7 @@ namespace AFISE.ViewModel
                 StoredProcedureGenerator sp = new StoredProcedureGenerator();
                 StringBuilder builder = new StringBuilder();
                 sp.SPHeader(Global.CurrentBase, spName, builder);
-                sp.VariableDeclaration(Global.datatable1,SPMappingTable, builder);
+                sp.VariableDeclaration(Global.datatable1, SPMappingTable, builder);
                 sp.ConstantsDeclaration(Global.datatable1, builder);
                 sp.CursorDeclaration(Global.datatable1, builder, Global.stagingTable);
                 builder.AppendLine("WHILE(@@fetch_status=0)");
@@ -95,18 +95,8 @@ namespace AFISE.ViewModel
                 builder.AppendLine("IF (@MSG = '')");
                 builder.AppendLine("BEGIN");
                 builder.AppendLine("BEGIN TRY");
-                sp.UpdateIfExists(Global.TableSP, SPMappingTable, builder, Global.sourceunique, Global.destunique);
-                if (Global.OtherTable != null)
-                {
-                    sp.DeleteInsert(Global.OtherTable, SPMappingTable, builder, Global.sourceunique, Global.destunique);
-                }
-                builder.AppendLine("ELSE");
-                sp.Insertion(Global.TableSP, SPMappingTable, builder);
-                if (Global.OtherTable != null)
-                {
-                    sp.Insertion(Global.OtherTable, SPMappingTable, builder);
-                }
-                builder.AppendLine(Global.InsertionUpdateScript);
+                builder.AppendLine(Global.TableScript);
+
                 builder.AppendLine("END TRY");
                 builder.AppendLine("BEGIN CATCH");
                 sp.UpdateSetEror(builder, Global.stagingTable);

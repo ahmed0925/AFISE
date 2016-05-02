@@ -50,6 +50,7 @@ namespace AFISE.View
        
             
             Popup2.IsOpen = false;
+            Popup3.IsOpen = false;
 
             string connection=null;
             if (Global.ConnectionType == 0)
@@ -114,15 +115,25 @@ namespace AFISE.View
 
         private void Add_btn(object sender, RoutedEventArgs e)
         {
-            String Func=null ;
-            Func+= function.SelectedItem.ToString() +"(";
-            foreach (var para in parameter.SelectedItems)
-                Func += para.ToString()+",";
+            try
+            {
 
-           Func= Func.Substring(0,Func.Length-1);
 
-            Func += ")";
-            List_Function.Add(Func);
+                String Func = null;
+                Func += function.SelectedItem.ToString() + "(";
+                foreach (var para in parameter.SelectedItems)
+                    Func += para.ToString() + ",";
+
+                Func = Func.Substring(0, Func.Length - 1);
+
+                Func += ")";
+                List_Function.Add(Func);
+                Popup3.IsOpen = true;
+            }
+            catch
+            {
+                Popup2.IsOpen = true;
+            }
           
           
         }
@@ -151,6 +162,16 @@ namespace AFISE.View
             SourceSelection sr = new SourceSelection();
             sr.Show();
             this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Popup2.IsOpen = false;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Popup3.IsOpen = false;
         }
     }
 }

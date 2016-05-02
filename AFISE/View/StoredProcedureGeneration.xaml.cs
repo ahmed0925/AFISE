@@ -18,6 +18,7 @@ using Common.Model;
 using System.Data;
 using System.Collections;
 using SPCoreGenerator;
+using System.Data.SqlClient;
 namespace AFISE.View
 {
     /// <summary>
@@ -32,6 +33,8 @@ namespace AFISE.View
 
             DataTable dt = new DataTable();
             DataTable dt1 = new DataTable();
+
+
             dt1.Columns.Add("Tables");
             dt.Columns.Add("Source");
             dt.Columns.Add("Destination");
@@ -51,12 +54,19 @@ namespace AFISE.View
 
             }
             RemoveDuplicateRows(dt1, "Tables");
-            Tables.ItemsSource = dt1.DefaultView;
+            combotbl.ItemsSource = dt1.DefaultView;
             sourcecolumns.ItemsSource = dt.DefaultView;
             destinationcolumns.ItemsSource = dt.DefaultView;
-        }
+            Tables.ItemsSource = dt1.DefaultView;
 
-        public string othertable;
+
+
+        }
+        string validationKey;
+        string validationKey1;
+
+        StringBuilder builder = new StringBuilder();
+        StoredProcedureGenerator sp = new StoredProcedureGenerator();
         int i = 0;
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -93,24 +103,62 @@ namespace AFISE.View
         private void Tables_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             DataRowView oDataRowView = Tables.SelectedItem as DataRowView;
-            if (i == 0)
+
+            Global.TableSP = oDataRowView.Row["Tables"] as string;
+
+            string connection = null;
+            if (Global.ConnectionType == 0)
             {
-                Global.TableSP = oDataRowView.Row["Tables"] as string;
+                SqlConnectionStringBuilder sqlcon = new SqlConnectionStringBuilder();
+                sqlcon.DataSource = Global.DataSource;
+                sqlcon.InitialCatalog = Global.CurrentBase;
+                sqlcon.IntegratedSecurity = true;
+                connection = sqlcon.ToString();
+
+
             }
-            else
+            if (Global.ConnectionType == 1)
             {
-                othertable = oDataRowView.Row["Tables"] as string;
+                SqlConnectionStringBuilder sqlcon = new SqlConnectionStringBuilder();
+                sqlcon.DataSource = Global.DataSource;
+                sqlcon.InitialCatalog = Global.CurrentBase;
+                sqlcon.UserID = Global.username;
+                sqlcon.Password = Global.password;
+                connection = sqlcon.ToString();
+
+
             }
-            i++;    
+            SqlConnection conn = new SqlConnection(connection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'" + Global.TableSP + "'", conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt2 = new DataTable();
+            da.Fill(dt2);
+            linkcombo.ItemsSource = dt2.DefaultView;
         }
 
         private async void ADD_TO_SCRIPT(object sender, RoutedEventArgs e)
         {
-
-            if (i > 0)
+            if (chkex.IsChecked == true)
             {
-                Global.OtherTable = othertable;
+
+                sp.UpdateIfExists(Global.TableSP, Global.SpDataTable, builder, Global.sourceunique, Global.destunique);
+                builder.AppendLine("ELSE");
+                sp.Insertion(Global.TableSP, Global.SpDataTable, builder);
+
             }
+            else
+
+                if (linkchk.IsChecked == true)
+                {
+                    sp.DeleteInsert(Global.TableSP, Global.SpDataTable, builder, validationKey, validationKey1);
+                }
+                else
+
+                    sp.Insertion(Global.TableSP, Global.SpDataTable, builder);
+            Global.TableScript = builder.ToString();
+            chkex.IsChecked = false;
+            linkchk.IsChecked = false;
 
             i++;
             await this.ShowMessageAsync("Message", "Informations were added to your script");
@@ -138,6 +186,67 @@ namespace AFISE.View
 
             //Datatable which contains unique records will be return as output.
             return dTable;
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            lbldest.Visibility = Visibility.Visible;
+            lblsrc.Visibility = Visibility.Visible;
+            sourcecolumns.Visibility = Visibility.Visible;
+            destinationcolumns.Visibility = Visibility.Visible;
+            linkchk.IsEnabled = false;
+        }
+
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            lbldest.Visibility = Visibility.Hidden;
+            lblsrc.Visibility = Visibility.Hidden;
+            sourcecolumns.Visibility = Visibility.Hidden;
+            destinationcolumns.Visibility = Visibility.Hidden;
+            linkchk.IsEnabled = true;
+        }
+
+        private void linkchk_Checked(object sender, RoutedEventArgs e)
+        {
+            linktable.Visibility = Visibility.Visible;
+            linkcombo.Visibility = Visibility.Visible;
+            tablename.Visibility = Visibility.Visible;
+            combotbl.Visibility = Visibility.Visible;
+            chkex.IsEnabled = false;
+        }
+
+        private void linkchk_Unchecked(object sender, RoutedEventArgs e)
+        {
+            linktable.Visibility = Visibility.Hidden;
+            linkcombo.Visibility = Visibility.Hidden;
+            tablename.Visibility = Visibility.Hidden;
+            combotbl.Visibility = Visibility.Hidden;
+            chkex.IsEnabled = true;
+        }
+
+        private void combotbl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataRowView oDataRowView = combotbl.SelectedItem as DataRowView;
+            foreach (DataRow dr in Global.SpDataTable.Rows)
+            {
+                if (dr[1].ToString() == oDataRowView.Row["Tables"] as string)
+                {
+                    validationKey = dr[3].ToString();
+                    if (Global.validationKeys.Contains(validationKey) == false)
+                    {
+                        Global.validationKeys.Add(validationKey);
+                    }
+                }
+            }
+
+
+        }
+
+        private void linkcombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataRowView oDataRowView = linkcombo.SelectedItem as DataRowView;
+            validationKey1 = oDataRowView.Row["COLUMN_NAME"] as string;
+
         }
 
 

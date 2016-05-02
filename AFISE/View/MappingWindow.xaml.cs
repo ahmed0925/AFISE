@@ -59,6 +59,7 @@ namespace AFISE.View
         public List<CompositeCollection> allproperties;
         public CompositeCollection currentproperties = new CompositeCollection();
         public List<string> EntiyList { get; set; }
+        public List<string> FuncList { get; set; }
         public MappingWindow(List<String> List_function)
         {
             allproperties = new List<CompositeCollection>();
@@ -66,7 +67,7 @@ namespace AFISE.View
             InitializeComponent();
             Popup2.IsOpen = false;
             MappingViewModel evm = new MappingViewModel();
-
+            FuncList = List_function;
             EntiyList = evm.EntiyList;
             L2.DataContext = evm.EntiyList;
             allproperties = evm.allproperties;
@@ -185,6 +186,8 @@ namespace AFISE.View
 
                 }
                 Global.TblData4.Remove(SelectedSourceText);
+                L.DataContext = Global.TblData4.Concat(FuncList).ToList();
+                
             }
 
             catch

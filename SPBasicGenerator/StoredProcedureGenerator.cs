@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using Common.Model;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -28,13 +30,16 @@ namespace SPCoreGenerator
             return builder.ToString();
         }
 
-        public string VariableDeclaration(DataTable datatable,DataTable datatable1, StringBuilder builder)
+        public string VariableDeclaration(DataTable datatable, DataTable datatable1, StringBuilder builder)
         {
             foreach (DataColumn dr in datatable.Columns)
             {
-                builder.AppendLine("DECLARE @" + dr.ColumnName.ToString() + " as NVARCHAR(100)           DECLARE @" + dr.ColumnName.ToString() + "_error as NVARCHAR(100)");             
+                builder.AppendLine("DECLARE @" + dr.ColumnName.ToString() + " as NVARCHAR(100)           DECLARE @" + dr.ColumnName.ToString() + "_error as NVARCHAR(100)");
             }
-            builder.AppendLine("DECLARE @" + datatable1.Rows[0][3] + " as INT");
+            foreach (string key in Global.validationKeys)
+            {
+                builder.AppendLine("DECLARE @" + key + " as INT");
+            }
             builder.AppendLine("DECLARE @MSG AS NVARCHAR(MAX) ");
             return builder.ToString();
         }
@@ -56,7 +61,7 @@ namespace SPCoreGenerator
             {
 
                 builder.AppendLine("cr.[" + dr.ColumnName.ToString() + "],");
- 
+
             }
             builder.Replace(',', ' ', builder.Length - 3, 1);
             builder.AppendLine("FROM " + stagingtable + " cr");
@@ -68,7 +73,7 @@ namespace SPCoreGenerator
 
                 builder.AppendLine("@" + dr.ColumnName.ToString() + ",");
 
-                
+
             }
             builder.Replace(',', ' ', builder.Length - 3, 1);
             return builder.ToString();
@@ -101,27 +106,27 @@ namespace SPCoreGenerator
                         {
 
                             builder.AppendLine(dr[2].ToString() + ",");
-                           
-                                
-                            
+
+
+
                         }
                         else
                             if (dr[4].ToString() != "")
                             {
 
                                 builder.AppendLine(dr[4].ToString() + ",");
-                                
+
                             }
                     }
                     else
                     {
 
                         builder.AppendLine(dr[2].ToString() + ",");
-                       
-                        
+
+
                     }
                 }
-            
+
             }
 
             builder.Replace(',', ' ', builder.Length - 3, 1);
@@ -135,6 +140,7 @@ namespace SPCoreGenerator
                     String build = dr[0].ToString();
                     if (build.Contains("("))
                     {
+                        build = "inter." + build;
                         build = build.Replace("(", "(@");
                         build = build.Replace(",", ",@");
 
@@ -178,7 +184,7 @@ namespace SPCoreGenerator
             {
 
                 builder.AppendLine("@" + dr.ColumnName.ToString() + ",");
-              
+
             }
             builder.Replace(',', ' ', builder.Length - 3, 1);
             return builder.ToString();
@@ -199,13 +205,14 @@ namespace SPCoreGenerator
                             String build = dr[0].ToString();
                             if (build.Contains("("))
                             {
+                                build = "inter." + build;
                                 build = build.Replace("(", "(@");
                                 build = build.Replace(",", ",@");
 
                             }
                             else
                             {
-                                build = "@"+build;
+                                build = "@" + build;
                             }
 
 
@@ -219,6 +226,7 @@ namespace SPCoreGenerator
                                 String build = dr[0].ToString();
                                 if (build.Contains("("))
                                 {
+                                    build = "inter." + build;
                                     build = build.Replace("(", "(@");
                                     build = build.Replace(",", ",@");
 
@@ -238,6 +246,7 @@ namespace SPCoreGenerator
                         String build = dr[0].ToString();
                         if (build.Contains("("))
                         {
+                            build = "inter." + build;
                             build = build.Replace("(", "(@");
                             build = build.Replace(",", ",@");
 
@@ -254,15 +263,15 @@ namespace SPCoreGenerator
                 }
             }
 
-                builder.Replace(',', ' ', builder.Length - 3, 1);
-                builder.AppendLine("WHERE " + uniquedestination + "=@" + uniquesource);
-            
+            builder.Replace(',', ' ', builder.Length - 3, 1);
+            builder.AppendLine("WHERE " + uniquedestination + "=@" + uniquesource);
+
             return builder.ToString();
         }
 
         public string DeleteInsert(string table, DataTable datatable, StringBuilder builder, string uniquesource, string uniquedestination)
         {
-            
+
             builder.AppendLine("DELETE FROM " + table);
             builder.AppendLine("WHERE " + uniquedestination + "=@" + uniquesource);
             builder.AppendLine("INSERT INTO " + table);
@@ -325,11 +334,11 @@ namespace SPCoreGenerator
             }
             builder.Replace(',', ' ', builder.Length - 3, 1);
             builder.AppendLine(")");
-            
-            
+
+
 
             return builder.ToString();
         }
-       
+
     }
 }

@@ -17,7 +17,7 @@
                       mc:Ignorable="d" 
                       Icon="../Themes/axefinance.ico"
         xmlns:local="clr-namespace:AFISE.ViewModel"
-        Title="Mapping" Height="770" Width="1200" WindowStartupLocation="CenterScreen"
+        Title="Funcions" Height="770" Width="1200" WindowStartupLocation="CenterScreen"
                       >
 
     <Window.Resources >
@@ -73,15 +73,23 @@
             <Label Content="Parameters" HorizontalAlignment="Left" Margin="35,12,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.422,-0.135" Width="148" FontWeight="Bold" FontSize="16"/>
             <Label Content="Function" HorizontalAlignment="Left" Margin="335,11,0,0" VerticalAlignment="Top" Width="225" FontWeight="Bold" FontSize="16" Height="27"/>
             <Button Content="ADD" HorizontalAlignment="Left" Margin="1078,122,0,0" Grid.Row="1" VerticalAlignment="Top" Width="89" Click="Add_btn"/>
-            <Button Content="Go to Mapping" HorizontalAlignment="Left" Margin="548,556,0,0" Grid.Row="1" VerticalAlignment="Top" Width="186" RenderTransformOrigin="0.067,0.16" Click="MappingGenerationbtn" Height="25"/>
+            <Button Content="Go to Mapping" HorizontalAlignment="Left" Margin="548,549,0,0" Grid.Row="1" VerticalAlignment="Top" Width="186" RenderTransformOrigin="0.067,0.16" Click="MappingGenerationbtn" Height="32"/>
             <Button Content="HOME" HorizontalAlignment="Left" Margin="50,549,0,0" Grid.Row="1" VerticalAlignment="Top" Width="89" Click="ResetMappingBtn"/>
-          
+
             <Popup Name="Popup2"   
   IsOpen="True" Placement="Center" >
                 <StackPanel Width="288" >
                     <TextBlock x:Name="McTextBlock"   
             		Background="DarkKhaki" Text="   Check your mapping" Height="38" RenderTransformOrigin="-0.19,0.145" ><InlineUIContainer/><InlineUIContainer/></TextBlock>
-                    <Button Content="OK" Click="Button_Click_2"/>
+                    <Button Content="OK" Click="Button_Click"/>
+                </StackPanel>
+            </Popup>
+            <Popup Name="Popup3"   
+  IsOpen="True" Placement="Center" >
+                <StackPanel Width="288" >
+                    <TextBlock x:Name="McTextBlocck"   
+            		Background="DarkKhaki" Text="         Matched" Height="38" RenderTransformOrigin="-0.19,0.145" ><InlineUIContainer/><InlineUIContainer/></TextBlock>
+                    <Button Content="OK" Click="Button_Click_1"/>
                 </StackPanel>
             </Popup>
         </Grid>

@@ -131,6 +131,9 @@
     <Compile Include="View\functions.xaml.cs">
       <DependentUpon>functions.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\LoadingAnimation.xaml.cs">
+      <DependentUpon>LoadingAnimation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MappingWindow.xaml.cs">
       <DependentUpon>MappingWindow.xaml</DependentUpon>
     </Compile>
@@ -180,6 +183,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\functions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\LoadingAnimation.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
